@@ -1,0 +1,11 @@
+# CQ11: Anh chị em, chú/bác/cô và ông bà của Trần Nhân Tông (luật R1 + chain uncleOrAunt = hasParent ∘ sibling)
+SELECT ?relation ?label
+WHERE {
+  { vidbr:Trần_Nhân_Tông vidbo:sibling ?x . BIND("anh chị em" AS ?relation) }
+  UNION
+  { vidbr:Trần_Nhân_Tông vidbo:uncleOrAunt ?x . BIND("chú / bác / cô" AS ?relation) }
+  UNION
+  { vidbr:Trần_Nhân_Tông vidbo:hasGrandparent ?x . BIND("ông / bà" AS ?relation) }
+  ?x rdfs:label ?label .
+}
+ORDER BY ?relation ?label

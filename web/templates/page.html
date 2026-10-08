@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}{{ info.title }} — ViDBpedia{% endblock %}
+{% block body %}
+<h1>{{ info.title }}</h1>
+<p class="uri"><code>{{ info.uri }}</code>
+  · <a href="{{ url_for('data', name=name, ext='ttl') }}">Turtle</a>
+  · <a href="{{ url_for('data', name=name, ext='rdf') }}">RDF/XML</a>
+  · <a href="{{ url_for('data', name=name, ext='jsonld') }}">JSON-LD</a>
+  {% if info.wiki %}· <a href="{{ info.wiki }}">Wikipedia</a>{% endif %}
+  {% if info.lat %}· <a href="https://www.openstreetmap.org/?mlat={{ info.lat }}&mlon={{ info.long }}#map=11/{{ info.lat }}/{{ info.long }}">Bản đồ</a>{% endif %}
+  {% if info.usage %}· dùng trong {{ info.usage }} triple{% endif %}
+</p>
+{% if info.abstract %}<p class="abstract">{{ info.abstract }}</p>{% endif %}
+<p class="legend"><span class="badge data">data</span> trích xuất từ Wikipedia ·
+  <span class="badge inferred">inferred</span> do reasoner / luật suy ra ·
+  <span class="badge links">links</span> liên kết ngoài · <span class="badge ontology">ontology</span> TBox</p>
+<table class="data props">
+<tr><th>Thuộc tính</th><th>Giá trị</th></tr>
+{% for p in order %}
+<tr><td><a href="{{ local_link(p) }}">{{ short(p) }}</a></td><td>
+  {% for v in props[p] %}
+  <div class="val">
+    {% if v.type == 'uri' %}<a href="{{ local_link(v.value) }}">{{ v.label or short(v.value) }}</a>
+    {% elif v.type == 'bnode' %}<i>[nút rỗng]</i>
+    {% else %}{{ v.value }}{% if v.lang %}<sup>@{{ v.lang }}</sup>{% elif v.datatype %}<sup>{{ short(v.datatype) }}</sup>{% endif %}{% endif %}
+    <span class="badge {{ v.graph }}">{{ v.graph }}</span>
+  </div>
+  {% endfor %}
+</td></tr>
+{% endfor %}
+</table>
+{% if incoming %}
+<h2>Liên kết đến (là đối tượng của)</h2>
+<table class="data">
+{% for r in incoming %}<tr><td><a href="{{ local_link(r.s.value) }}">{{ r.label.value if r.label else short(r.s.value) }}</a></td>
+<td><a href="{{ local_link(r.p.value) }}">{{ short(r.p.value) }}</a></td>
+<td><span class="badge {{ r.g.value.split('/')[-1] }}">{{ r.g.value.split('/')[-1] }}</span></td></tr>{% endfor %}
+</table>
+{% endif %}
+{% endblock %}

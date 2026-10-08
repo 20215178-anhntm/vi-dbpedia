@@ -1,0 +1,8 @@
+# CQ3: Hậu duệ của Trần Thái Tông có trong dữ liệu (hasDescendant: nghịch đảo của hasAncestor, bắc cầu)
+SELECT ?d ?label ?birthYear
+WHERE {
+  vidbr:Trần_Thái_Tông vidbo:hasDescendant ?d .
+  ?d rdfs:label ?label .
+  OPTIONAL { ?d vidbo:birthYear ?birthYear }
+}
+ORDER BY ?birthYear ?label

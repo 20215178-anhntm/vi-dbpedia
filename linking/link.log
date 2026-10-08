@@ -1,0 +1,47 @@
+43,614 entities, 33,278 with an English language link
+  verified 80/33,272
+  verified 2,080/33,272
+  verified 4,080/33,272
+  verified 6,080/33,272
+  verified 8,080/33,272
+  verified 10,080/33,272
+  verified 12,080/33,272
+  verified 14,080/33,272
+  verified 16,080/33,272
+  verified 18,080/33,272
+  verified 20,080/33,272
+  verified 22,080/33,272
+  verified 24,080/33,272
+  verified 26,080/33,272
+  verified 28,080/33,272
+  verified 30,080/33,272
+  verified 32,080/33,272
+interlanguage: {'linked': 32136, 'followed_redirect': 937, 'missing_in_dbpedia': 1142}
+  matched 40/1,500
+  matched 840/1,500
+evaluation: {'sample_size': 1500, 'threshold': 0.88, 'true_positives': 728, 'false_positives': 27, 'precision': 0.9642, 'recall': 0.4853, 'f1': 0.6457, 'incomplete_because_endpoint_failed': False}
+silk-style matching for 10,930 entities without a language link
+  matched 40/10,930
+  matched 840/10,930
+  matched 1,640/10,930
+  matched 2,440/10,930
+  matched 3,240/10,930
+  matched 4,040/10,930
+  ! query failed SELECT ?s ?l ?t ?y WHERE {
+        VALUES ?l { "Lưu Ẩn (nhà Hán)"@en "Lưu Ẩn"@en "Luu An (nha Han)"@en "Luu An"@en "Lưu 
+  matched 4,840/10,930
+  matched 5,640/10,930
+  ! query failed SELECT ?s ?l ?t ?y WHERE {
+        VALUES ?l { "Joênia Wapixana"@en "Joenia Wapixana"@en "Huỳnh Anh (thiếu tướng)"@en "H
+  matched 6,440/10,930
+  ! query failed SELECT ?s ?l ?t ?y WHERE {
+        VALUES ?l { "Trần Ngọc Tam"@en "Tran Ngoc Tam"@en "Santiraj Kulnoppakiet"@en "Trần Th
+  matched 7,240/10,930
+  ! query failed SELECT ?s ?l ?t ?y WHERE {
+        VALUES ?l { "Nguyễn Văn Út"@en "Nguyen Van Ut"@en "Phạm Quang Ngọc"@en "Pham Quang Ng
+  ! DBpedia endpoint unreachable - continuing with cached answers only
+  matched 8,040/10,930
+  matched 8,840/10,930
+  matched 9,640/10,930
+  matched 10,440/10,930
+silk-style: 329 accepted links, 319 for manual review

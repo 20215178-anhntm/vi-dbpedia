@@ -1,0 +1,31 @@
+## Apache Jena Fuseki configuration for the ViDBpedia SPARQL endpoint.
+##   Query endpoint : http://localhost:3030/vidbpedia/sparql   (read-only, public)
+##   Graph store    : http://localhost:3030/vidbpedia/get      (read-only)
+## The dataset is a persistent TDB2 store; the default graph is the union of all named graphs:
+##   <http://vi.dbpedia.example.org/graph/ontology>  the vidbo ontology (TBox)
+##   <http://vi.dbpedia.example.org/graph/data>      facts extracted from Wikipedia (ABox)
+##   <http://vi.dbpedia.example.org/graph/inferred>  triples materialised by the reasoner + rules
+##   <http://vi.dbpedia.example.org/graph/links>     owl:sameAs links to DBpedia and Wikidata
+
+PREFIX fuseki: <http://jena.apache.org/fuseki#>
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ja:     <http://jena.hpl.hp.com/2005/11/Assembler#>
+PREFIX tdb2:   <http://jena.apache.org/2016/tdb#>
+PREFIX :       <#>
+
+[] rdf:type fuseki:Server ;
+   ja:context [ ja:cxtName "arq:queryTimeout" ; ja:cxtValue "60000" ] ;
+   fuseki:services ( :service ) .
+
+:service rdf:type fuseki:Service ;
+    rdfs:label "ViDBpedia" ;
+    fuseki:name "vidbpedia" ;
+    fuseki:endpoint [ fuseki:operation fuseki:query ; fuseki:name "sparql" ] ;
+    fuseki:endpoint [ fuseki:operation fuseki:query ; fuseki:name "query" ] ;
+    fuseki:endpoint [ fuseki:operation fuseki:gsp-r ; fuseki:name "get" ] ;
+    fuseki:dataset :dataset .
+
+:dataset rdf:type tdb2:DatasetTDB2 ;
+    tdb2:location "databases/vidbpedia" ;
+    tdb2:unionDefaultGraph true .

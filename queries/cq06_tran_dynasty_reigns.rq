@@ -1,0 +1,10 @@
+# CQ6: Các vua nhà Trần theo thứ tự thời gian và số năm trị vì (mẫu n-ary Reign + luật R4)
+SELECT ?label ?title ?start ?end ?years
+WHERE {
+  ?m vidbo:memberOfDynasty vidbr:Nhà_Trần ; vidbo:hasReign ?r ; rdfs:label ?label .
+  ?r a vidbo:Reign ; vidbo:startYear ?start .
+  OPTIONAL { ?r vidbo:endYear ?end }
+  OPTIONAL { ?r vidbo:durationYears ?years }
+  OPTIONAL { ?r vidbo:title ?title }
+}
+ORDER BY ?start

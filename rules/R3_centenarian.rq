@@ -1,0 +1,8 @@
+# R3 - Centenarians: persons who lived 100 years or more (classification by a numeric condition).
+PREFIX vidbo: <http://vi.dbpedia.example.org/ontology/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+CONSTRUCT { ?p a vidbo:CentenarianPerson }
+WHERE {
+  ?p vidbo:birthYear ?b ; vidbo:deathYear ?d .
+  FILTER ((xsd:integer(STR(?d)) - xsd:integer(STR(?b))) >= 100 && (xsd:integer(STR(?d)) - xsd:integer(STR(?b))) <= 125)
+}

@@ -1,0 +1,10 @@
+992,418 triples to validate (114s)
+conforms=False  violations=104  (1043s)
+       48  None / SPARQLConstraintComponent
+       24  long / MaxInclusiveConstraintComponent
+       13  lat / MaxInclusiveConstraintComponent
+        8  birthDate / LessThanConstraintComponent
+        4  adminCode / PatternConstraintComponent
+        3  birthDate / MaxCountConstraintComponent
+        2  birthYear / MaxCountConstraintComponent
+        2  adminLevel / MinCountConstraintComponent

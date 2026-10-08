@@ -1,0 +1,10 @@
+# CQ18: Tỷ lệ thực thể của mỗi lớp đã liên kết owl:sameAs tới DBpedia tiếng Anh
+SELECT ?class (COUNT(DISTINCT ?x) AS ?entities) (COUNT(DISTINCT ?linked) AS ?linkedToDBpedia)
+       (ROUND(100 * COUNT(DISTINCT ?linked) / COUNT(DISTINCT ?x)) AS ?percent)
+WHERE {
+  VALUES ?class { vidbo:Person vidbo:Monarch vidbo:MilitaryConflict vidbo:AdministrativeUnit vidbo:State vidbo:Writer }
+  ?x a ?class .
+  OPTIONAL { ?x owl:sameAs ?d . FILTER(STRSTARTS(STR(?d), "http://dbpedia.org/resource/")) BIND(?x AS ?linked) }
+}
+GROUP BY ?class
+ORDER BY DESC(?entities)

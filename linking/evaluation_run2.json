@@ -1,0 +1,191 @@
+{
+ "sample_size": 1500,
+ "threshold": 0.88,
+ "true_positives": 728,
+ "false_positives": 27,
+ "precision": 0.9642,
+ "recall": 0.4853,
+ "f1": 0.6457,
+ "per_class": {
+  "Person_n": 1127,
+  "MilitaryConflict_n": 126,
+  "Person_tp": 637,
+  "Place_n": 82,
+  "Place_tp": 52,
+  "AdministrativeUnit_tp": 29,
+  "AdministrativeUnit_n": 67,
+  "State_n": 91,
+  "WrittenWork_n": 4,
+  "AdministrativeUnit_fp": 8,
+  "Region_n": 2,
+  "State_tp": 9,
+  "Person_fp": 12,
+  "Place_fp": 5,
+  "State_fp": 2,
+  "Dynasty_n": 1,
+  "WrittenWork_tp": 1
+ },
+ "false_positive_examples": [
+  [
+   "Trà Cú (huyện)",
+   "http://dbpedia.org/resource/Trà_Cú",
+   "http://dbpedia.org/resource/Trà_Cú_district",
+   0.92
+  ],
+  [
+   "Thiệu Hóa (huyện)",
+   "http://dbpedia.org/resource/Thiệu_Hóa",
+   "http://dbpedia.org/resource/Thiệu_Hóa_district",
+   0.92
+  ],
+  [
+   "JD Vance",
+   "http://dbpedia.org/resource/JD_Vance",
+   "http://dbpedia.org/resource/J._D._Vance",
+   0.92
+  ],
+  [
+   "Mannert L. Abele",
+   "http://dbpedia.org/resource/Mannert_L._Abele",
+   "http://dbpedia.org/resource/USS_Mannert_L._Abele",
+   0.92
+  ],
+  [
+   "Kim Ji-won (diễn viên)",
+   "http://dbpedia.org/resource/Kim_Ji-won_(actress)",
+   "http://dbpedia.org/resource/Kim_Ji-won",
+   1.0
+  ],
+  [
+   "Thessalía",
+   "http://dbpedia.org/resource/Thessalia",
+   "http://dbpedia.org/resource/Thessaly",
+   0.92
+  ],
+  [
+   "Graham Greene (diễn viên)",
+   "http://dbpedia.org/resource/Graham_Greene",
+   "http://dbpedia.org/resource/Graham_Greene_(actor)",
+   0.92
+  ],
+  [
+   "Bùi Thị Minh Hằng",
+   "http://dbpedia.org/resource/Bùi_Thị_Minh_Hằng",
+   "http://dbpedia.org/resource/Bui_Thi_Minh_Hang",
+   0.92
+  ],
+  [
+   "Đoàn Thị Hương",
+   "http://dbpedia.org/resource/Doan_Thi_Huong",
+   "http://dbpedia.org/resource/Assassination_of_Kim_Jong-nam",
+   0.92
+  ],
+  [
+   "Al-Hasakah (tỉnh)",
+   "http://dbpedia.org/resource/Al-Hasakah",
+   "http://dbpedia.org/resource/Al-Hasakah_Governorate",
+   0.92
+  ],
+  [
+   "Moselle",
+   "http://dbpedia.org/resource/Moselle",
+   "http://dbpedia.org/resource/Moselle_(department)",
+   0.92
+  ],
+  [
+   "Hồ Văn Trung (Cà Mau)",
+   "http://dbpedia.org/resource/Hồ_Văn_Trung",
+   "http://dbpedia.org/resource/Hồ_Văn_Trung_(giant)",
+   0.92
+  ],
+  [
+   "Cainta (thực thể chính trị trong lịch sử)",
+   "http://dbpedia.org/resource/Cainta",
+   "http://dbpedia.org/resource/Cainta_(historical_polity)",
+   0.92
+  ],
+  [
+   "Chương Mỹ (phường)",
+   "http://dbpedia.org/resource/Chương_Mỹ",
+   "http://dbpedia.org/resource/Chương_Mỹ_district",
+   0.92
+  ],
+  [
+   "Punjab (Pakistan)",
+   "http://dbpedia.org/resource/Punjab",
+   "http://dbpedia.org/resource/Punjab,_Pakistan",
+   0.92
+  ],
+  [
+   "Mường Lát (huyện)",
+   "http://dbpedia.org/resource/Mường_Lát",
+   "http://dbpedia.org/resource/Mường_Lát_district",
+   0.92
+  ],
+  [
+   "Cát Tiên (huyện)",
+   "http://dbpedia.org/resource/Cát_Tiên",
+   "http://dbpedia.org/resource/Cát_Tiên_district",
+   0.92
+  ],
+  [
+   "Phú Thọ",
+   "http://dbpedia.org/resource/Phú_Thọ",
+   "http://dbpedia.org/resource/Phú_Thọ_province",
+   0.92
+  ],
+  [
+   "Charlie Kirk",
+   "http://dbpedia.org/resource/Charlie_Kirk",
+   "http://dbpedia.org/resource/Charles_Kirk",
+   1.0
+  ],
+  [
+   "Nguyễn Khánh (Phó Thủ tướng)",
+   "http://dbpedia.org/resource/Nguyễn_Khánh",
+   "http://dbpedia.org/resource/Nguyễn_Khánh_(communist)",
+   0.92
+  ],
+  [
+   "Gia Nghĩa (huyện)",
+   "http://dbpedia.org/resource/Gia_Nghĩa",
+   "http://dbpedia.org/resource/Chiayi_County",
+   0.92
+  ],
+  [
+   "Marcello Menegatto",
+   "http://dbpedia.org/resource/Marcello_Menegatto",
+   "http://dbpedia.org/resource/Principality_of_Seborga",
+   0.92
+  ],
+  [
+   "Bắc Yên (Thập lục quốc)",
+   "http://dbpedia.org/resource/Bắc_Yên",
+   "http://dbpedia.org/resource/Northern_Yan",
+   0.92
+  ],
+  [
+   "Bắc Kạn (tỉnh)",
+   "http://dbpedia.org/resource/Bắc_Kạn",
+   "http://dbpedia.org/resource/Bắc_Kạn_province",
+   0.92
+  ],
+  [
+   "Jang Hye-jin (diễn viên)",
+   "http://dbpedia.org/resource/Jang_Hye-jin_(actress)",
+   "http://dbpedia.org/resource/Jang_Hye-jin",
+   1.0
+  ]
+ ],
+ "incomplete_because_endpoint_failed": false,
+ "interlanguage": {
+  "linked": 32136,
+  "followed_redirect": 937,
+  "missing_in_dbpedia": 1142
+ },
+ "silk_candidates": 10930,
+ "silk_accepted": 224,
+ "silk_review": 258,
+ "failed_queries": 154,
+ "endpoint_down_during_run": true
+}

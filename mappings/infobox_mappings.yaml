@@ -1,0 +1,257 @@
+# Infobox -> ontology mappings (the role of the DBpedia "Mappings Wiki").
+#
+# Keys of `properties` may list several infobox parameter names separated by "|".
+# A parameter followed by a number ("tại vị 2", "office3", "commander1") is matched by its
+# base name; numbered groups are used to build n-ary Tenure nodes.
+#
+# kind:
+#   object   - every wiki link in the value becomes an object (resource URI)
+#   literal  - cleaned plain text, @vi language tag
+#   string   - cleaned plain text, xsd:string (codes)
+#   date     - xsd:date (+ year into `year_prop`)
+#   year     - xsd:gYear
+#   integer / decimal - number in Vietnamese notation
+#   adminType - selects the class and admin level of a Vietnamese administrative unit
+#   lat / long - WGS84 coordinates
+#   period   - "start – end" (+ start/end props)
+#
+# tenure groups: params with the same numeric suffix form one Tenure node.
+
+person_common: &person_common
+  "sinh|ngày sinh|birth_date|birthdate|born|ngày_sinh|năm sinh": {prop: birthDate, kind: date, year_prop: birthYear}
+  "mất|ngày mất|death_date|deathdate|died|ngày_mất|năm mất": {prop: deathDate, kind: date, year_prop: deathYear}
+  "nơi sinh|birth_place|birthplace|placeofbirth|nơi_sinh|quê quán": {prop: birthPlace, kind: object}
+  "nơi mất|death_place|deathplace|placeofdeath|nơi_mất": {prop: deathPlace, kind: object}
+  "nơi an táng|an táng|burial_place|resting_place|restingplace|placeofburial|lăng mộ": {prop: restingPlace, kind: object}
+  "cha|father|thân phụ": {prop: hasFather, kind: object, max: 1}
+  "mẹ|mother|thân mẫu": {prop: hasMother, kind: object, max: 1}
+  "cha mẹ|parents|song thân": {prop: hasParent, kind: object}
+  "phối ngẫu|vợ|chồng|spouse|spouses|người hôn phối|partner|hôn phối": {prop: spouse, kind: object}
+  "con cái|con|children|issue|hậu duệ": {prop: hasChild, kind: object}
+  "tôn giáo|religion": {prop: religion, kind: object}
+  "quốc tịch|nationality|citizenship": {prop: nationality, kind: object}
+  "tên đầy đủ|tên húy|tên khai sinh|birth_name|birthname|realname|full name|tên thật": {prop: birthName, kind: literal}
+  "tên gốc|native_name|chữ hán": {prop: nativeName, kind: literal}
+  "nghề nghiệp|occupation|profession|công việc": {prop: occupation, kind: literal}
+  "battles|tham chiến|các trận|chiến tranh": {prop: participatedIn, kind: object}
+  "rank|cấp bậc|quân hàm": {prop: rank, kind: literal}
+  "serviceyears|năm phục vụ|thời gian phục vụ": {prop: serviceYears, kind: literal}
+  "notableworks|notable_works|tác phẩm|tác phẩm nổi bật|tác phẩm tiêu biểu|works|magnum_opus": {prop: notableWork, kind: object}
+  "influences|ảnh hưởng|chịu ảnh hưởng": {prop: influencedBy, kind: object}
+  "influenced|ảnh hưởng tới": {prop: influenced, kind: object}
+  "dân tộc|ethnicity": {prop: ethnicGroups, kind: literal}
+  "penname|pseudonym|bút danh": {prop: penName, kind: literal}
+
+templates:
+
+  royalty:
+    names: [Thông tin nhân vật hoàng gia, Vua Việt Nam, Chúa Việt Nam, Infobox royalty, Infobox Royalty,
+            Infobox monarch, Infobox Monarch, Infobox Chinese Royalty, Infobox Emperor, Infobox Roman emperor,
+            Infobox English Royalty, Infobox British Royalty, Infobox French Royalty, Infobox Japanese Royalty,
+            Hộp thông tin vua Pháp, Infobox Russian Royalty, Infobox Spanish Royalty, Infobox German Royalty,
+            Infobox pharaoh, Infobox Korean Royalty, Infobox Vietnamese Royalty]
+    class: Person
+    properties:
+      <<: *person_common
+      "hoàng tộc|triều đại|house|dynasty|hoàng gia|royal house": {prop: memberOfDynasty, kind: object, range_class: Dynasty}
+      "miếu hiệu|temple name": {prop: templeName, kind: literal}
+      "thụy hiệu|posthumous name": {prop: posthumousName, kind: literal}
+      "niên hiệu|era name|era dates": {prop: eraName, kind: literal}
+      "tước vị|title|tước hiệu": {prop: title, kind: literal}
+    tenure:
+      class: Reign
+      link: hasReign
+      fields:
+        "chức vị|succession": {prop: position, kind: literal}
+        "tại vị|reign": {kind: period}
+        "tiền nhiệm|predecessor": {prop: predecessor, kind: object, attach: person}
+        "kế nhiệm|successor": {prop: successor, kind: object, attach: person}
+      dynasty_from: memberOfDynasty
+
+  officeholder:
+    names: [Thông tin viên chức, Infobox officeholder, Infobox office holder, Viên chức, Thông tin chính trị gia,
+            Infobox officeholder 1, Infobox officeholder1, Thông tin viên chức 1, Thông tin viên chức/1,
+            Infobox politician (general), Infobox Prime Minister, Infobox prime minister, Infobox President,
+            Infobox president, Tổng thống, Infobox governor, Infobox Ambassador, Infobox Judge]
+    class: Person
+    properties:
+      <<: *person_common
+      "party|đảng|đảng phái": {prop: wikiPageWikiLink, kind: object}
+      "alma_mater|học vấn|trường": {prop: wikiPageWikiLink, kind: object}
+    tenure:
+      class: OfficeTenure
+      link: holdsOffice
+      fields:
+        "office|chức vụ|chức vị|title": {prop: position, kind: literal}
+        "term_start|bắt đầu|nhiệm kỳ bắt đầu": {kind: start}
+        "term_end|kết thúc|nhiệm kỳ kết thúc": {kind: end}
+        "tiền nhiệm|predecessor": {prop: predecessor, kind: object, attach: person}
+        "kế nhiệm|successor": {prop: successor, kind: object, attach: person}
+        "monarch|quân chủ|vua": {prop: underMonarch, kind: object, attach: tenure}
+
+  feudal_person:     # mandarins, generals, scholars of the monarchic era (e.g. Lý Thường Kiệt)
+    names: [Thông tin nhân vật phong kiến]
+    class: Person
+    properties:
+      <<: *person_common
+      "triều đại": {prop: servedDynasty, kind: object}
+      "phục vụ|quốc gia": {prop: wikiPageWikiLink, kind: object}
+      "tự": {prop: courtesyName, kind: literal}
+      "tước hiệu": {prop: title, kind: literal}
+      "chỉ huy": {prop: wikiPageWikiLink, kind: object}
+    tenure:
+      class: OfficeTenure
+      link: holdsOffice
+      fields:
+        "chức vụ|chức quan": {prop: position, kind: literal}
+        "nhiệm kỳ": {kind: period}
+        "tiền nhiệm": {prop: predecessor, kind: object, attach: person}
+        "kế nhiệm": {prop: successor, kind: object, attach: person}
+        "quân chủ": {prop: underMonarch, kind: object, attach: tenure}
+
+  book:
+    names: [Thông tin sách, Infobox book, Infobox Book, Thông tin tác phẩm văn học]
+    class: WrittenWork
+    properties:
+      "author|tác giả": {prop: author, kind: object}
+      "release_date|ngày phát hành|năm xuất bản|pub_date": {prop: publicationYear, kind: year}
+      "country|nước|quốc gia": {prop: wikiPageWikiLink, kind: object}
+      "genre|thể loại": {prop: wikiPageWikiLink, kind: object}
+      "tên gốc|title_orig": {prop: nativeName, kind: literal}
+
+  settlement:        # places outside Vietnam (cities of China, France...) reached through links
+    names: [Infobox settlement, Thông tin khu dân cư, Infobox Settlement, Infobox city, Infobox City]
+    class: PopulatedPlace
+    properties:
+      "subdivision_name|subdivision_name1|subdivision_name2|quốc gia": {prop: locatedIn, kind: object, if_many: contains}
+      "population_total|dân số": {prop: population, kind: integer}
+      "area_total_km2|diện tích": {prop: area, kind: decimal}
+      "established_date|thành lập": {prop: foundingDate, kind: date, year_prop: foundingYear}
+      "postal_code": {prop: postalCode, kind: string}
+      "native_name": {prop: nativeName, kind: literal}
+
+  military_person:
+    names: [Tiểu sử quân nhân, Infobox military person, Infobox Military Person, Thông tin tiểu sử quân nhân,
+            Quân nhân, Thông tin quân nhân, Thông tin sĩ quan, Thông tin nhân vật quân sự]
+    class: MilitaryPerson
+    properties:
+      <<: *person_common
+      "allegiance|phục vụ|thuộc": {prop: wikiPageWikiLink, kind: object}
+      "branch|quân chủng|binh chủng": {prop: wikiPageWikiLink, kind: object}
+      "commands|chỉ huy": {prop: wikiPageWikiLink, kind: object}
+
+  writer:
+    names: [Thông tin nhà văn, Infobox writer, Infobox Writer, Thông tin nhà thơ]
+    class: Writer
+    properties:
+      <<: *person_common
+      "genre|thể loại": {prop: wikiPageWikiLink, kind: object}
+      "movement|trào lưu": {prop: wikiPageWikiLink, kind: object}
+
+  person:
+    names: [Thông tin nhân vật, Infobox person, Infobox Person, Infobox biography, Tiểu sử, Thông tin người,
+            Bảng tóm tắt tiểu sử, Infobox People, Infobox Celebrity, Thông tin nhân vật Tam Quốc, Infobox Chinese-language singer and actor]
+    class: Person
+    properties:
+      <<: *person_common
+
+  conflict:
+    names: [Thông tin chiến tranh, Infobox military conflict, Infobox Military Conflict, Infobox battle,
+            Tóm tắt chiến tranh, Hộp thông tin chiến tranh, Xung đột quân đội, Thông tin xung đột quân sự,
+            Hộp thông tin cách mạng, Hộp thông tin chiến tranh cách mạng]
+    class: MilitaryConflict
+    title_classes:            # regex on the article title -> subclass
+      "^(Trận|Hải chiến|Cuộc vây hãm|Vây hãm|Trận chiến)\\b": Battle
+      "^Chiến dịch\\b": Campaign
+      "^(Chiến tranh|Kháng chiến|Cuộc chiến|Nội chiến|Thế chiến|Chiến tranh thế giới)\\b": War
+      "^(Khởi nghĩa|Cuộc khởi nghĩa|Nổi dậy|Binh biến)\\b": Uprising
+    properties:
+      "partof|một phần của|thuộc": {prop: partOfConflict, kind: object}
+      "date|thời gian|ngày": {kind: period, start_prop: startDate, end_prop: endDate}
+      "place|địa điểm|nơi": {prop: conflictPlace, kind: object}
+      "result|kết quả": {prop: result, kind: literal}
+      "combatant|bên tham chiến|tham chiến|bên": {prop: combatant, kind: object}
+      "commander|chỉ huy": {prop: commander, kind: object}
+      "strength|lực lượng": {prop: strength, kind: literal}
+      "casualties|thương vong|tổn thất": {prop: casualties, kind: literal}
+
+  vn_admin:
+    names: [Thông tin đơn vị hành chính Việt Nam]
+    class: AdministrativeUnit
+    properties:
+      "1|loại|cấp|vai trò hành chính": {kind: adminType}
+      "tỉnh": {prop: province, kind: object}
+      "huyện": {prop: district, kind: object}
+      "thành phố": {prop: locatedIn, kind: object}
+      "vùng": {prop: region, kind: object}
+      "tỉnh lỵ|huyện lỵ|thủ phủ|thủ đô": {prop: adminSeat, kind: object}
+      "diện tích": {prop: area, kind: decimal}
+      "dân số": {prop: population, kind: integer}
+      "thời điểm dân số": {prop: populationAsOf, kind: string}
+      "mã hành chính": {prop: adminCode, kind: string}
+      "mã bưu chính": {prop: postalCode, kind: string}
+      "mã điện thoại": {prop: areaCode, kind: string}
+      "biển số xe": {prop: licensePlate, kind: string}
+      "mã địa lý": {prop: isoCode, kind: string}
+      "thành lập": {prop: foundingDate, kind: date, year_prop: foundingYear}
+      "giải thể": {prop: dissolutionYear, kind: year}
+      "sáp nhập vào|nhập vào|kế tục": {prop: mergedInto, kind: object}
+      "tên cũ": {prop: formerName, kind: literal}
+      "dân tộc": {prop: ethnicGroups, kind: literal}
+      "chủ tịch UBND": {prop: leaderName, kind: literal}
+      "vĩ độ": {kind: lat}
+      "kinh độ": {kind: long}
+      "web": {prop: website, kind: string}
+
+  country:
+    names: [Hộp thông tin quốc gia, Infobox country, Infobox Country, Infobox former country, Infobox Former Country,
+            Thông tin quốc gia cũ, Thông tin cựu quốc gia, Cựu quốc gia, Tóm tắt về quốc gia, Tóm tắt quốc gia,
+            Hộp thông tin cựu quốc gia, Tóm tắt cựu quốc gia, Infobox Country or territory]
+    class: State
+    properties:
+      "native_name|tên bản địa": {prop: nativeName, kind: literal}
+      "conventional_long_name|tên đầy đủ": {prop: title, kind: literal}
+      "year_start|năm bắt đầu": {prop: foundingYear, kind: year}
+      "year_end|năm kết thúc": {prop: dissolutionYear, kind: year}
+      "p|predecessor": {prop: predecessorState, kind: object}
+      "s|successor": {prop: successorState, kind: object}
+      "capital|thủ đô|kinh đô": {prop: capital, kind: object}
+      "religion|tôn giáo": {prop: religion, kind: object}
+      "area_km2|diện tích": {prop: area, kind: decimal}
+      "population_estimate|population_census|dân số": {prop: population, kind: integer}
+      "ethnic_groups": {prop: ethnicGroups, kind: literal}
+      "leader|leader_name": {prop: leader, kind: object}
+      "government_type|chính phủ|chính thể": {prop: governmentType, kind: literal}
+
+# Unit-type words in the first positional parameter of {{Thông tin đơn vị hành chính Việt Nam}}
+admin_types:
+  "thành phố trực thuộc trung ương": {class: Municipality, level: 1}
+  "tỉnh": {class: Province, level: 1}
+  "quận": {class: District, level: 2}
+  "huyện": {class: District, level: 2}
+  "thị xã": {class: District, level: 2}
+  "thành phố": {class: District, level: 2}   # "thành phố" alone = provincial city (2nd level) unless in 1st-level list
+  "phường": {class: Ward, level: 3}
+  "xã": {class: Commune, level: 3}
+  "thị trấn": {class: Township, level: 3}
+  "đặc khu": {class: SpecialZone, level: 3}
+
+# The six centrally-governed cities after the 2025 reform (+ Hà Nội) are first level even if typed "thành phố"
+first_level_cities: [Hà Nội, Thành phố Hồ Chí Minh, Hải Phòng, Đà Nẵng, Cần Thơ, Huế]
+
+# Category -> class rules (substring match on category title, after "Thể loại:")
+category_types:
+  "Triều đại Việt Nam": VietnameseDynasty
+  "Triều đại Trung Quốc": Dynasty
+  "Anh hùng dân tộc Việt Nam": NationalHero
+  "Vùng của Việt Nam": Region
+  "Tỉnh của Việt Nam": Province
+  "Nhà văn Việt Nam": Writer
+  "Nhà thơ Việt Nam": Writer
+  "Tướng lĩnh": MilitaryPerson
+  "Tác phẩm văn học": WrittenWork
+  "Truyện thơ Nôm": WrittenWork
+  "Tập thơ": WrittenWork
+
+# Position text of a royalty tenure that denotes a NON-sovereign title (consort / heir / prince)
+royal_title_regex: "hoàng hậu|thái hậu|hậu phi|\\bphi\\b|\\btần\\b|vương hậu|vương phi|consort|thái tử|hoàng tử|công chúa|phu nhân|chính cung|princess|prince of wales|duchess|đông cung|trữ quân|thân vương|thế tử|phò mã|quận chúa"

@@ -1,0 +1,9 @@
+# CQ5: Ai đã tham gia Chiến tranh Nguyên Mông – Đại Việt? (participatedIn ∘ partOfConflict ⊑ participatedIn)
+SELECT ?person ?label (GROUP_CONCAT(DISTINCT ?viaLabel; separator=" | ") AS ?commandedIn)
+WHERE {
+  ?person vidbo:participatedIn <http://vi.dbpedia.example.org/resource/Chiến_tranh_Nguyên_Mông_–_Đại_Việt> ;
+          rdfs:label ?label .
+  OPTIONAL { ?person vidbo:commanded ?via . ?via rdfs:label ?viaLabel }
+}
+GROUP BY ?person ?label
+ORDER BY ?label

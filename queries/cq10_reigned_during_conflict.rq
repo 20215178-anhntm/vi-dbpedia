@@ -1,0 +1,8 @@
+# CQ10: Vua trị vì đúng lúc triều đại của mình tham chiến (luật thời gian R6)
+SELECT ?monarchLabel ?conflictLabel ?year
+WHERE {
+  ?m vidbo:reignedDuringConflict ?c ; rdfs:label ?monarchLabel .
+  ?m a vidbo:VietnameseMonarch .
+  ?c rdfs:label ?conflictLabel ; vidbo:startYear ?year .
+}
+ORDER BY ?year

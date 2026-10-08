@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Silk Link Specification (LSL) – ViDBpedia persons  ->  English DBpedia persons
+  Same rule as the Python matcher in src/link.py (part B), so the links can be
+  regenerated with the Silk Workbench / Silk single-machine tool:
+
+      java -DconfigFile=linking/silk_vidbpedia_dbpedia.xml -jar silk.jar
+
+  Source: the local Fuseki endpoint of ViDBpedia, target: the public DBpedia endpoint.
+-->
+<Silk>
+  <Prefixes>
+    <Prefix id="rdf"   namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" />
+    <Prefix id="rdfs"  namespace="http://www.w3.org/2000/01/rdf-schema#" />
+    <Prefix id="owl"   namespace="http://www.w3.org/2002/07/owl#" />
+    <Prefix id="dbo"   namespace="http://dbpedia.org/ontology/" />
+    <Prefix id="vidbo" namespace="http://vi.dbpedia.example.org/ontology/" />
+  </Prefixes>
+
+  <DataSources>
+    <DataSource id="vidbpedia" type="sparqlEndpoint">
+      <Param name="endpointURI" value="http://localhost:3030/vidbpedia/sparql" />
+      <Param name="retryCount" value="3" />
+    </DataSource>
+    <DataSource id="dbpedia" type="sparqlEndpoint">
+      <Param name="endpointURI" value="https://dbpedia.org/sparql" />
+      <Param name="pageSize" value="1000" />
+      <Param name="retryCount" value="5" />
+      <Param name="retryPause" value="2000" />
+    </DataSource>
+  </DataSources>
+
+  <Interlinks>
+    <Interlink id="persons">
+      <LinkType>owl:sameAs</LinkType>
+
+      <SourceDataset dataSource="vidbpedia" var="a">
+        <RestrictTo>
+          ?a rdf:type vidbo:Person .
+          FILTER NOT EXISTS { ?a owl:sameAs ?x . FILTER(STRSTARTS(STR(?x), "http://dbpedia.org/resource/")) }
+        </RestrictTo>
+      </SourceDataset>
+      <TargetDataset dataSource="dbpedia" var="b">
+        <RestrictTo>
+          ?b rdf:type dbo:Person .
+        </RestrictTo>
+      </TargetDataset>
+
+      <LinkageRule>
+        <Aggregate type="average">
+          <!-- 0.55 : label similarity after removing Vietnamese diacritics -->
+          <Compare metric="jaroWinkler" threshold="0.12" weight="11">
+            <TransformInput function="lowerCase">
+              <TransformInput function="stripAccents">
+                <Input path="?a/rdfs:label" />
+              </TransformInput>
+            </TransformInput>
+            <TransformInput function="lowerCase">
+              <TransformInput function="stripAccents">
+                <Input path="?b/rdfs:label[@lang = 'en']" />
+              </TransformInput>
+            </TransformInput>
+          </Compare>
+          <!-- 0.20 : birth year must agree (± 2 years) -->
+          <Compare metric="num" threshold="2" weight="4" required="false">
+            <Input path="?a/vidbo:birthYear" />
+            <Input path="?b/dbo:birthYear" />
+          </Compare>
+          <!-- 0.25 : death year agreement -->
+          <Compare metric="num" threshold="2" weight="5" required="false">
+            <Input path="?a/vidbo:deathYear" />
+            <Input path="?b/dbo:deathYear" />
+          </Compare>
+        </Aggregate>
+      </LinkageRule>
+
+      <Filter limit="1" />
+
+      <Outputs>
+        <Output type="file" minConfidence="0.88">
+          <Param name="file" value="links_dbpedia_silk_persons.nt" />
+          <Param name="format" value="ntriples" />
+        </Output>
+        <Output type="file" minConfidence="0.75" maxConfidence="0.88">
+          <Param name="file" value="review_persons.nt" />
+          <Param name="format" value="alignment" />
+        </Output>
+      </Outputs>
+    </Interlink>
+  </Interlinks>
+</Silk>

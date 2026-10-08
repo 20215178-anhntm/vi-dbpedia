@@ -1,0 +1,65 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix vidbo: <http://vi.dbpedia.example.org/ontology/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+# SHACL = closed-world data quality constraints, complementary to the open-world OWL ontology.
+# OWL says "a person has at most one birth date"; only SHACL can say "a person MUST have a label",
+# "death date must not precede birth date" or "an administrative code is 2, 3 or 5 digits".
+
+vidbo:PersonShape a sh:NodeShape ;
+    sh:targetClass vidbo:Person ;
+    sh:property [ sh:path rdfs:label ; sh:minCount 1 ; sh:message "Người phải có nhãn (rdfs:label)." ] ;
+    sh:property [ sh:path vidbo:birthDate ; sh:maxCount 1 ; sh:datatype xsd:date ;
+                  sh:lessThan vidbo:deathDate ; sh:message "Ngày sinh phải duy nhất và trước ngày mất." ] ;
+    sh:property [ sh:path vidbo:birthYear ; sh:maxCount 1 ; sh:datatype xsd:gYear ;
+                  sh:message "Năm sinh phải duy nhất và có kiểu xsd:gYear." ] ;
+    sh:sparql vidbo:YearOrderConstraint ;
+    sh:property [ sh:path vidbo:hasFather ; sh:maxCount 1 ; sh:class vidbo:Person ] ;
+    sh:property [ sh:path vidbo:hasMother ; sh:maxCount 1 ; sh:class vidbo:Person ] ;
+    sh:property [ sh:path vidbo:ageAtDeath ; sh:maxInclusive 125 ; sh:minInclusive 0 ] .
+
+vidbo:TenureShape a sh:NodeShape ;
+    sh:targetClass vidbo:Tenure ;
+    sh:property [ sh:path vidbo:startYear ; sh:maxCount 1 ] ;
+    sh:sparql vidbo:YearOrderConstraint .
+
+vidbo:AdminUnitShape a sh:NodeShape ;
+    sh:targetClass vidbo:AdministrativeUnit ;
+    sh:property [ sh:path vidbo:adminCode ; sh:maxCount 1 ; sh:pattern "^[0-9]{2}$|^[0-9]{3}$|^[0-9]{5}$" ;
+                  sh:message "Mã hành chính phải gồm 2 (tỉnh), 3 (huyện) hoặc 5 (xã) chữ số." ] ;
+    sh:property [ sh:path vidbo:population ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+    sh:property [ sh:path vidbo:area ; sh:datatype xsd:decimal ; sh:minExclusive 0 ] ;
+    sh:property [ sh:path vidbo:adminLevel ; sh:minCount 1 ; sh:in ( 1 2 3 ) ;
+                  sh:message "Đơn vị hành chính phải có cấp (1, 2 hoặc 3)." ] .
+
+vidbo:GeoShape a sh:NodeShape ;
+    sh:targetSubjectsOf geo:lat ;
+    sh:property [ sh:path geo:lat ; sh:minInclusive -90 ; sh:maxInclusive 90 ] ;
+    sh:property [ sh:path geo:long ; sh:minInclusive -180 ; sh:maxInclusive 180 ] .
+
+vidbo:ConflictShape a sh:NodeShape ;
+    sh:targetClass vidbo:MilitaryConflict ;
+    sh:property [ sh:path vidbo:startYear ; sh:maxCount 1 ] ;
+    sh:sparql vidbo:YearOrderConstraint ;
+    sh:property [ sh:path vidbo:commander ; sh:class vidbo:Person ;
+                  sh:message "Chỉ huy của một trận đánh phải là một Người." ] .
+
+# gYear values (including negative years = BCE) are compared as integers with a SHACL-SPARQL constraint,
+# because sh:lessThanOrEquals is not defined for xsd:gYear in most engines.
+vidbo:YearOrderConstraint a sh:SPARQLConstraint ;
+    sh:message "Năm kết thúc / năm mất ({?end}) trước năm bắt đầu / năm sinh ({?start})." ;
+    sh:prefixes vidbo:shapesPrefixes ;
+    sh:select """
+        SELECT $this ?start ?end WHERE {
+          { $this vidbo:birthYear ?start ; vidbo:deathYear ?end . }
+          UNION
+          { $this vidbo:startYear ?start ; vidbo:endYear ?end . }
+          FILTER (xsd:integer(STR(?end)) < xsd:integer(STR(?start)))
+        }""" .
+
+vidbo:shapesPrefixes a owl:Ontology ;
+    sh:declare [ sh:prefix "vidbo" ; sh:namespace "http://vi.dbpedia.example.org/ontology/"^^xsd:anyURI ] ,
+               [ sh:prefix "xsd" ; sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ] .

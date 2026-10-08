@@ -1,0 +1,11 @@
+# R1 - Siblings: two DIFFERENT persons sharing a parent.
+# OWL cannot express "x != y" inside a property chain (hasParent ∘ hasChild would make
+# everybody his own sibling), so this is a rule. Its result feeds the OWL chain
+# uncleOrAunt = hasParent ∘ sibling in the second reasoning round.
+PREFIX vidbo: <http://vi.dbpedia.example.org/ontology/>
+CONSTRUCT { ?x vidbo:sibling ?y }
+WHERE {
+  ?x vidbo:hasParent ?p .
+  ?y vidbo:hasParent ?p .
+  FILTER (?x != ?y)
+}

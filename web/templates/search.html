@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Tìm kiếm{% if q %}: “{{ q }}”{% endif %}</h1>
+{% if q and not results %}<p>Không tìm thấy.</p>{% endif %}
+<table class="data">
+{% for r in results %}<tr><td><a href="{{ local_link(r.s.value) }}">{{ r.label.value }}</a></td>
+<td class="muted">{{ short(r.cls.value) if r.cls else '' }}</td></tr>{% endfor %}
+</table>
+{% endblock %}

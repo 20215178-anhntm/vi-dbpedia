@@ -1,0 +1,662 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vidbr: <http://vi.dbpedia.example.org/resource/> .
+
+vidbr:A_Dơi owl:sameAs dbr:A_Doi .
+
+vidbr:Amaravati_\(Chăm_Pa\) owl:sameAs dbr:Amaravati .
+
+vidbr:An_Nhơn_\(thị_xã\) owl:sameAs dbr:An_Nhơn .
+
+vidbr:Anh_Thơ_\(ca_sĩ\) owl:sameAs dbr:Anh_Thơ .
+
+vidbr:Ayun_Pa_\(thị_xã\) owl:sameAs dbr:Ayun_Pa .
+
+vidbr:Ba_Đồn_\(thị_xã\) owl:sameAs dbr:Ba_Đồn .
+
+vidbr:Barbara_Evelyn_Bailey owl:sameAs dbr:Barbara_Evelyn_Bailey .
+
+vidbr:Bernhard_Caesar_Einstein owl:sameAs dbr:Bernhard_Caesar_Einstein .
+
+vidbr:Biên_Hòa_\(thành_phố\) owl:sameAs dbr:Biên_Hòa .
+
+vidbr:Brigette_Lundy-Paine owl:sameAs dbr:Brigette_Lundy-Paine .
+
+vidbr:Buôn_Hồ_\(thị_xã\) owl:sameAs dbr:Buôn_Hồ .
+
+vidbr:Buôn_Ma_Thuột_\(thành_phố\) owl:sameAs dbr:Buôn_Ma_Thuột .
+
+vidbr:Bà_Rịa_\(thành_phố\) owl:sameAs dbr:Bà_Rịa .
+
+vidbr:Bình_Long_\(huyện\) owl:sameAs dbr:Bình_Long .
+
+vidbr:Bình_Trị_Thiên owl:sameAs dbr:Bình_Trị_Thiên .
+
+vidbr:Bùi_Quang_Huy_\(chính_khách\) owl:sameAs dbr:Bùi_Quang_Huy .
+
+vidbr:Bảo_Ân owl:sameAs dbr:Bảo_Ân .
+
+vidbr:Bảy_Núi_\(huyện\) owl:sameAs dbr:Bảy_Núi .
+
+vidbr:Bắc_Giang_\(thành_phố\) owl:sameAs dbr:Bắc_Giang .
+
+vidbr:Bắc_Kạn_\(thành_phố\) owl:sameAs dbr:Bắc_Kạn .
+
+vidbr:Bắc_Ninh_\(thành_phố_thuộc_tỉnh\) owl:sameAs dbr:Bắc_Ninh .
+
+vidbr:Bến_Cát_\(thành_phố\) owl:sameAs dbr:Bến_Cát .
+
+vidbr:Bến_Tre_\(thành_phố\) owl:sameAs dbr:Bến_Tre .
+
+vidbr:Bỉm_Sơn_\(thị_xã\) owl:sameAs dbr:Bỉm_Sơn .
+
+vidbr:Cam_Ranh_\(thành_phố\) owl:sameAs dbr:Cam_Ranh .
+
+vidbr:Cao_Bằng_\(thành_phố\) owl:sameAs dbr:Cao_Bằng .
+
+vidbr:Chiềng_Sơ owl:sameAs dbr:Chiềng_Sơ .
+
+vidbr:Chu_Ngọc_Anh_\(chính_khách\) owl:sameAs dbr:Chu_Ngọc_Anh .
+
+vidbr:Châu_Đốc_\(phường\) owl:sameAs dbr:Châu_Đốc .
+
+vidbr:Châu_Đốc_\(thành_phố\) owl:sameAs dbr:Châu_Đốc .
+
+vidbr:Chơn_Thành_\(thị_xã\) owl:sameAs dbr:Chơn_Thành .
+
+vidbr:Chế_A_Nan owl:sameAs dbr:Chế_A_Nan .
+
+vidbr:Chế_Năng owl:sameAs dbr:Chế_Năng .
+
+vidbr:Chợ_Mới_\(huyện_An_Giang\) owl:sameAs dbr:Chợ_Mới .
+
+vidbr:Cindy_Crawford_\(diễn_viên_phim_khiêu_dâm\) owl:sameAs dbr:Cindy_Crawford .
+
+vidbr:Cà_Mau_\(huyện\) owl:sameAs dbr:Cà_Mau .
+
+vidbr:Cần_Thơ_\(thành_phố_thuộc_tỉnh\) owl:sameAs dbr:Cần_Thơ .
+
+vidbr:Cần_Thơ_\(tỉnh\) owl:sameAs dbr:Cần_Thơ .
+
+vidbr:Cẩm_Phả_\(thành_phố\) owl:sameAs dbr:Cẩm_Phả .
+
+vidbr:Dominga_Sotomayor_Castillo owl:sameAs dbr:Dominga_Sotomayor_Castillo .
+
+vidbr:Don_Nguyễn owl:sameAs dbr:Don_Nguyen .
+
+vidbr:Dĩ_An_\(phường\) owl:sameAs dbr:Dĩ_An .
+
+vidbr:Dĩ_An_\(thành_phố\) owl:sameAs dbr:Dĩ_An .
+
+vidbr:Dương_Minh_Châu_\(xã\) owl:sameAs dbr:Dương_Minh_Châu .
+
+vidbr:Dương_Văn_Thái_\(1970\) owl:sameAs dbr:Dương_Văn_Thái .
+
+vidbr:Dương_Văn_Thái_\(chính_khách\) owl:sameAs dbr:Dương_Văn_Thái .
+
+vidbr:Dầu_Tiếng_\(xã\) owl:sameAs dbr:Dầu_Tiếng .
+
+vidbr:Elly_Trần owl:sameAs dbr:Elly_Trần .
+
+vidbr:Erbi_Ago owl:sameAs dbr:Erbi_Ago .
+
+vidbr:Eugène_Dejean_de_la_Bâtie owl:sameAs dbr:Eugène_Dejean_de_la_Bâtie .
+
+vidbr:Evelyn_McHale owl:sameAs dbr:Evelyn_McHale .
+
+vidbr:Francisco_Félix_de_Sousa owl:sameAs dbr:Francisco_Félix_de_Sousa .
+
+vidbr:Frema_Opare owl:sameAs dbr:Frema_Opare .
+
+vidbr:Fujiwara_no_Kinshi_\(Go-Shirakawa\) owl:sameAs dbr:Fujiwara_no_Kinshi_\(Go-Shirakawa\) .
+
+vidbr:Georgina_Bruni owl:sameAs dbr:Georgina_Bruni .
+
+vidbr:Gia_Lộc_\(phường\) owl:sameAs dbr:Gia_Lộc_district .
+
+vidbr:Gia_Lộc_\(xã\) owl:sameAs dbr:Gia_Lộc_district .
+
+vidbr:Giá_Rai_\(thị_xã\) owl:sameAs dbr:Giá_Rai .
+
+vidbr:Go_Kyung-pyo owl:sameAs dbr:Go_Kyung-pyo .
+
+vidbr:Gào owl:sameAs dbr:Gao .
+
+vidbr:Hoàng_Anh_Tuấn_\(thiếu_tướng\) owl:sameAs dbr:Hoàng_Anh_Tuấn .
+
+vidbr:Hoàng_Anh_Tuấn_\(thiếu_tướng_chính_trị\) owl:sameAs dbr:Hoàng_Anh_Tuấn .
+
+vidbr:Hoàng_Minh_Chính_\(nhà_thơ\) owl:sameAs dbr:Hoàng_Minh_Chính .
+
+vidbr:Hoàng_Nhật_Nam_\(đạo_diễn\) owl:sameAs dbr:Hoàng_Nhật_Nam .
+
+vidbr:Hoàng_Thanh_Tùng_\(chính_khách\) owl:sameAs dbr:Hoàng_Thanh_Tùng .
+
+vidbr:Hoàng_Văn_Thái_\(trung_tướng\) owl:sameAs dbr:Hoàng_Văn_Thái .
+
+vidbr:Hà_Tiên_\(huyện\) owl:sameAs dbr:Hà_Tiên .
+
+vidbr:Hà_Tiên_\(thành_phố\) owl:sameAs dbr:Hà_Tiên .
+
+vidbr:Hà_Tĩnh_\(thành_phố\) owl:sameAs dbr:Hà_Tĩnh .
+
+vidbr:Hưng_Yên_\(thành_phố\) owl:sameAs dbr:Hưng_Yên .
+
+vidbr:Hương_Giang_\(sinh_1970\) owl:sameAs dbr:Hương_Giang .
+
+vidbr:Hương_Thủy_\(thị_xã\) owl:sameAs dbr:Hương_Thủy .
+
+vidbr:Hạ_Long_\(thành_phố\) owl:sameAs dbr:Hạ_Long .
+
+vidbr:Hồng_Vân owl:sameAs dbr:Hồng_Vân .
+
+vidbr:Hội_An_\(phường\) owl:sameAs dbr:Hội_An .
+
+vidbr:Hội_An_\(thành_phố\) owl:sameAs dbr:Hội_An .
+
+vidbr:Isaac_\(ca_sĩ\) owl:sameAs dbr:Isaac .
+
+vidbr:Jamie_Fox owl:sameAs dbr:Jamie_Fox .
+
+vidbr:Jo_Yu-ri owl:sameAs dbr:Jo_Yu-ri .
+
+vidbr:Juliane_Okot_Bitek owl:sameAs dbr:Juliane_Okot_Bitek .
+
+vidbr:Kim_Won-bong owl:sameAs dbr:Kim_Won-bong .
+
+vidbr:Kiến_Tường_\(thị_xã\) owl:sameAs dbr:Kiến_Tường .
+
+vidbr:Kon_Tum_\(thành_phố\) owl:sameAs dbr:Kon_Tum .
+
+vidbr:Kép_\(phường\) owl:sameAs dbr:Kép .
+
+vidbr:La_Gi_\(thị_xã\) owl:sameAs dbr:La_Gi .
+
+vidbr:Lai_Châu_\(thành_phố\) owl:sameAs dbr:Lai_Châu .
+
+vidbr:Lee_Ju-yeon owl:sameAs dbr:Lee_Ju-yeon .
+
+vidbr:Long_Khánh_\(thành_phố\) owl:sameAs dbr:Long_Khánh .
+
+vidbr:Long_Tuyền owl:sameAs dbr:Long_Tuyền .
+
+vidbr:Long_Xuyên_\(phường\) owl:sameAs dbr:Long_Xuyên .
+
+vidbr:Long_Xuyên_\(tỉnh\) owl:sameAs dbr:Long_Xuyên .
+
+vidbr:Lào_Cai_\(phường\) owl:sameAs dbr:Lào_Cai .
+
+vidbr:Lào_Cai_\(thành_phố\) owl:sameAs dbr:Lào_Cai .
+
+vidbr:Lê_Mạnh_Hà owl:sameAs dbr:Lê_Mạnh_Hà .
+
+vidbr:Lê_Quang_Cường owl:sameAs dbr:Lê_Quang_Cường .
+
+vidbr:Lê_Quang_Hùng_\(chính_khách\) owl:sameAs dbr:Lê_Quang_Hùng .
+
+vidbr:Lê_Thanh_Bình owl:sameAs dbr:Lê_Thanh_Bình .
+
+vidbr:Lê_Thanh_Hải_\(tướng_công_an\) owl:sameAs dbr:Lê_Thanh_Hải .
+
+vidbr:Lê_Thanh_Phong_\(thẩm_phán\) owl:sameAs dbr:Lê_Thanh_Phong .
+
+vidbr:Lê_Thanh_Thúy_\(blogger\) owl:sameAs dbr:Lê_Thanh_Thúy .
+
+vidbr:Lê_Thanh_Vân_\(chính_khách\) owl:sameAs dbr:Lê_Thanh_Vân .
+
+vidbr:Lê_Văn_Phước_\(thẩm_phán\) owl:sameAs dbr:Lê_Văn_Phước .
+
+vidbr:Lê_Văn_Thành_\(Hà_Tây\) owl:sameAs dbr:Le_Van_Thanh .
+
+vidbr:Lê_Văn_Thắng_\(tướng_công_an\) owl:sameAs dbr:Lê_Văn_Thắng .
+
+vidbr:Lê_Đức_Thọ_\(chính_khách_sinh_1970\) owl:sameAs dbr:Lê_Đức_Thọ .
+
+vidbr:Megan_Alexander_\(nhà_báo\) owl:sameAs dbr:Megan_Alexander .
+
+vidbr:Mường_Lay_\(thị_xã\) owl:sameAs dbr:Mường_Lay .
+
+vidbr:Mỹ_Tho_\(thành_phố\) owl:sameAs dbr:Mỹ_Tho .
+
+vidbr:Nafissatou_Moussa_Adamou owl:sameAs dbr:Nafissatou_Moussa_Adamou .
+
+vidbr:Nana_Oye_Lithur owl:sameAs dbr:Nana_Oye_Lithur .
+
+vidbr:Nghi_Sơn_\(thị_xã\) owl:sameAs dbr:Nghi_Sơn .
+
+vidbr:Nghĩa_Lộ_\(tỉnh\) owl:sameAs dbr:Nghĩa_Lộ .
+
+vidbr:Nghĩa_Đô_\(phường\) owl:sameAs dbr:Nghĩa_Đô .
+
+vidbr:Nghĩa_Đô_\(xã\) owl:sameAs dbr:Nghĩa_Đô .
+
+vidbr:Nguyễn_An_\(thiếu_tướng\) owl:sameAs dbr:Nguyễn_An .
+
+vidbr:Nguyễn_Anh_Dũng_\(chính_khách\) owl:sameAs dbr:Nguyễn_Anh_Dũng .
+
+vidbr:Nguyễn_Anh_Tuấn_\(Hà_Nội\) owl:sameAs dbr:Nguyễn_Anh_Tuấn .
+
+vidbr:Nguyễn_Anh_Tuấn_\(Thái_Bình\) owl:sameAs dbr:Nguyễn_Anh_Tuấn .
+
+vidbr:Nguyễn_Anh_Tuấn_\(chính_khách\) owl:sameAs dbr:Nguyễn_Anh_Tuấn .
+
+vidbr:Nguyễn_Cao_Kỳ_Duyên_\(người_mẫu\) owl:sameAs dbr:Nguyễn_Cao_Kỳ_Duyên .
+
+vidbr:Nguyễn_Chí_Dũng_\(thiếu_tướng\) owl:sameAs dbr:Nguyễn_Chí_Dũng .
+
+vidbr:Nguyễn_Dzoãn_Cẩm_Vân owl:sameAs dbr:Nguyễn_Dzoãn_Cẩm_Vân .
+
+vidbr:Nguyễn_Hồng_Sơn_\(Hưng_Yên\) owl:sameAs dbr:Nguyễn_Hồng_Sơn .
+
+vidbr:Nguyễn_Hồng_Sơn_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Hồng_Sơn .
+
+vidbr:Nguyễn_Hữu_Dũng_\(chính_khách\) owl:sameAs dbr:Nguyễn_Hữu_Dũng .
+
+vidbr:Nguyễn_Khắc_Nhu owl:sameAs dbr:Nguyen_Khac_Nhu .
+
+vidbr:Nguyễn_Kim_Hồng_\(chính_khách\) owl:sameAs dbr:Nguyễn_Kim_Hồng .
+
+vidbr:Nguyễn_Minh_Quang_\(bộ_trưởng\) owl:sameAs dbr:Nguyễn_Minh_Quang .
+
+vidbr:Nguyễn_Minh_Đức_\(công_an\) owl:sameAs dbr:Nguyễn_Minh_Đức .
+
+vidbr:Nguyễn_Mạnh_Cường_\(Nam_Định\) owl:sameAs dbr:Nguyễn_Mạnh_Cường .
+
+vidbr:Nguyễn_Mạnh_Dũng_\(chính_khách\) owl:sameAs dbr:Nguyễn_Mạnh_Dũng .
+
+vidbr:Nguyễn_Mạnh_Dũng_\(tướng\) owl:sameAs dbr:Nguyễn_Mạnh_Dũng .
+
+vidbr:Nguyễn_Ngọc_Thanh_\(tướng_công_an\) owl:sameAs dbr:Nguyễn_Ngọc_Thanh .
+
+vidbr:Nguyễn_Phi_Hùng_\(phi_công\) owl:sameAs dbr:Nguyễn_Phi_Hùng .
+
+vidbr:Nguyễn_Phi_Hùng_\(thiếu_tướng\) owl:sameAs dbr:Nguyễn_Phi_Hùng .
+
+vidbr:Nguyễn_Quốc_Dũng_\(kiểm_sát_viên\) owl:sameAs dbr:Nguyễn_Quốc_Dũng .
+
+vidbr:Nguyễn_Quốc_Y owl:sameAs dbr:Nguyen_Quoc_Y .
+
+vidbr:Nguyễn_Sơn_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Sơn .
+
+vidbr:Nguyễn_Thanh_Châu owl:sameAs dbr:Nguyễn_Thanh_Châu .
+
+vidbr:Nguyễn_Thanh_Hiền_\(chính_khách\) owl:sameAs dbr:Nguyễn_Thanh_Hiền .
+
+vidbr:Nguyễn_Thanh_Hà owl:sameAs dbr:Nguyễn_Thanh_Hà .
+
+vidbr:Nguyễn_Thanh_Hải_\(kiểm_sát_viên\) owl:sameAs dbr:Nguyễn_Thanh_Hải .
+
+vidbr:Nguyễn_Thanh_Hải_\(nữ_chính_khách\) owl:sameAs dbr:Nguyễn_Thanh_Hải .
+
+vidbr:Nguyễn_Thanh_Tùng_\(Bình_Định\) owl:sameAs dbr:Nguyễn_Thanh_Tùng .
+
+vidbr:Nguyễn_Thanh_Tùng_\(thiếu_tướng\) owl:sameAs dbr:Nguyễn_Thanh_Tùng .
+
+vidbr:Nguyễn_Thiện_Nhân_\(ca_sĩ\) owl:sameAs dbr:Nguyễn_Thiện_Nhân .
+
+vidbr:Nguyễn_Thành_Công owl:sameAs dbr:Nguyễn_Thành_Công .
+
+vidbr:Nguyễn_Thái_Học_\(Phú_Yên\) owl:sameAs dbr:Nguyễn_Thái_Học .
+
+vidbr:Nguyễn_Thúy_Hiền_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Thúy_Hiền .
+
+vidbr:Nguyễn_Thế_Anh_\(sử_gia\) owl:sameAs dbr:Nguyễn_Thế_Anh .
+
+vidbr:Nguyễn_Thị_Hạnh owl:sameAs dbr:Nguyễn_Thị_Hạnh .
+
+vidbr:Nguyễn_Thị_Hằng owl:sameAs dbr:Nguyễn_Thị_Hằng .
+
+<http://vi.dbpedia.example.org/resource/Nguyễn_Thị_Hồng_(chính_khách,_sinh_1955)> owl:sameAs dbr:Nguyễn_Thị_Hồng .
+
+vidbr:Nguyễn_Thị_Lụa owl:sameAs dbr:Nguyễn_Thị_Lụa .
+
+vidbr:Nguyễn_Thị_Nga_\(doanh_nhân\) owl:sameAs dbr:Nguyễn_Thị_Nga .
+
+vidbr:Nguyễn_Thị_Nga_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Thị_Nga .
+
+vidbr:Nguyễn_Thị_Nguyệt owl:sameAs dbr:Nguyễn_Thị_Nguyệt .
+
+vidbr:Nguyễn_Thị_Oanh_\(sinh_1931\) owl:sameAs dbr:Nguyễn_Thị_Oanh .
+
+vidbr:Nguyễn_Thị_Sen_\(hoàng_hậu\) owl:sameAs dbr:Nguyễn_Thị_Sen .
+
+vidbr:Nguyễn_Thị_Sen_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Thị_Sen .
+
+vidbr:Nguyễn_Thị_Thanh_\(chính_khách\) owl:sameAs dbr:Nguyễn_Thị_Thanh .
+
+vidbr:Nguyễn_Thị_Thanh_Thủy owl:sameAs dbr:Nguyễn_Thị_Thanh_Thủy .
+
+vidbr:Nguyễn_Trung_Hiếu owl:sameAs dbr:Nguyễn_Trung_Hiếu .
+
+vidbr:Nguyễn_Tuấn_Anh_\(Hà_Nội\) owl:sameAs dbr:Nguyễn_Tuấn_Anh .
+
+vidbr:Nguyễn_Tuấn_Anh_\(Thanh_Hóa\) owl:sameAs dbr:Nguyễn_Tuấn_Anh .
+
+vidbr:Nguyễn_Tuấn_Anh_\(sinh_năm_1968\) owl:sameAs dbr:Nguyễn_Tuấn_Anh .
+
+vidbr:Nguyễn_Việt_Thắng_\(chính_khách\) owl:sameAs dbr:Nguyễn_Việt_Thắng .
+
+vidbr:Nguyễn_Văn_Công owl:sameAs dbr:Nguyễn_Văn_Công .
+
+vidbr:Nguyễn_Văn_Cường_\(kiểm_sát_viên\) owl:sameAs dbr:Nguyễn_Văn_Cường .
+
+vidbr:Nguyễn_Văn_Cường_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Văn_Cường .
+
+vidbr:Nguyễn_Văn_Dũng_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Văn_Dũng .
+
+vidbr:Nguyễn_Văn_Dũng_\(võ_sư\) owl:sameAs dbr:Nguyễn_Văn_Dũng .
+
+vidbr:Nguyễn_Văn_Hiến_\(Nghệ_An\) owl:sameAs dbr:Nguyễn_Văn_Hiến .
+
+vidbr:Nguyễn_Văn_Hiếu_\(Gia_Lai\) owl:sameAs dbr:Nguyễn_Văn_Hiếu .
+
+vidbr:Nguyễn_Văn_Hiếu_\(quan_nhà_Nguyễn\) owl:sameAs dbr:Nguyễn_Văn_Hiếu .
+
+vidbr:Nguyễn_Văn_Hiếu_\(thứ_trưởng\) owl:sameAs dbr:Nguyễn_Văn_Hiếu .
+
+vidbr:Nguyễn_Văn_Huy owl:sameAs dbr:Nguyễn_Văn_Huy .
+
+vidbr:Nguyễn_Văn_Huy_\(quân_nhân\) owl:sameAs dbr:Nguyễn_Văn_Huy .
+
+vidbr:Nguyễn_Văn_Hải_\(kiểm_sát_viên\) owl:sameAs dbr:Nguyễn_Văn_Hải .
+
+vidbr:Nguyễn_Văn_Linh_\(Bắc_Giang\) owl:sameAs dbr:Nguyễn_Văn_Linh .
+
+vidbr:Nguyễn_Văn_Lộc_\(bộ_trưởng\) owl:sameAs dbr:Nguyễn_Văn_Lộc .
+
+vidbr:Nguyễn_Văn_Lợi_\(Gia_Định\) owl:sameAs dbr:Nguyễn_Văn_Lợi .
+
+vidbr:Nguyễn_Văn_Minh_\(kiểm_sát_viên\) owl:sameAs dbr:Nguyễn_Văn_Minh .
+
+vidbr:Nguyễn_Văn_Minh_\(tướng_công_an\) owl:sameAs dbr:Nguyễn_Văn_Minh .
+
+vidbr:Nguyễn_Văn_Nghĩa_\(tướng\) owl:sameAs dbr:Nguyễn_Văn_Nghĩa .
+
+vidbr:Nguyễn_Văn_Phúc_\(chính_khách_sinh_năm_1974\) owl:sameAs dbr:Nguyễn_Văn_Phúc .
+
+vidbr:Nguyễn_Văn_Phúc_\(nhà_cách_mạng\) owl:sameAs dbr:Nguyễn_Văn_Phúc .
+
+vidbr:Nguyễn_Văn_Phụng_\(chính_khách\) owl:sameAs dbr:Nguyễn_Văn_Phụng .
+
+vidbr:Nguyễn_Văn_Thuận_\(tướng_công_an\) owl:sameAs dbr:Nguyễn_Văn_Thuận .
+
+vidbr:Nguyễn_Văn_Thành_\(chính_khách\) owl:sameAs dbr:Nguyễn_Văn_Thành .
+
+vidbr:Nguyễn_Văn_Thái_\(trung_tướng\) owl:sameAs dbr:Nguyễn_Văn_Thái .
+
+vidbr:Nguyễn_Văn_Thái_\(đại_tá\) owl:sameAs dbr:Nguyễn_Văn_Thái .
+
+vidbr:Nguyễn_Văn_Thương_\(quân_nhân\) owl:sameAs dbr:Nguyễn_Văn_Thương .
+
+vidbr:Nguyễn_Văn_Thắng_\(chính_khách\) owl:sameAs dbr:Nguyễn_Văn_Thắng .
+
+vidbr:Nguyễn_Văn_Thắng_\(thẩm_phán\) owl:sameAs dbr:Nguyễn_Văn_Thắng .
+
+vidbr:Nguyễn_Văn_Thắng_\(trung_tướng\) owl:sameAs dbr:Nguyễn_Văn_Thắng .
+
+vidbr:Nguyễn_Văn_Trường owl:sameAs dbr:Nguyễn_Văn_Trường .
+
+vidbr:Nguyễn_Văn_Tùng_\(Hải_Phòng\) owl:sameAs dbr:Nguyễn_Văn_Tùng .
+
+vidbr:Nguyễn_Văn_Vỹ owl:sameAs dbr:Nguyễn_Văn_Vy .
+
+vidbr:Nguyễn_Văn_Đức owl:sameAs dbr:Nguyễn_Văn_Đức .
+
+vidbr:Nguyễn_Xuân_Hùng owl:sameAs dbr:Nguyễn_Xuân_Hùng .
+
+vidbr:Nguyễn_Đình_Ngọc owl:sameAs dbr:Nguyen_Dinh_Ngoc .
+
+vidbr:Nguyễn_Đình_Trung_\(sinh_năm_1973\) owl:sameAs dbr:Nguyễn_Đình_Trung .
+
+vidbr:Nguyễn_Đức_Kiên_\(Hải_Dương\) owl:sameAs dbr:Nguyễn_Đức_Kiên .
+
+vidbr:Nguyễn_Đức_Kiên_\(Ninh_Bình\) owl:sameAs dbr:Nguyễn_Đức_Kiên .
+
+vidbr:Ngã_Bảy_\(phường\) owl:sameAs dbr:Ngã_Bảy .
+
+vidbr:Ngã_Bảy_\(thành_phố\) owl:sameAs dbr:Ngã_Bảy .
+
+vidbr:Ngọc_Linh owl:sameAs dbr:Ngọc_Linh .
+
+vidbr:Nha_Trang_\(thành_phố\) owl:sameAs dbr:Nha_Trang .
+
+vidbr:Ninh_Hòa_\(thị_xã\) owl:sameAs dbr:Ninh_Hòa .
+
+vidbr:Nkiru_Njoku owl:sameAs dbr:Nkiru_Njoku .
+
+vidbr:Paola_Galué owl:sameAs dbr:Paola_Galue .
+
+vidbr:Peter_New owl:sameAs dbr:Peter_New .
+
+vidbr:Phan_Thanh_Bình_\(chính_khách\) owl:sameAs dbr:Phan_Thanh_Bình .
+
+vidbr:Phan_Thiết_\(thành_phố\) owl:sameAs dbr:Phan_Thiết .
+
+vidbr:Phong_Châu_\(phường\) owl:sameAs dbr:Phong_Châu .
+
+<http://vi.dbpedia.example.org/resource/Phú_Lộc,_Huế> owl:sameAs <http://dbpedia.org/resource/Phú_Lộc,_Thừa_Thiên_Huế> .
+
+vidbr:Phú_Mỹ_\(phường\) owl:sameAs dbr:Phú_Mỹ .
+
+vidbr:Phú_Thượng owl:sameAs dbr:Phú_Thượng .
+
+vidbr:Phú_Thọ_\(xã\) owl:sameAs dbr:Phú_Thọ .
+
+<http://vi.dbpedia.example.org/resource/Phúc_Lộc,_Thái_Nguyên> owl:sameAs dbr:Phúc_Lộc .
+
+vidbr:Phúc_Yên_\(thành_phố\) owl:sameAs dbr:Phúc_Yên .
+
+vidbr:Phạm_Chuyên owl:sameAs dbr:Pham_Chuyen .
+
+vidbr:Phạm_Hồng_Sơn_\(thiếu_tướng_công_an\) owl:sameAs dbr:Phạm_Hồng_Sơn .
+
+vidbr:Phạm_Minh_Tuấn owl:sameAs dbr:Phạm_Minh_Tuấn .
+
+vidbr:Phạm_Mạnh_Hùng_\(chính_khách\) owl:sameAs dbr:Phạm_Mạnh_Hùng .
+
+vidbr:Phạm_Mạnh_Hùng_\(tướng_quân_đội\) owl:sameAs dbr:Phạm_Mạnh_Hùng .
+
+vidbr:Phạm_Phú_Quốc_\(doanh_nhân\) owl:sameAs dbr:Phạm_Phú_Quốc .
+
+vidbr:Phạm_Quốc_Khánh owl:sameAs dbr:Phạm_Quốc_Khánh .
+
+vidbr:Phạm_Tuấn_Hải_\(đầu_bếp\) owl:sameAs dbr:Phạm_Tuấn_Hải .
+
+vidbr:Phạm_Văn_Cường_\(chính_khách\) owl:sameAs dbr:Phạm_Văn_Cường .
+
+vidbr:Phạm_Xuân_Nguyên owl:sameAs dbr:Phạm_Xuân_Nguyên .
+
+vidbr:Phổ_Yên_\(thành_phố\) owl:sameAs dbr:Phổ_Yên .
+
+vidbr:Pleiku_\(thành_phố\) owl:sameAs dbr:Pleiku .
+
+vidbr:Pù_Nhi owl:sameAs dbr:Pu_Nhi .
+
+vidbr:Quang_Dũng_\(ca_sĩ\) owl:sameAs dbr:Quang_Dũng .
+
+vidbr:Quảng_Ngãi_\(thành_phố\) owl:sameAs dbr:Quảng_Ngãi .
+
+vidbr:Quảng_Trị_\(phường\) owl:sameAs dbr:Quảng_Trị .
+
+vidbr:Quảng_Yên_\(thị_xã\) owl:sameAs dbr:Quảng_Yên .
+
+vidbr:Quảng_Yên_\(tỉnh\) owl:sameAs dbr:Quảng_Yên .
+
+vidbr:Quế_Võ_\(thị_xã\) owl:sameAs dbr:Quế_Võ .
+
+vidbr:Rạch_Giá_\(thành_phố\) owl:sameAs dbr:Rạch_Giá .
+
+vidbr:Sa_Pa_\(phường\) owl:sameAs dbr:Sa_Pa_\(ward\) .
+
+vidbr:Sa_Pa_\(thị_xã\) owl:sameAs dbr:Sa_Pa_\(ward\) .
+
+vidbr:Sa_Đéc_\(thành_phố\) owl:sameAs dbr:Sa_Đéc .
+
+vidbr:Sabrina_Colie owl:sameAs dbr:Sabrina_Colie .
+
+vidbr:Seo_Yu-na owl:sameAs dbr:Seo_Yu-na .
+
+vidbr:Shin_Won-ho_\(diễn_viên\) owl:sameAs dbr:Shin_Won-ho .
+
+vidbr:Shivaji_II owl:sameAs dbr:Shivaji_II .
+
+vidbr:Shoshenq_C owl:sameAs dbr:Shoshenq_C .
+
+vidbr:Soraya_Hakuziyaremye owl:sameAs dbr:Soraya_Hakuziyaremye .
+
+vidbr:Sông_Công_\(thành_phố\) owl:sameAs dbr:Sông_Công .
+
+vidbr:Sông_Cầu_\(thị_xã\) owl:sameAs dbr:Sông_Cầu .
+
+<http://vi.dbpedia.example.org/resource/Sơn_Hải,_Bắc_Ninh> owl:sameAs <http://dbpedia.org/resource/Sơn_Hải,_Bắc_Giang> .
+
+vidbr:Sơn_La_\(thành_phố\) owl:sameAs dbr:Sơn_La .
+
+vidbr:Sầm_Sơn_\(thành_phố\) owl:sameAs dbr:Sầm_Sơn .
+
+vidbr:Tam_Kỳ_\(phường\) owl:sameAs dbr:Tam_Kỳ .
+
+vidbr:Tam_Kỳ_\(thành_phố\) owl:sameAs dbr:Tam_Kỳ .
+
+vidbr:Thanh_Hóa_\(thành_phố\) owl:sameAs dbr:Thanh_Hóa .
+
+vidbr:Thanh_Tùng_\(nhà_thơ\) owl:sameAs dbr:Thanh_Tùng .
+
+vidbr:Thiệu_\(nước\) owl:sameAs dbr:Thieu .
+
+<http://vi.dbpedia.example.org/resource/Thuận_An,_Huế> owl:sameAs <http://dbpedia.org/resource/Thuận_An,_Thừa_Thiên_Huế> .
+
+vidbr:Thuận_Thành_\(thị_xã\) owl:sameAs dbr:Thuận_Thành .
+
+vidbr:Thái_Bình_\(thành_phố\) owl:sameAs dbr:Thái_Bình .
+
+vidbr:Thái_Nguyên_\(thành_phố\) owl:sameAs dbr:Thái_Nguyên .
+
+vidbr:Thạnh_Mỹ_Tây_\(xã\) owl:sameAs dbr:Thạnh_Mỹ_Tây .
+
+vidbr:Thủ_Dầu_Một_\(thành_phố\) owl:sameAs dbr:Thủ_Dầu_Một .
+
+vidbr:Thủ_Đức_\(huyện\) owl:sameAs dbr:Thủ_Đức .
+
+vidbr:Thủ_Đức_\(quận\) owl:sameAs dbr:Thủ_Đức .
+
+vidbr:Trà_My_\(huyện\) owl:sameAs dbr:Trà_My .
+
+vidbr:Trương_Tử_Anh owl:sameAs dbr:Trương_Tử_Anh .
+
+<http://vi.dbpedia.example.org/resource/Trường_Sơn,_Bắc_Ninh> owl:sameAs <http://dbpedia.org/resource/Trường_Sơn,_Bắc_Giang> .
+
+vidbr:Trảng_Bàng_\(phường\) owl:sameAs dbr:Trảng_Bàng .
+
+vidbr:Trần_Hồng_Hà_\(Vĩnh_Phúc\) owl:sameAs dbr:Trần_Hồng_Hà .
+
+vidbr:Trần_Minh_Tiết owl:sameAs dbr:Tran_Minh_Tiet .
+
+vidbr:Trần_Quang_Khải_\(kiểm_sát_viên\) owl:sameAs dbr:Trần_Quang_Khải .
+
+vidbr:Trần_Quốc_Cường_\(sinh_năm_1961\) owl:sameAs dbr:Trần_Quốc_Cường .
+
+vidbr:Trần_Quốc_Toản_\(chính_khách\) owl:sameAs dbr:Trần_Quốc_Toản .
+
+vidbr:Trần_Thanh_Hải_\(Thiếu_tướng\) owl:sameAs dbr:Trần_Thanh_Hải .
+
+vidbr:Trần_Thanh_Hải_\(nhà_địa_chất_học\) owl:sameAs dbr:Trần_Thanh_Hải .
+
+vidbr:Trần_Thị_Dung_\(chính_khách\) owl:sameAs dbr:Trần_Thị_Dung .
+
+vidbr:Trần_Tiểu_Vy owl:sameAs dbr:Trần_Tiểu_Vy .
+
+vidbr:Trần_Văn_Minh_\(chính_khách\) owl:sameAs dbr:Trần_Văn_Minh .
+
+vidbr:Trần_Văn_Minh_\(thiếu_tướng\) owl:sameAs dbr:Trần_Văn_Minh .
+
+vidbr:Trần_Đăng_Ninh_\(chính_khách\) owl:sameAs dbr:Trần_Đăng_Ninh .
+
+vidbr:Trần_Đại_Quang_\(kiểm_sát_viên\) owl:sameAs dbr:Trần_Đại_Quang .
+
+vidbr:Tuy_Hòa_\(thành_phố\) owl:sameAs dbr:Tuy_Hòa .
+
+vidbr:Tuyên_Quang_\(thành_phố\) owl:sameAs dbr:Tuyên_Quang .
+
+<http://vi.dbpedia.example.org/resource/Tân_An,_Bắc_Ninh> owl:sameAs <http://dbpedia.org/resource/Tân_Dân,_Bắc_Giang> .
+
+<http://vi.dbpedia.example.org/resource/Tân_Sơn,_Bắc_Ninh> owl:sameAs <http://dbpedia.org/resource/Tân_Sơn,_Bắc_Giang> .
+
+vidbr:Tạ_An_Khương_\(xã\) owl:sameAs dbr:Tạ_An_Khương .
+
+vidbr:Tịnh_Biên_\(phường\) owl:sameAs dbr:Tịnh_Biên .
+
+vidbr:Tịnh_Biên_\(thị_xã\) owl:sameAs dbr:Tịnh_Biên .
+
+vidbr:Tự_Long owl:sameAs dbr:Tu_Long .
+
+vidbr:Uông_Bí_\(thành_phố\) owl:sameAs dbr:Uông_Bí .
+
+vidbr:Việt_Trì_\(thành_phố\) owl:sameAs dbr:Việt_Trì .
+
+vidbr:Việt_Yên_\(thị_xã\) owl:sameAs dbr:Việt_Yên .
+
+<http://vi.dbpedia.example.org/resource/Vân_Sơn,_Bắc_Ninh> owl:sameAs <http://dbpedia.org/resource/Vân_Sơn,_Bắc_Giang> .
+
+vidbr:Văn_Chung_\(kịch_sĩ\) owl:sameAs dbr:Văn_Chung .
+
+vidbr:Vĩnh_Yên_\(thành_phố\) owl:sameAs dbr:Vĩnh_Yên .
+
+vidbr:Vĩnh_Yên_\(tỉnh\) owl:sameAs dbr:Vĩnh_Yên .
+
+vidbr:Vũ_Xuân_Cường owl:sameAs dbr:Vũ_Xuân_Cường .
+
+vidbr:Vũng_Tàu_\(thành_phố\) owl:sameAs dbr:Vũng_Tàu .
+
+vidbr:Vị_Thanh_\(huyện\) owl:sameAs dbr:Vị_Thanh .
+
+vidbr:Vị_Thanh_\(thành_phố\) owl:sameAs dbr:Vị_Thanh .
+
+vidbr:Y_Bham_Enuol owl:sameAs dbr:Y_Bham_Enuol .
+
+vidbr:Ya_Dố owl:sameAs dbr:Ya_Do .
+
+vidbr:Yun_Dong-ju owl:sameAs dbr:Yun_Dong-ju .
+
+vidbr:Yên_Bái_\(thành_phố\) owl:sameAs dbr:Yên_Bái .
+
+<http://vi.dbpedia.example.org/resource/Yên_Định,_Bắc_Ninh> owl:sameAs <http://dbpedia.org/resource/Yên_Định,_Bắc_Giang> .
+
+vidbr:Óc_Eo_\(xã\) owl:sameAs dbr:Óc_Eo .
+
+vidbr:Ô_Chợ_Dừa_\(phường\) owl:sameAs dbr:Ô_Chợ_Dừa .
+
+vidbr:Đen_Vâu owl:sameAs dbr:Den_Vau .
+
+vidbr:Điện_Biên_Phủ_\(thành_phố\) owl:sameAs dbr:Điện_Biên_Phủ .
+
+vidbr:Điện_Bàn_\(thị_xã\) owl:sameAs dbr:Điện_Bàn .
+
+vidbr:Đoàn_Hùng_Sơn owl:sameAs dbr:Đoàn_Hùng_Sơn .
+
+vidbr:Đà_Nẵng_\(thành_phố_thuộc_tỉnh\) owl:sameAs dbr:Da_Nang .
+
+vidbr:Đông_Hà_\(thành_phố\) owl:sameAs dbr:Đông_Hà .
+
+vidbr:Đông_Hòa_\(thị_xã\) owl:sameAs dbr:Đông_Hòa .
+
+vidbr:Đông_Hòa_\(xã\) owl:sameAs dbr:Đông_Hòa .
+
+vidbr:Đông_Ngạc owl:sameAs dbr:Đông_Ngạc .
+
+vidbr:Đông_Triều_\(thành_phố\) owl:sameAs dbr:Đông_Triều .
+
+<http://vi.dbpedia.example.org/resource/Đại_Sơn,_Bắc_Ninh> owl:sameAs dbr:Chiên_Sơn .
+
+vidbr:Đặng_Thu_Thảo_\(sinh_1995\) owl:sameAs dbr:Đặng_Thu_Thảo .
+
+vidbr:Đặng_Thị_Ngọc_Hân owl:sameAs dbr:Đặng_Thị_Ngọc_Hân .
+
+vidbr:Đặng_Văn_Thành_\(doanh_nhân\) owl:sameAs dbr:Đặng_Văn_Thành .
+
+vidbr:Đặng_Văn_Thành_\(thẩm_phán\) owl:sameAs dbr:Đặng_Văn_Thành .
+
+vidbr:Đồng_Hới_\(thành_phố\) owl:sameAs dbr:Đồng_Hới .
+
+vidbr:Đức_Phổ_\(thị_xã\) owl:sameAs dbr:Đức_Phổ .
+

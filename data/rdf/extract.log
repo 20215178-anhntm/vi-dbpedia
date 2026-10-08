@@ -1,0 +1,39 @@
+44003 pages, 317604 redirects
+  2000/44003
+  4000/44003
+  6000/44003
+  8000/44003
+  10000/44003
+  12000/44003
+  14000/44003
+  16000/44003
+  18000/44003
+  20000/44003
+  22000/44003
+  24000/44003
+  26000/44003
+  28000/44003
+  30000/44003
+  32000/44003
+  34000/44003
+  36000/44003
+  38000/44003
+  40000/44003
+  42000/44003
+  44000/44003
+  range check: 536 object triples moved to mappingbased_objects_disjoint_range
+  labels                    43,614 triples
+  instance_types            45,575 triples
+  mappingbased_objects     206,184 triples
+  mappingbased_literals    239,831 triples
+  tenures                  135,405 triples
+  abstracts                 87,172 triples
+  article_categories       353,687 triples
+  geo_coordinates           13,745 triples
+  page_metadata            256,546 triples
+  redirects                 43,140 triples
+  wikidata_links            86,290 triples
+  mappingbased_objects_disjoint_range       536 triples
+TOTAL 1,511,725 triples
+{'pages': 43614, 'infobox_country': 1754, 'literal': 70865, 'infobox_vn_admin': 4170, 'number': 11205, 'object': 209775, 'date': 43873, 'infobox_feudal_person': 560, 'infobox_royalty': 7078, 'tenure_Reign': 4691, 'infobox_writer': 1074, 'infobox_conflict': 2366, 'infobox_officeholder': 7134, 'tenure_OfficeTenure': 20755, 'infobox_person': 11473, 'infobox_settlement': 1446, 'infobox_military_person': 1332, 'tenure_RoyalTitleTenure': 1807, 'infobox_book': 89, 'skipped_disambiguation': 389, 'disjoint_range_removed': 536}
+  labels_referenced        53,907 triples

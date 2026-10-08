@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}ViDBpedia{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <a class="brand" href="/">Vi<b>DBpedia</b></a>
+  <nav><a href="/sparql">SPARQL</a><a href="/ontology">Ontology</a><a href="/search">Tìm kiếm</a></nav>
+  <form action="/search"><input name="q" placeholder="Tìm thực thể… (vd: Trần Hưng Đạo)" value="{{ q or '' }}"></form>
+</header>
+<main>{% block body %}{% endblock %}</main>
+<footer>Dữ liệu trích xuất từ Wikipedia tiếng Việt (CC BY-SA 4.0) · Ontology <code>vidbo</code> · Liên kết tới DBpedia &amp; Wikidata</footer>
+</body>
+</html>

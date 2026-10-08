@@ -1,0 +1,11 @@
+# CQ9: Các tỉnh/thành cấp 1: số đơn vị cấp xã, dân số, diện tích, mật độ (adminLevel=3 → ThirdLevelUnit; luật R5)
+SELECT ?label ?communes ?population ?area ?density
+WHERE {
+  { SELECT ?p (COUNT(DISTINCT ?x) AS ?communes) WHERE {
+      ?x a vidbo:ThirdLevelUnit ; vidbo:province ?p . } GROUP BY ?p }
+  ?p a vidbo:FirstLevelUnit ; rdfs:label ?label .
+  OPTIONAL { ?p vidbo:population ?population }
+  OPTIONAL { ?p vidbo:area ?area }
+  OPTIONAL { ?p vidbo:populationDensity ?density }
+}
+ORDER BY DESC(?communes)

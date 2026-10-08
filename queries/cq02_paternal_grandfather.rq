@@ -1,0 +1,6 @@
+# CQ2: Ông nội của Trần Nhân Tông (property chain hasFather ∘ hasFather)
+SELECT ?grandfather ?label ?g
+WHERE {
+  GRAPH ?g { vidbr:Trần_Nhân_Tông vidbo:hasPaternalGrandfather ?grandfather }
+  ?grandfather rdfs:label ?label .
+}

@@ -1,0 +1,14 @@
+# CQ17: Kiểm tra chất lượng: năm mất trước năm sinh, hoặc vừa là Người vừa là Địa điểm (vi phạm Person ⊥ Place)
+SELECT ?x ?label ?problem
+WHERE {
+  {
+    ?x vidbo:birthYear ?b ; vidbo:deathYear ?d .
+    FILTER(xsd:integer(STR(?d)) < xsd:integer(STR(?b)))
+    BIND("năm mất trước năm sinh" AS ?problem)
+  } UNION {
+    ?x a vidbo:Person , vidbo:Place .
+    BIND("vừa là Person vừa là Place (Person ⊥ Place)" AS ?problem)
+  }
+  OPTIONAL { ?x rdfs:label ?label }
+}
+LIMIT 100

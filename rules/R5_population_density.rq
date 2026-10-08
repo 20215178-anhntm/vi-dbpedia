@@ -1,0 +1,9 @@
+# R5 - Population density (people / km²) of a place.
+PREFIX vidbo: <http://vi.dbpedia.example.org/ontology/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+CONSTRUCT { ?x vidbo:populationDensity ?density }
+WHERE {
+  ?x vidbo:population ?pop ; vidbo:area ?area .
+  FILTER (?area > 0)
+  BIND (ROUND(xsd:decimal(?pop) / xsd:decimal(?area) * 10) / 10 AS ?density)
+}

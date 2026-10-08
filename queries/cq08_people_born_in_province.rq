@@ -1,0 +1,9 @@
+# CQ8: Danh nhân sinh ra trong địa bàn tỉnh Nghệ An, kể cả khi Wikipedia chỉ ghi huyện/xã (bornWithin ∘ locatedIn)
+SELECT ?person ?label ?birthYear (GROUP_CONCAT(DISTINCT ?placeLabel; separator=", ") AS ?statedBirthPlace)
+WHERE {
+  ?person vidbo:bornWithin vidbr:Nghệ_An ; rdfs:label ?label .
+  OPTIONAL { ?person vidbo:birthYear ?birthYear }
+  OPTIONAL { ?person vidbo:birthPlace ?bp . ?bp rdfs:label ?placeLabel }
+}
+GROUP BY ?person ?label ?birthYear
+ORDER BY ?birthYear

@@ -1,0 +1,9 @@
+# R4 - Duration (years) of a reign / office tenure.
+PREFIX vidbo: <http://vi.dbpedia.example.org/ontology/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+CONSTRUCT { ?t vidbo:durationYears ?dur }
+WHERE {
+  ?t vidbo:startYear ?s ; vidbo:endYear ?e .
+  BIND (xsd:decimal(xsd:integer(STR(?e)) - xsd:integer(STR(?s))) AS ?dur)
+  FILTER (?dur >= 0 && ?dur < 100)
+}

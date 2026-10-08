@@ -1,0 +1,9 @@
+# CQ14: Vị quân chủ nào có nhiều quan lại nhất (RoyalCourtOfficial ≡ OfficeHolder ⊓ ∃servedUnder.Monarch; servedUnder = holdsOffice ∘ underMonarch)
+SELECT ?monarchLabel (COUNT(DISTINCT ?p) AS ?officials) (GROUP_CONCAT(DISTINCT ?pLabel; separator=" | ") AS ?examples)
+WHERE {
+  ?p a vidbo:RoyalCourtOfficial ; vidbo:servedUnder ?m ; rdfs:label ?pLabel .
+  ?m a vidbo:Monarch ; rdfs:label ?monarchLabel .
+}
+GROUP BY ?monarchLabel
+ORDER BY DESC(?officials)
+LIMIT 15

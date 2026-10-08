@@ -1,0 +1,9 @@
+# R2 - Age at death (in years) from birth and death years (date arithmetic is outside OWL).
+PREFIX vidbo: <http://vi.dbpedia.example.org/ontology/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+CONSTRUCT { ?p vidbo:ageAtDeath ?age }
+WHERE {
+  ?p vidbo:birthYear ?b ; vidbo:deathYear ?d .
+  BIND (xsd:integer(STR(?d)) - xsd:integer(STR(?b)) AS ?age)
+  FILTER (?age >= 0 && ?age <= 125)
+}

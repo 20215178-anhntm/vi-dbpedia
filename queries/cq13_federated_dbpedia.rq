@@ -1,0 +1,17 @@
+# CQ13: Truy vấn liên hợp: lấy mô tả tiếng Anh và ảnh từ DBpedia cho các vua nhà Lý qua owl:sameAs (cần Internet)
+# Jena evaluates the SERVICE block first, so it is restricted to Vietnamese monarchs on the DBpedia side;
+# the join with the local data (memberOfDynasty Nhà Lý, owl:sameAs) happens in ViDBpedia.
+# (The current DBpedia release no longer publishes dbo:abstract; dbo:description is used instead.)
+SELECT ?label ?dbpedia ?descriptionEn ?thumbnail
+WHERE {
+  SERVICE <https://dbpedia.org/sparql> {
+    ?dbpedia <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Vietnamese_monarchs> .
+    OPTIONAL { ?dbpedia <http://dbpedia.org/ontology/description> ?descriptionEn . FILTER(LANG(?descriptionEn) = "en") }
+    OPTIONAL { ?dbpedia <http://dbpedia.org/ontology/thumbnail> ?thumbnail }
+  }
+  ?m owl:sameAs ?dbpedia ;
+     vidbo:memberOfDynasty vidbr:Nhà_Lý ;
+     a vidbo:Monarch ;
+     rdfs:label ?label .
+}
+ORDER BY ?label

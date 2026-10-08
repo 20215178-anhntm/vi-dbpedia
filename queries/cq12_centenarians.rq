@@ -1,0 +1,8 @@
+# CQ12: Nhân vật thọ từ 100 tuổi trở lên (luật R2 ageAtDeath, R3 CentenarianPerson)
+SELECT ?label ?birthYear ?deathYear ?age
+WHERE {
+  ?p a vidbo:CentenarianPerson ; rdfs:label ?label ;
+     vidbo:birthYear ?birthYear ; vidbo:deathYear ?deathYear ; vidbo:ageAtDeath ?age .
+}
+ORDER BY DESC(?age)
+LIMIT 50

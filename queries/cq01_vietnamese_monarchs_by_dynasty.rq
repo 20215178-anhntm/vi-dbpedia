@@ -1,0 +1,12 @@
+# CQ1: Các vua Việt Nam theo từng triều đại và năm lên ngôi (VietnameseMonarch là lớp ĐỊNH NGHĨA, được suy diễn)
+SELECT ?dynastyLabel ?monarchLabel (MIN(xsd:integer(STR(?start))) AS ?firstYear)
+WHERE {
+  ?m a vidbo:VietnameseMonarch ;
+     rdfs:label ?monarchLabel ;
+     vidbo:memberOfDynasty ?d ;
+     vidbo:hasReign ?r .
+  ?d a vidbo:VietnameseDynasty ; rdfs:label ?dynastyLabel .
+  OPTIONAL { ?r vidbo:startYear ?start }
+}
+GROUP BY ?dynastyLabel ?monarchLabel
+ORDER BY (!BOUND(?firstYear)) ?firstYear

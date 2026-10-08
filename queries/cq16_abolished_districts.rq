@@ -1,0 +1,8 @@
+# CQ16: Các huyện đã giải thể từ 1/7/2025 (SecondLevelUnit ⊑ HistoricalAdministrativeUnit) theo tỉnh
+SELECT ?provinceLabel (COUNT(DISTINCT ?d) AS ?abolishedDistricts) (SAMPLE(?dLabel) AS ?example)
+WHERE {
+  ?d a vidbo:HistoricalAdministrativeUnit ; rdfs:label ?dLabel ; vidbo:province ?p .
+  ?p rdfs:label ?provinceLabel .
+}
+GROUP BY ?provinceLabel
+ORDER BY DESC(?abolishedDistricts)

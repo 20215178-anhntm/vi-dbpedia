@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="hero">
+  <h1>ViDBpedia — DBpedia tiếng Việt</h1>
+  <p>Đồ thị tri thức Linked Data (5★) về <b>lịch sử, địa lý và danh nhân Việt Nam</b>, được trích xuất từ hộp thông tin của Wikipedia tiếng Việt,
+     mô hình hóa bằng ontology OWL 2 <code>vidbo</code>, suy diễn bằng reasoner OWL 2 RL và liên kết <code>owl:sameAs</code> tới DBpedia tiếng Anh.</p>
+</section>
+{% if stats.error %}
+<p class="warn">Chưa kết nối được SPARQL endpoint (Fuseki): {{ stats.error }}</p>
+{% else %}
+<section class="grid">
+  {% for g, n in stats.graphs.items() %}
+  <div class="tile"><div class="num">{{ "{:,}".format(n) }}</div><div>triple — graph <code>{{ g }}</code></div></div>
+  {% endfor %}
+</section>
+<h2>Số thực thể theo lớp (gồm cả suy diễn)</h2>
+<table class="data"><tr><th>Lớp</th><th>Số thực thể</th></tr>
+{% for c, n in stats.classes %}<tr><td><a href="{{ local_link(c) }}">{{ short(c) }}</a></td><td class="r">{{ "{:,}".format(n) }}</td></tr>{% endfor %}
+</table>
+{% endif %}
+<h2>Câu hỏi năng lực (competency questions)</h2>
+<ul class="examples">
+{% for e in examples %}<li><a href="/sparql?example={{ e.id }}">{{ e.title }}</a></li>{% endfor %}
+</ul>
+{% endblock %}

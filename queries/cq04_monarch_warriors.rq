@@ -1,0 +1,10 @@
+# CQ4: Những vị vua Việt Nam trực tiếp cầm quân (MonarchWarrior = Monarch ⊓ MilitaryCommander) và trận đánh
+SELECT ?monarchLabel (GROUP_CONCAT(DISTINCT ?battleLabel; separator=" | ") AS ?battles)
+WHERE {
+  ?m a vidbo:MonarchWarrior , vidbo:VietnameseMonarch ;
+     rdfs:label ?monarchLabel ;
+     vidbo:commanded ?b .
+  ?b rdfs:label ?battleLabel .
+}
+GROUP BY ?monarchLabel
+ORDER BY ?monarchLabel

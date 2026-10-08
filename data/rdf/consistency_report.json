@@ -1,0 +1,2248 @@
+{
+ "summary": {
+  "disjoint_classes": 145,
+  "transitive_cycle": 857,
+  "asymmetric": 6,
+  "functional_datatype": 6,
+  "has_key_duplicates": 19
+ },
+ "details": {
+  "disjoint_classes": [
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Tử_trận",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Người_Ba_Lan",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Trương_Tự_Trung",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Lục_quân_Đế_quốc_Nhật_Bản",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Houthi",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Samosata",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Circassia",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Hannover",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/The_Independent",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vua_Arthur",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Liên_bang_Đông_Dương",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/The_Wall_Street_Journal",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/The_Guardian",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Lê_Chân",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Muwatalli_II",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/The_New_York_Times",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Reuters",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Tagsatzung",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Radagaisus",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Los_Angeles_Times",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Time_(tạp_chí)",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Cơ_quan_Tình_báo_Trung_ương_(Hoa_Kỳ)",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Rabaul",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Boeotia",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Thập_tự_chinh",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Ptolemaios_XIII_Theos_Philopator",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Kansas",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Hồi_giáo",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Tinian",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Fort_Leavenworth",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/CNN",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chiến_tranh_Kavkaz",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Athena",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/BBC_News",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Phước_Long_(tỉnh)",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Thăng_Long",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Sachsen",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Bethesda,_Maryland",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Hồng_Kông",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Palenque",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Luang_Prabang",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Monza",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Nürnberg",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Quốc_gia_Việt_Nam",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Đảng_Công_nhân_Đức_Quốc_gia_Xã_hội_chủ_nghĩa",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Sicilia",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Gaza_Strip",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Firenze",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vương_quốc_Sardegna",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Địa_Trung_Hải",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Bộ_Giáo_dục_và_Đào_tạo",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Bình_Long_(tỉnh)",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Sussex",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Buôn_Ma_Thuột_(định_hướng)",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Silesia",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Tây_Đô_(định_hướng)",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Đại_Công_quốc_Posen",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Fontevraud-l'Abbaye",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Lan_Na",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Ngoại_Mông",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Soissons",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Medan",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Quảng_Tín_(tỉnh)",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Tiểu_Á",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/BBC",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Guam",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Bactria",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Mauretania",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Bournemouth",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Pavia",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Sicyon",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Gallipoli",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Victoria",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Al-Jura",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Forbes",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chosun_Ilbo",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Paphlagonia",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Naver",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Pahang",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/USA_Today",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Dmitrov",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Bán_đảo_Đông_Dương",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vĩnh_Hòa_(định_hướng)",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Phượng_Dương",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Danville,_Vermont",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vũ_Quý",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Punjab",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/VnExpress",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Khu_tự_trị_Tây_Bắc",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Tuyển_hầu_quốc_Hesse",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Trường_Thọ_(định_hướng)",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/VietNamNet",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Sakhalin",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/De_facto",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vương_tộc_Hohenzollern",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/De_jure",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Nam_Minh",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Biệt_khu_Thủ_đô",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Liên_Xô_giải_thể",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/VietnamPlus",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Liên_minh_phương_Bắc",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/José_María_Orellana",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Tiền_phong_(báo)",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Biển_Đỏ",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Người_Pháp",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Horemheb",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chiến_tranh_Thái_Bình_Dương",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chiến_tranh",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Mùa_xuân_Ả_Rập",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chūgoku",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Cách_mạng_Pháp",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Manuel_Estrada_Cabrera",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Xuân_Thu",
+    "classes": [
+     "Event",
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Wolfgang_Amadeus_Mozart",
+    "classes": [
+     "Person",
+     "Work"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Biên_giới_Campuchia–Thái_Lan",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Người_Việt",
+    "classes": [
+     "Event",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chiến_Quốc",
+    "classes": [
+     "Event",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Goryeosa",
+    "classes": [
+     "Person",
+     "Place"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Loạn_ba_vương",
+    "classes": [
+     "Event",
+     "Group"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Gia_tộc_Minamoto",
+    "classes": [
+     "Event",
+     "Group"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chiến_Quốc",
+    "classes": [
+     "Event",
+     "Group"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/An_Dương_Vương",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Thiên_hoàng",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Liên_bang_Đông_Dương",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Geoffrey_V_của_Anjou",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Luang_Prabang",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vương_tộc_Hohenzollern",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Nam_Minh",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vương_tộc_Áo-Este",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Bắc_Nguyên",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vương_triều_Chakri",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Triều_đại_Yarlung",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Hecatomnus",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Quốc_vương_Campuchia",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Hoàng_thất_Nhật_Bản",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Hoằng_Cát_Lạt_thị",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vương_triều_thứ_Tư_của_Ai_Cập",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Nguyễn",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Toàn_Châu_Lý_thị",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Lý_(họ)",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Vương_thị",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/An_Đông_Quyền_thị",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Nam_Dương_Hồng_thị",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Pha_Bình_Doãn_thị",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Chiến_Quốc",
+    "classes": [
+     "Group",
+     "Person"
+    ]
+   }
+  ],
+  "transitive_cycle": [
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Jesse_Root_Grant",
+    "b": "http://vi.dbpedia.example.org/resource/Ulysses_S._Grant",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Antiochus_IV_của_Commagene",
+    "b": "http://vi.dbpedia.example.org/resource/Iotapa",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Jigme_Dorji_Wangchuck",
+    "b": "http://vi.dbpedia.example.org/resource/Jigme_Singye_Wangchuck",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Domentzia",
+    "b": "http://vi.dbpedia.example.org/resource/Phocas",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Borommarachathirat_II",
+    "b": "http://vi.dbpedia.example.org/resource/Borommatrailokkanat",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Aleksandar_I_của_Nam_Tư",
+    "b": "http://vi.dbpedia.example.org/resource/Petar_II_của_Nam_Tư",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Borommatrailokkanat",
+    "b": "http://vi.dbpedia.example.org/resource/Intharacha",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Shō_Hō",
+    "b": "http://vi.dbpedia.example.org/resource/Án_ti",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Borommarachathirat_II",
+    "b": "http://vi.dbpedia.example.org/resource/Intharacha",
+    "property": "hasAncestor"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Minsk",
+    "b": "http://vi.dbpedia.example.org/resource/Minsk_(tỉnh)",
+    "property": "locatedIn"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Vitebsk",
+    "b": "http://vi.dbpedia.example.org/resource/Vitebsk_(tỉnh)",
+    "property": "locatedIn"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Mogilev",
+    "b": "http://vi.dbpedia.example.org/resource/Mogilev_(tỉnh)",
+    "property": "locatedIn"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Khủng_hoảng_Biển_Đỏ",
+    "b": "http://vi.dbpedia.example.org/resource/Nội_chiến_Yemen_(2014–nay)",
+    "property": "hasSubConflict"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Chiến_tranh_Israel_–_Hamas",
+    "b": "http://vi.dbpedia.example.org/resource/Khủng_hoảng_Trung_Đông_(2023–nay)",
+    "property": "hasSubConflict"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Khủng_hoảng_Biển_Đỏ",
+    "b": "http://vi.dbpedia.example.org/resource/Nội_chiến_Yemen_(2014–nay)",
+    "property": "partOfConflict"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Chiến_tranh_Israel_–_Hamas",
+    "b": "http://vi.dbpedia.example.org/resource/Khủng_hoảng_Trung_Đông_(2023–nay)",
+    "property": "partOfConflict"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Minsk",
+    "b": "http://vi.dbpedia.example.org/resource/Minsk_(tỉnh)",
+    "property": "contains"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Vitebsk",
+    "b": "http://vi.dbpedia.example.org/resource/Vitebsk_(tỉnh)",
+    "property": "contains"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Mogilev",
+    "b": "http://vi.dbpedia.example.org/resource/Mogilev_(tỉnh)",
+    "property": "contains"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Jesse_Root_Grant",
+    "b": "http://vi.dbpedia.example.org/resource/Ulysses_S._Grant",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Antiochus_IV_của_Commagene",
+    "b": "http://vi.dbpedia.example.org/resource/Iotapa",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Jigme_Dorji_Wangchuck",
+    "b": "http://vi.dbpedia.example.org/resource/Jigme_Singye_Wangchuck",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Domentzia",
+    "b": "http://vi.dbpedia.example.org/resource/Phocas",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Borommarachathirat_II",
+    "b": "http://vi.dbpedia.example.org/resource/Borommatrailokkanat",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Aleksandar_I_của_Nam_Tư",
+    "b": "http://vi.dbpedia.example.org/resource/Petar_II_của_Nam_Tư",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Borommatrailokkanat",
+    "b": "http://vi.dbpedia.example.org/resource/Intharacha",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Shō_Hō",
+    "b": "http://vi.dbpedia.example.org/resource/Án_ti",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Borommarachathirat_II",
+    "b": "http://vi.dbpedia.example.org/resource/Intharacha",
+    "property": "hasDescendant"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "b": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "b": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/John_Maxwell_Coetzee",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ezra_Pound",
+    "b": "http://vi.dbpedia.example.org/resource/Guy_de_Maupassant",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Colm_Tóibín",
+    "b": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "b": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Knut_Hamsun",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Guy_de_Maupassant",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Colm_Tóibín",
+    "b": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Doris_Lessing",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Al-Biruni",
+    "b": "http://vi.dbpedia.example.org/resource/Al-Sijzi",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "b": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Colm_Tóibín",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ezra_Pound",
+    "b": "http://vi.dbpedia.example.org/resource/Herman_Melville",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Guy_de_Maupassant",
+    "b": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/Ivan_Sergeyevich_Turgenev",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "b": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/Guy_de_Maupassant",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Doris_Lessing",
+    "b": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Guy_de_Maupassant",
+    "b": "http://vi.dbpedia.example.org/resource/John_Maxwell_Coetzee",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Samuel_Beckett",
+    "b": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "b": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ezra_Pound",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "b": "http://vi.dbpedia.example.org/resource/Ivan_Sergeyevich_Turgenev",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/Knut_Hamsun",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ezra_Pound",
+    "b": "http://vi.dbpedia.example.org/resource/James_Joyce",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "b": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Colm_Tóibín",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/Ted_Hughes",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "b": "http://vi.dbpedia.example.org/resource/Knut_Hamsun",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Maxwell_Coetzee",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Knut_Hamsun",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ivan_Sergeyevich_Turgenev",
+    "b": "http://vi.dbpedia.example.org/resource/Ted_Hughes",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ivan_Sergeyevich_Turgenev",
+    "b": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Colm_Tóibín",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/Herman_Melville",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "b": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/William_Butler_Yeats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ivan_Sergeyevich_Turgenev",
+    "b": "http://vi.dbpedia.example.org/resource/William_Butler_Yeats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "b": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/Samuel_Beckett",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Mikhail_Afanasievich_Bulgakov",
+    "b": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "b": "http://vi.dbpedia.example.org/resource/Seamus_Heaney",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "b": "http://vi.dbpedia.example.org/resource/Ted_Hughes",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Samuel_Beckett",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Doris_Lessing",
+    "b": "http://vi.dbpedia.example.org/resource/John_Maxwell_Coetzee",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "b": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Joyce_Carol_Oates",
+    "b": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "b": "http://vi.dbpedia.example.org/resource/William_Butler_Yeats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Herman_Melville",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Knut_Hamsun",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Mikhail_Afanasievich_Bulgakov",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/James_Joyce",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "b": "http://vi.dbpedia.example.org/resource/Samuel_Beckett",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Colm_Tóibín",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Herman_Melville",
+    "b": "http://vi.dbpedia.example.org/resource/James_Joyce",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Georg_Simmel",
+    "b": "http://vi.dbpedia.example.org/resource/Max_Weber",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "b": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Honoré_de_Balzac",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Franz_Kafka",
+    "b": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/Jean-Paul_Sartre",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "b": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/Doris_Lessing",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Jean-Paul_Sartre",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/William_Butler_Yeats",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gerard_Manley_Hopkins",
+    "b": "http://vi.dbpedia.example.org/resource/John_Maxwell_Coetzee",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "b": "http://vi.dbpedia.example.org/resource/Samuel_Beckett",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Colm_Tóibín",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/James_Joyce",
+    "b": "http://vi.dbpedia.example.org/resource/Ted_Hughes",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/James_Joyce",
+    "b": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "b": "http://vi.dbpedia.example.org/resource/Jean-Paul_Sartre",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/Mikhail_Afanasievich_Bulgakov",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Henry_James",
+    "b": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/William_Shakespeare",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Doris_Lessing",
+    "b": "http://vi.dbpedia.example.org/resource/Guy_de_Maupassant",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ezra_Pound",
+    "b": "http://vi.dbpedia.example.org/resource/Ivan_Sergeyevich_Turgenev",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "b": "http://vi.dbpedia.example.org/resource/Octavio_Paz",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/Ernest_Hemingway",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/D._H._Lawrence",
+    "b": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Nathaniel_Hawthorne",
+    "b": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/James_Joyce",
+    "b": "http://vi.dbpedia.example.org/resource/William_Butler_Yeats",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "b": "http://vi.dbpedia.example.org/resource/Mikhail_Afanasievich_Bulgakov",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Keats",
+    "b": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Anton_Pavlovich_Chekhov",
+    "b": "http://vi.dbpedia.example.org/resource/Ezra_Pound",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Mikhail_Afanasievich_Bulgakov",
+    "b": "http://vi.dbpedia.example.org/resource/Samuel_Beckett",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "b": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Lev_Nikolayevich_Tolstoy",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ivan_Sergeyevich_Turgenev",
+    "b": "http://vi.dbpedia.example.org/resource/Jean-Paul_Sartre",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/Orhan_Pamuk",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Sylvia_Plath",
+    "b": "http://vi.dbpedia.example.org/resource/T._S._Eliot",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Gustave_Flaubert",
+    "b": "http://vi.dbpedia.example.org/resource/Marcel_Proust",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Alfred_Tennyson",
+    "b": "http://vi.dbpedia.example.org/resource/Samuel_Beckett",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Geoffrey_Chaucer",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Guy_de_Maupassant",
+    "b": "http://vi.dbpedia.example.org/resource/Herman_Melville",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Friedrich_Nietzsche",
+    "b": "http://vi.dbpedia.example.org/resource/John_Maxwell_Coetzee",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Fyodor_Mikhaylovich_Dostoyevsky",
+    "b": "http://vi.dbpedia.example.org/resource/Tom_Stoppard",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Knut_Hamsun",
+    "b": "http://vi.dbpedia.example.org/resource/Ted_Hughes",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Knut_Hamsun",
+    "b": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ezra_Pound",
+    "b": "http://vi.dbpedia.example.org/resource/Virginia_Woolf",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/John_Donne",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Ted_Hughes",
+    "b": "http://vi.dbpedia.example.org/resource/Wilfred_Owen",
+    "property": "intellectualLineage"
+   }
+  ],
+  "asymmetric": [
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Domentzia",
+    "b": "http://vi.dbpedia.example.org/resource/Phocas",
+    "property": "http://vi.dbpedia.example.org/ontology/hasParent"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Antiochus_IV_của_Commagene",
+    "b": "http://vi.dbpedia.example.org/resource/Iotapa",
+    "property": "http://vi.dbpedia.example.org/ontology/hasParent"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Aleksandar_I_của_Nam_Tư",
+    "b": "http://vi.dbpedia.example.org/resource/Petar_II_của_Nam_Tư",
+    "property": "http://vi.dbpedia.example.org/ontology/hasParent"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Shō_Hō",
+    "b": "http://vi.dbpedia.example.org/resource/Án_ti",
+    "property": "http://vi.dbpedia.example.org/ontology/hasParent"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Jigme_Dorji_Wangchuck",
+    "b": "http://vi.dbpedia.example.org/resource/Jigme_Singye_Wangchuck",
+    "property": "http://vi.dbpedia.example.org/ontology/hasParent"
+   },
+   {
+    "a": "http://vi.dbpedia.example.org/resource/Jesse_Root_Grant",
+    "b": "http://vi.dbpedia.example.org/resource/Ulysses_S._Grant",
+    "property": "http://vi.dbpedia.example.org/ontology/hasParent"
+   }
+  ],
+  "functional_datatype": [
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Yamamoto_Isoroku",
+    "property": "birthDate",
+    "values": [
+     "1884-04-04",
+     "1884-08-04"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Alexandre_de_Rhodes",
+    "property": "birthDate",
+    "values": [
+     "1591-03-15",
+     "1593-03-15"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Đỗ_Hữu_Vị",
+    "property": "birthDate",
+    "values": [
+     "1883-02-12",
+     "1883-02-17"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Nguyễn_Phục",
+    "property": "birthYear",
+    "values": [
+     "1433",
+     "1434"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Alexandre_de_Rhodes",
+    "property": "birthYear",
+    "values": [
+     "1591",
+     "1593"
+    ]
+   },
+   {
+    "individual": "http://vi.dbpedia.example.org/resource/Cuộc_nổi_loạn_của_lực_lượng_biên_phòng_Bangladesh",
+    "property": "startDate",
+    "values": [
+     "2009-02-25",
+     "2009-02-26"
+    ]
+   }
+  ],
+  "has_key_duplicates": [
+   {
+    "key": "80",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Tây_Ninh",
+     "http://vi.dbpedia.example.org/resource/Long_An_(tỉnh)"
+    ]
+   },
+   {
+    "key": "26113",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Hàng_Gòn",
+     "http://vi.dbpedia.example.org/resource/Cẩm_Mỹ_(xã)"
+    ]
+   },
+   {
+    "key": "10402",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Hòa_Xá",
+     "http://vi.dbpedia.example.org/resource/Ứng_Hòa_(xã)"
+    ]
+   },
+   {
+    "key": "09832",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Phú_Cát",
+     "http://vi.dbpedia.example.org/resource/Hoài_Đức,_Hà_Nội"
+    ]
+   },
+   {
+    "key": "31024",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Đông_Hòa_(xã)",
+     "http://vi.dbpedia.example.org/resource/Vĩnh_Hòa,_An_Giang"
+    ]
+   },
+   {
+    "key": "369",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Ninh_Bình_(thành_phố)",
+     "http://vi.dbpedia.example.org/resource/Hoa_Lư_(thành_phố)"
+    ]
+   },
+   {
+    "key": "28360",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Hội_Cư",
+     "http://vi.dbpedia.example.org/resource/Cái_Bè_(xã)"
+    ]
+   },
+   {
+    "key": "697",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Hòa_Vang_(huyện)",
+     "http://vi.dbpedia.example.org/resource/Chơn_Thành_(thị_xã)"
+    ]
+   },
+   {
+    "key": "52",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Bình_Định_(tỉnh)",
+     "http://vi.dbpedia.example.org/resource/Gia_Lai"
+    ]
+   },
+   {
+    "key": "18040",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Lam_Thành",
+     "http://vi.dbpedia.example.org/resource/Hưng_Nguyên_Nam"
+    ]
+   },
+   {
+    "key": "02449",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Xuân_Vân",
+     "http://vi.dbpedia.example.org/resource/Hồng_Sơn,_Tuyên_Quang"
+    ]
+   },
+   {
+    "key": "07462",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Phúc_Hòa",
+     "http://vi.dbpedia.example.org/resource/Bảo_Đài"
+    ]
+   },
+   {
+    "key": "44",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Quảng_Bình_(tỉnh)",
+     "http://vi.dbpedia.example.org/resource/Quảng_Trị"
+    ]
+   },
+   {
+    "key": "28789",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Bến_Tre_(phường)",
+     "http://vi.dbpedia.example.org/resource/Trà_Vinh_(phường)"
+    ]
+   },
+   {
+    "key": "91",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Kiên_Giang",
+     "http://vi.dbpedia.example.org/resource/An_Giang"
+    ]
+   },
+   {
+    "key": "691",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Phước_Long_(huyện_Bình_Phước)",
+     "http://vi.dbpedia.example.org/resource/Bù_Gia_Mập_(huyện)"
+    ]
+   },
+   {
+    "key": "24",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Bắc_Ninh",
+     "http://vi.dbpedia.example.org/resource/Bắc_Giang_(tỉnh)"
+    ]
+   },
+   {
+    "key": "82",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Tiền_Giang",
+     "http://vi.dbpedia.example.org/resource/Đồng_Tháp"
+    ]
+   },
+   {
+    "key": "20575",
+    "individuals": [
+     "http://vi.dbpedia.example.org/resource/Bàn_Thạch",
+     "http://vi.dbpedia.example.org/resource/An_Thắng"
+    ]
+   }
+  ]
+ }
+}

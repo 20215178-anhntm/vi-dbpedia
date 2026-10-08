@@ -1,0 +1,969 @@
+@prefix vidbo: <http://vi.dbpedia.example.org/ontology/> .
+@prefix vidbr: <http://vi.dbpedia.example.org/resource/> .
+
+vidbr:Abbas_II_của_Ai_Cập vidbo:successor vidbr:Phó_vương_Ai_Cập .
+
+vidbr:Abe_no_Nakamaro vidbo:successor vidbr:An_Nam_đô_hộ_phủ .
+
+vidbr:Adolphe_của_Luxembourg vidbo:successor vidbr:Vương_quốc_Phổ .
+
+vidbr:Alexandros_Đại_đế vidbo:spouse vidbr:Iran .
+
+vidbr:Ali_ibn_Ridwan vidbo:notableWork vidbr:Galenus,
+        vidbr:Hy_Lạp .
+
+vidbr:Amyntas_IV_của_Macedonia vidbo:hasChild vidbr:Boston .
+
+vidbr:An_Toàn_Hoàng_hậu vidbo:successor vidbr:Nhà_Lý .
+
+vidbr:Anurak_Devesh vidbo:predecessor vidbr:Vương_quốc_Ayutthaya .
+
+vidbr:Artabanus_IV_của_Parthia vidbo:successor vidbr:Đế_quốc_Sasan .
+
+vidbr:Ashikaga_Takauji vidbo:predecessor vidbr:Tân_chính_Kemmu .
+
+vidbr:Ashikaga_Yoshiaki vidbo:successor vidbr:Mạc_phủ_Ashikaga,
+        vidbr:Mạc_phủ_Tokugawa .
+
+vidbr:Astrid_Aagesen vidbo:notableWork vidbr:Helsingborg .
+
+vidbr:Augustine_Washington vidbo:birthPlace vidbr:William_Westmoreland .
+
+vidbr:Augustus vidbo:predecessor vidbr:Đế_quốc_La_Mã .
+
+vidbr:Bahadur_Shah_II vidbo:successor vidbr:Ấn_Độ .
+
+vidbr:Bela_Lugosi vidbo:spouse vidbr:Los_Angeles .
+
+vidbr:Bogd_Khan vidbo:successor vidbr:Cộng_hòa_Nhân_dân_Mông_Cổ .
+
+vidbr:Bá_Ích vidbo:hasChild vidbr:Từ_\(nước\) .
+
+vidbr:Bùi_Duy_Hưng vidbo:predecessor vidbr:Bắc_Ninh .
+
+vidbr:Bùi_Phùng vidbo:participatedIn vidbr:Luangnamtha,
+        vidbr:Lào .
+
+vidbr:Bùi_Văn_Anh vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Bùi_Đức_Sòn vidbo:hasChild vidbr:Phú_Thọ .
+
+vidbr:Bùi_Đức_Tài vidbo:successor vidbr:Tây_Ninh .
+
+vidbr:Bảo_Đại vidbo:predecessor vidbr:Chính_phủ_Trung_ương_lâm_thời_Việt_Nam ;
+    vidbo:successor vidbr:Việt_Nam_Dân_chủ_Cộng_hòa .
+
+vidbr:Bế_Xuân_Trường vidbo:birthPlace vidbr:An_Dương_Vương .
+
+vidbr:Bửu_Viên vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Camillo_II_Borghese vidbo:successor vidbr:Công_quốc_Parma .
+
+vidbr:Cao_Kế_Xung vidbo:successor vidbr:Nhà_Tống .
+
+vidbr:Cao_Ly_An_Tông vidbo:restingPlace vidbr:Hiến_Trinh_Vương_hậu .
+
+vidbr:Cao_Vân vidbo:predecessor vidbr:Hậu_Yên .
+
+vidbr:Cao_Văn_Viên vidbo:successor vidbr:Hoa_Kỳ,
+        vidbr:Việt_Nam_Cộng_hòa,
+        <http://vi.dbpedia.example.org/resource/Washington,_D.C.> .
+
+vidbr:Carlos_I_của_Bồ_Đào_Nha vidbo:memberOfDynasty vidbr:Fernando_II_của_Bồ_Đào_Nha,
+        vidbr:Maria_II_của_Bồ_Đào_Nha .
+
+vidbr:Chandragupta_Maurya vidbo:predecessor vidbr:Đế_quốc_Maurya .
+
+vidbr:Charles_I_xứ_Anjou vidbo:successor vidbr:Vương_quốc_Napoli .
+
+vidbr:Charles_de_Gaulle vidbo:predecessor vidbr:Quốc_gia_Pháp .
+
+vidbr:Chiến_dịch_Thọ_Xuân vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Chiến_dịch_giải_phóng_Bulgaria vidbo:commander vidbr:Đức_Quốc_Xã .
+
+vidbr:Chiến_dịch_tấn_công_Courtrai vidbo:commander vidbr:Vương_quốc_Bayern .
+
+vidbr:Chiến_tranh_Genkō vidbo:commander vidbr:Mạc_phủ_Kamakura .
+
+vidbr:Chiến_tranh_Goth_\(535-554\) vidbo:partOfConflict vidbr:Justinianus_I .
+
+vidbr:Chiến_tranh_Hán-Trọng_Gia vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Chiến_tranh_Liên_minh_thứ_Ba vidbo:conflictPlace vidbr:Trận_Trafalgar .
+
+<http://vi.dbpedia.example.org/resource/Chiến_tranh_Minh_–_Việt_(1407–1414)> vidbo:partOfConflict vidbr:Thời_kỳ_Bắc_thuộc_lần_thứ_tư .
+
+vidbr:Chiến_tranh_Nga-Circassia vidbo:commander vidbr:Luân_Đôn,
+        vidbr:Vương_quốc_Liên_hiệp_Anh_và_Ireland,
+        vidbr:Đế_quốc_Nga,
+        vidbr:Đế_quốc_Ottoman .
+
+<http://vi.dbpedia.example.org/resource/Chiến_tranh_Ngô_–_Ngụy_(222–225)> vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Chiến_tranh_Peloponnisos vidbo:commander vidbr:Athens,
+        vidbr:Sparta,
+        vidbr:Síp .
+
+<http://vi.dbpedia.example.org/resource/Chiến_tranh_Thục_–_Ngụy_(263–264)> vidbo:partOfConflict vidbr:Tam_Quốc .
+
+<http://vi.dbpedia.example.org/resource/Chiến_tranh_Tấn_–_Ngô_(280)> vidbo:partOfConflict vidbr:Tam_Quốc .
+
+<http://vi.dbpedia.example.org/resource/Chiến_tranh_Xiêm-Campuchia_(1591–1594)> vidbo:partOfConflict vidbr:Ang_Chan_I .
+
+vidbr:Chiến_tranh_chống_khủng_bố vidbo:commander vidbr:Israel .
+
+vidbr:Chiến_tranh_thế_giới_thứ_hai vidbo:conflictPlace <http://vi.dbpedia.example.org/resource/Chiến_tranh_Trung_–_Nhật>,
+        vidbr:Chiến_trường_châu_Âu_trong_Thế_chiến_thứ_hai,
+        vidbr:Chiến_trường_Địa_Trung_Hải_và_Trung_Đông_\(Thế_chiến_thứ_hai\),
+        vidbr:Mặt_trận_Đông_Nam_Á_trong_Chiến_tranh_thế_giới_thứ_hai,
+        <http://vi.dbpedia.example.org/resource/Trận_chiến_Đại_Tây_Dương_(1939–1945)> .
+
+vidbr:Chu_Thử vidbo:predecessor vidbr:Nhà_Đường ;
+    vidbo:successor vidbr:Nhà_Đường .
+
+vidbr:Chun_Doo-hwan vidbo:birthPlace vidbr:Encyclopædia_Britannica .
+
+vidbr:Chân_Đức_nữ_vương__OfficeTenure_0 vidbo:underMonarch vidbr:Nhà_Đường .
+
+vidbr:Chương_Yêu_Nhi vidbo:predecessor vidbr:Nhà_Lương .
+
+vidbr:Cung_Duệ vidbo:successor vidbr:Cao_Ly .
+
+vidbr:Cuộc_nổi_dậy_Kościuszko vidbo:commander vidbr:Đại_công_quốc_Lietuva .
+
+vidbr:Cuộc_nổi_dậy_Phan_Bá_Vành vidbo:commander vidbr:Nhà_Tây_Sơn .
+
+vidbr:Cuộc_xâm_lược_Ba_Lan_\(1939\) vidbo:commander vidbr:Kraków,
+        vidbr:Pomorze,
+        vidbr:Poznań .
+
+vidbr:Cyrus_Đại_đế vidbo:deathPlace vidbr:Herodotos,
+        vidbr:Xenophon ;
+    vidbo:spouse vidbr:Iran .
+
+vidbr:Cù_Chính_Lan vidbo:restingPlace vidbr:Chiến_dịch_Hòa_Bình,
+        vidbr:Tôn_Đức_Thắng .
+
+vidbr:Daniel_Auteuil vidbo:spouse vidbr:Corse .
+
+vidbr:Diêu_Hưng vidbo:hasChild vidbr:Bắc_Ngụy .
+
+vidbr:Douglas_MacArthur vidbo:participatedIn vidbr:Chiếm_đóng_Nhật_Bản .
+
+vidbr:Dương_Kích_Nhưỡng vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Dương_Văn_Minh vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Edmund_Ironside vidbo:hasMother vidbr:York .
+
+vidbr:Edward_Jełowicki vidbo:participatedIn vidbr:Algérie .
+
+vidbr:Edward_Osóbka-Morawski vidbo:predecessor vidbr:Đệ_Nhị_Cộng_hòa_Ba_Lan .
+
+vidbr:Ekkathat vidbo:successor vidbr:Vương_triều_Thonburi .
+
+vidbr:Eleanor_của_Anh vidbo:memberOfDynasty vidbr:Henry_III_của_Anh,
+        vidbr:Henry_II_của_Anh,
+        vidbr:John_của_Anh,
+        vidbr:Richard_I_của_Anh .
+
+vidbr:Ellac vidbo:deathPlace vidbr:Trận_Nedao .
+
+vidbr:Emilio_Aguinaldo vidbo:predecessor vidbr:Đông_Ấn_Tây_Ban_Nha ;
+    vidbo:successor vidbr:Thịnh_vượng_chung_Philippines .
+
+vidbr:Ernst_I_xứ_Sachsen-Gotha vidbo:successor vidbr:Công_quốc_Sachsen-Gotha-Altenburg,
+        vidbr:Sachsen-Coburg,
+        vidbr:Sachsen-Eisenberg,
+        vidbr:Sachsen-Hildburghausen,
+        vidbr:Sachsen-Meiningen,
+        vidbr:Sachsen-Römhild,
+        vidbr:Sachsen-Saalfeld .
+
+vidbr:Eugenius vidbo:deathPlace vidbr:Trận_sông_Frigidus .
+
+vidbr:Fay_Na vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Friedrich_Wilhelm_III_của_Phổ vidbo:spouse vidbr:Berlin,
+        vidbr:Phổ_\(quốc_gia\),
+        vidbr:Potsdam .
+
+vidbr:George_Washington vidbo:successor vidbr:Thuộc_địa_Virginia .
+
+vidbr:Gia_Luật_Bội vidbo:predecessor vidbr:Vương_quốc_Bột_Hải .
+
+vidbr:Giuseppe_Garibaldi vidbo:participatedIn <http://vi.dbpedia.example.org/resource/Cộng_hòa_La_Mã_(1849–1850)> .
+
+vidbr:Giản_Định_Đế vidbo:predecessor vidbr:Nhà_Hồ,
+        vidbr:Nhà_Trần .
+
+vidbr:Haile_Selassie vidbo:successor vidbr:Chính_phủ_Quân_sự_Lâm_thời_Ethiopia_xã_hội_chủ_nghĩa .
+
+vidbr:Harold_Godwinson vidbo:deathPlace vidbr:Trận_Hastings .
+
+vidbr:Harun_Al-Rashid vidbo:spouse vidbr:Iran .
+
+vidbr:Hiến_Triết_Hoàng_quý_phi vidbo:deathPlace vidbr:Vinh_Thọ_Cố_Luân_công_chúa .
+
+vidbr:Hiếu_Trinh_Thuần_Hoàng_hậu vidbo:birthPlace vidbr:Shō_Gen .
+
+vidbr:Hoàn_Nhan_Doãn_Tế vidbo:hasFather vidbr:Nhà_Kim .
+
+vidbr:Hoàng_Xuân_Tửu vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Hoằng_Chiêm vidbo:successor vidbr:Vĩnh_Hoàng .
+
+vidbr:Hussein_Kamel_của_Ai_Cập vidbo:predecessor vidbr:Phó_vương_Ai_Cập .
+
+vidbr:Huy_Tư_Hoàng_thái_phi vidbo:predecessor vidbr:Nhà_Lý ;
+    vidbo:successor vidbr:Nhà_Nguyễn .
+
+vidbr:Huệ_Trưng vidbo:hasFather vidbr:Cảnh_Thụy .
+
+vidbr:Hách_Liên_Bột_Bột vidbo:hasChild vidbr:Bắc_Ngụy .
+
+vidbr:Hán_Hiến_Đế vidbo:successor vidbr:Nhà_Hán,
+        vidbr:Tào_Ngụy .
+
+vidbr:Hòa_Thân vidbo:predecessor vidbr:Thái_Tân .
+
+vidbr:Hạng_Vũ vidbo:successor vidbr:Sở_\(nước\) .
+
+vidbr:Hầu_Cảnh vidbo:predecessor vidbr:Nhà_Lương ;
+    vidbo:successor vidbr:Nhà_Lương .
+
+vidbr:Hậu_Chu_Cung_Đế vidbo:successor vidbr:Nhà_Tống .
+
+vidbr:Hậu_Lương_Thái_Tổ vidbo:predecessor vidbr:Nhà_Đường .
+
+vidbr:Hồ_Hán_Thương vidbo:successor vidbr:Nhà_Hậu_Trần .
+
+vidbr:Hồng_Thiên_Quý_Phúc vidbo:successor vidbr:Cuộc_nổi_dậy_Thái_Bình_Thiên_Quốc .
+
+vidbr:Inthraphithak vidbo:predecessor vidbr:Vương_quốc_Ayutthaya ;
+    vidbo:successor vidbr:Vương_quốc_Rattanakosin .
+
+vidbr:Ismail_Haniyeh vidbo:hasParent vidbr:Ashkelon .
+
+vidbr:Italia_\(tỉnh_La_Mã\) vidbo:capital vidbr:Diocletianus .
+
+vidbr:Jean-Jacques_Dessalines vidbo:successor vidbr:Haiti .
+
+vidbr:Jean_Lannes vidbo:deathPlace vidbr:Trận_Aspern-Essling .
+
+vidbr:Joachim_Ernst_xứ_Anhalt vidbo:spouse vidbr:Công_quốc_Württemberg .
+
+vidbr:John_Sanderson vidbo:participatedIn vidbr:Cơ_quan_chuyển_tiếp_Liên_Hợp_Quốc_tại_Campuchia .
+
+vidbr:Jules_Brunet vidbo:participatedIn vidbr:Công_xã_Paris .
+
+vidbr:Khai_Bua_Ban vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Kham_Hiao vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Kham_Keut vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Kham_Nai vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Kham_Souk vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Kham_Tam_Sa vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Khâm_Thánh_Hoàng_hậu vidbo:successor vidbr:Nhà_Lê_sơ .
+
+vidbr:Khất_Phục_Càn_Quy vidbo:hasChild vidbr:Bắc_Lương .
+
+vidbr:Khất_Phục_Quốc_Nhân vidbo:predecessor vidbr:Tiền_Tần .
+
+vidbr:Khởi_nghĩa_Hai_Bà_Trưng vidbo:commander vidbr:Đại_Việt_sử_ký_toàn_thư .
+
+vidbr:Khởi_nghĩa_Khăn_Vàng vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Khởi_nghĩa_Lam_Sơn vidbo:partOfConflict vidbr:Thời_kỳ_Bắc_thuộc_lần_thứ_tư .
+
+vidbr:Khởi_nghĩa_Tam_Biệt_Sao vidbo:partOfConflict vidbr:Hốt_Tất_Liệt .
+
+vidbr:Khởi_nghĩa_Yên_Bái vidbo:commander vidbr:Hà_Nội,
+        vidbr:Thái_Bình_\(tỉnh\),
+        vidbr:Yên_Bái_\(tỉnh\) .
+
+<http://vi.dbpedia.example.org/resource/Khủng_hoảng_Trung_Đông_(2023–nay)> vidbo:conflictPlace <http://vi.dbpedia.example.org/resource/Chiến_tranh_Israel_–_Hamas>,
+        vidbr:Chiến_tranh_Mười_hai_ngày,
+        vidbr:Không_kích_Yemen_2024,
+        vidbr:Khủng_hoảng_Biển_Đỏ .
+
+vidbr:Kim_Thành_công_chúa vidbo:spouse vidbr:Thổ_Phồn .
+
+vidbr:Kim_Thế_Tông vidbo:hasFather vidbr:Nhà_Kim .
+
+vidbr:Kim_Tuyên_Tông vidbo:hasFather vidbr:Nhà_Kim .
+
+vidbr:Kiều_Công_Tiễn vidbo:successor vidbr:Nhà_Ngô,
+        vidbr:Tĩnh_Hải_quân .
+
+vidbr:Klemens_von_Metternich vidbo:predecessor vidbr:Đế_quốc_La_Mã_Thần_thánh .
+
+vidbr:Kính_Thuận_vương vidbo:successor vidbr:Cao_Ly .
+
+vidbr:Lan_Kham_Deng vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Lasenthai_Puvanart vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Libya vidbo:capital vidbr:The_World_Factbook .
+
+vidbr:Louis_Jules_Trochu vidbo:successor vidbr:Đệ_Tam_Cộng_hòa_Pháp .
+
+vidbr:Louis_Mộ_đạo vidbo:successor vidbr:Trung_Francia,
+        vidbr:Tây_Francia,
+        vidbr:Đông_Frank .
+
+vidbr:Louis_XVIII_của_Pháp vidbo:predecessor vidbr:Chiến_tranh_Liên_minh_thứ_Bảy,
+        vidbr:Đệ_Nhất_Đế_chế_Pháp .
+
+vidbr:Lue_Sai vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Lâm_Minh_Thành vidbo:successor vidbr:An_Giang .
+
+vidbr:Lã_Bá_Di vidbo:hasChild vidbr:Hứa_\(nước\),
+        vidbr:Nhà_Chu,
+        vidbr:Thân_\(nước\) .
+
+vidbr:Lã_hậu vidbo:restingPlace vidbr:Hán_Quang_Vũ_Đế .
+
+vidbr:Lê_Chiêu_Thống vidbo:successor vidbr:Nhà_Tây_Sơn .
+
+vidbr:Lê_Cung_Hoàng vidbo:successor vidbr:Nhà_Lê_trung_hưng,
+        vidbr:Nhà_Mạc .
+
+vidbr:Lê_Hải_Châu vidbo:birthPlace vidbr:Đan_Trường .
+
+vidbr:Lê_Khả_Phiêu vidbo:deathPlace vidbr:Lý_Nam_Đế .
+
+vidbr:Lê_Long_Đĩnh vidbo:successor vidbr:Nhà_Lý .
+
+vidbr:Lê_Quan_Giảng vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Lê_Quang_Trường vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Lê_Quang_Uyển vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Lê_Thái_Ngọc vidbo:birthPlace vidbr:Xuân_Thủy .
+
+vidbr:Lê_Thái_Tổ vidbo:predecessor vidbr:Nhà_Hậu_Trần,
+        vidbr:Nhà_Hồ .
+
+vidbr:Lê_Văn_Thịnh vidbo:predecessor vidbr:Việt_Nam .
+
+vidbr:Lê_Đại_Hành vidbo:predecessor vidbr:Nhà_Đinh .
+
+vidbr:Lê_Đức_Anh vidbo:predecessor vidbr:Việt_Nam_Cộng_hòa .
+
+vidbr:Lê_Đức_Thái vidbo:birthPlace vidbr:Hiệp_Hòa .
+
+vidbr:Lò_Văn_Hặc vidbo:predecessor vidbr:Việt_Nam_Dân_chủ_Cộng_hòa .
+
+vidbr:Lý_Chiêu_Hoàng vidbo:predecessor vidbr:Nhà_Lý ;
+    vidbo:successor vidbr:Nhà_Trần .
+
+vidbr:Lý_Huệ_Tông vidbo:successor vidbr:Nhà_Lý,
+        vidbr:Nhà_Trần .
+
+vidbr:Lý_Phương_Tử vidbo:predecessor vidbr:Đại_Hàn_Đế_Quốc .
+
+vidbr:Lý_Quang_Địa vidbo:predecessor vidbr:Nam_Trạch .
+
+vidbr:Lý_Thiên_Bảo vidbo:predecessor vidbr:Vạn_Xuân .
+
+vidbr:Lý_Thừa_Vãn vidbo:predecessor vidbr:Chính_phủ_Lâm_thời_Đại_Hàn_Dân_Quốc .
+
+vidbr:Lý_Tú_Thành vidbo:participatedIn vidbr:Vũ_Hán .
+
+vidbr:Lưu_Dung vidbo:predecessor vidbr:Thái_Tân .
+
+vidbr:Lưu_Kế_Nguyên vidbo:successor vidbr:Nhà_Tống .
+
+vidbr:Lưu_Minh_Truyền vidbo:participatedIn vidbr:Thái_Bình_Thiên_Quốc .
+
+vidbr:Lưu_Thị_Huỳnh_Mai vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Lưu_Thừa_Hựu vidbo:successor vidbr:Bắc_Hán .
+
+vidbr:Lưu_Yểm_\(đại_tá\) vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Lương_Lăng_Kiệt vidbo:influenced vidbr:Vương_quốc_Liên_hiệp_Anh_và_Bắc_Ireland .
+
+vidbr:Lương_Nhị_Kỳ vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Lại_Văn_Hoàn vidbo:successor vidbr:Hưng_Yên .
+
+vidbr:Magadha vidbo:leader vidbr:Đế_quốc_Gupta,
+        vidbr:Đế_quốc_Maurya,
+        vidbr:Đế_quốc_Nanda .
+
+vidbr:Maha_Sura_Singhanat vidbo:predecessor vidbr:Vương_triều_Thonburi .
+
+vidbr:Manoi vidbo:memberOfDynasty vidbr:Khun_Lo ;
+    vidbo:predecessor vidbr:Thái_Lan ;
+    vidbo:successor vidbr:Thái_Lan .
+
+vidbr:Marfa_Vasilyevna_Sobakina vidbo:memberOfDynasty vidbr:Ryurik .
+
+vidbr:Mariam-uz-Zamani vidbo:deathPlace vidbr:Jahangir .
+
+vidbr:Matilda_Joslyn_Gage vidbo:notableWork vidbr:Elizabeth_Cady_Stanton .
+
+vidbr:Mehmed_VI vidbo:successor vidbr:Đế_quốc_Ottoman .
+
+vidbr:Mengistu_Haile_Mariam vidbo:successor vidbr:Ethiopia .
+
+vidbr:Mohamed_Bouazizi vidbo:influenced vidbr:Nội_chiến_Libya_\(2011\) .
+
+vidbr:Mom_Keo vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Mykhailo_Serhiiovych_Hrushevsky vidbo:successor vidbr:Quốc_gia_Ukraina .
+
+vidbr:Mã_Lai_thuộc_Anh vidbo:leader vidbr:Mã_Lai_thuộc_Nhật .
+
+vidbr:Mã_Sĩ_Anh__OfficeTenure_0 vidbo:underMonarch vidbr:Nguyệt_Viên .
+
+vidbr:Mạc_Cửu__OfficeTenure_0 vidbo:underMonarch vidbr:Chúa_Nguyễn .
+
+vidbr:Mạc_Thái_Tổ vidbo:predecessor vidbr:Nhà_Lê_sơ .
+
+vidbr:Mộ_Dung_Hi vidbo:successor vidbr:Bắc_Yên_\(Thập_lục_quốc\) .
+
+vidbr:Mộ_Dung_Siêu vidbo:hasFather vidbr:Tiền_Yên .
+
+vidbr:Nakhon_Noi vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Nam_Tất vidbo:hasFather vidbr:Tiên_Đồng .
+
+vidbr:Nan_Tharat vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Nathaniel_Lyon vidbo:deathPlace <http://vi.dbpedia.example.org/resource/Trận_Wilson's_Creek> .
+
+vidbr:Nguyên_Thánh_Thiên_Cảm_Hoàng_hậu vidbo:predecessor vidbr:Nhà_Lý .
+
+vidbr:Nguyễn_Duy_Quang vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Huệ_Chi vidbo:notableWork vidbr:Việt_Nam .
+
+vidbr:Nguyễn_Hồng_Thái_\(tướng_quân_đội\) vidbo:predecessor vidbr:Bắc_Ninh .
+
+vidbr:Nguyễn_Hữu_Chì vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Hữu_Hạnh vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Hữu_Thọ vidbo:successor vidbr:Việt_Nam_Dân_chủ_Cộng_hòa .
+
+vidbr:Nguyễn_Khánh vidbo:predecessor vidbr:Thượng_Hội_đồng_Quốc_gia_\(Việt_Nam_Cộng_hòa\) .
+
+vidbr:Nguyễn_Khánh_Toàn vidbo:spouse vidbr:Trung_Quốc .
+
+vidbr:Nguyễn_Khắc_Thận vidbo:successor vidbr:Hưng_Yên .
+
+vidbr:Nguyễn_Lâm_Thành vidbo:birthPlace vidbr:Tô_Hiệu .
+
+vidbr:Nguyễn_Mạnh_Hiển vidbo:birthPlace vidbr:Lê_Thánh_Tông .
+
+vidbr:Nguyễn_Mạnh_Hùng_\(Vĩnh_Long\) vidbo:birthPlace vidbr:Hiệp_Hòa .
+
+vidbr:Nguyễn_Phi_Long vidbo:successor vidbr:Hòa_Bình_\(tỉnh\),
+        vidbr:Phú_Thọ,
+        vidbr:Vĩnh_Phúc_\(tỉnh\) .
+
+vidbr:Nguyễn_Phú_Đức vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Phương_Thiệp vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Quang_Toản vidbo:successor vidbr:Nhà_Nguyễn .
+
+vidbr:Nguyễn_Thanh_Thủy vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Thanh_Tuấn_\(sinh_năm_1976\) vidbo:predecessor vidbr:Huế,
+        vidbr:Thừa_Thiên_Huế .
+
+vidbr:Nguyễn_Thế_Trị vidbo:participatedIn vidbr:Duyên_hải_Nam_Trung_Bộ_và_Tây_Nguyên,
+        vidbr:Nam_Bộ .
+
+vidbr:Nguyễn_Thị_Anh vidbo:predecessor vidbr:Nhà_Trần .
+
+vidbr:Nguyễn_Tiến_Hải_\(chính_khách\) vidbo:successor vidbr:An_Giang .
+
+vidbr:Nguyễn_Tiến_Trung_\(Công_an\) vidbo:predecessor vidbr:Quảng_Ninh .
+
+vidbr:Nguyễn_Triệu_Đan vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+<http://vi.dbpedia.example.org/resource/Nguyễn_Tuấn_Anh_(chính_khách,_sinh_1975)> vidbo:successor vidbr:Lào_Cai,
+        vidbr:Yên_Bái_\(tỉnh\) .
+
+vidbr:Nguyễn_Việt_Oanh vidbo:successor vidbr:Bắc_Ninh .
+
+vidbr:Nguyễn_Văn_Bông vidbo:deathPlace vidbr:Cao_Thắng,
+        vidbr:Phan_Thanh_Giản .
+
+vidbr:Nguyễn_Văn_Hiếu_\(nhà_ngoại_giao\) vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Văn_Hảo vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Văn_Kiểu vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Văn_Lộc_\(nhà_ngoại_giao\) vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Nguyễn_Văn_Thiệu vidbo:predecessor vidbr:Ủy_ban_Lãnh_đạo_Quốc_gia_\(Việt_Nam_Cộng_hòa\) ;
+    vidbo:successor vidbr:Ninh_Thuận .
+
+vidbr:Ngô_Tấn_Nghĩa vidbo:successor vidbr:Bình_Thuận_\(tỉnh\) .
+
+vidbr:Ngô_Xương_Xí vidbo:successor vidbr:Nhà_Đinh .
+
+vidbr:Ngô_hoàng_hậu_\(Lưu_Bị\) vidbo:birthPlace vidbr:Trần_Lưu .
+
+vidbr:Ngũ_Đình_Phương vidbo:successor vidbr:Lương_Thành .
+
+vidbr:Ngụy_Nhiễm vidbo:memberOfDynasty vidbr:Tần_Chiêu_Tương_vương .
+
+vidbr:Nhà_Hạ vidbo:capital vidbr:Thái_Khang .
+
+vidbr:Nicomedes_IV_của_Bithynia vidbo:hasMother vidbr:Nysa .
+
+vidbr:Nokasad vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Nokeo_Koumane vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Norodom_Kantol vidbo:deathPlace vidbr:Norodom_Sihanouk .
+
+vidbr:Nùng_Trí_Cao vidbo:spouse vidbr:Nùng_Trí_Cao_\(phường\) ;
+    vidbo:successor vidbr:Nhà_Lý .
+
+vidbr:Nữ_vương_Yoshiko vidbo:memberOfDynasty vidbr:Tokugawa_Ieyoshi,
+        vidbr:Tokugawa_Yoshinobu .
+
+vidbr:Ong_Bun vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Ong_Long vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Otto_IV_của_Thánh_chế_La_Mã vidbo:successor vidbr:Milano .
+
+vidbr:Patrice_de_Mac_Mahon vidbo:participatedIn vidbr:Công_xã_Paris .
+
+vidbr:Pavle_Đurišić vidbo:participatedIn vidbr:Nam_Tư .
+
+vidbr:Pavlo_Petrovych_Skoropadskyi vidbo:predecessor vidbr:Cộng_hòa_Nhân_dân_Ukraina ;
+    vidbo:successor vidbr:Cộng_hòa_Nhân_dân_Ukraina .
+
+vidbr:Pedro_de_Alvarado vidbo:participatedIn vidbr:Cuba .
+
+vidbr:Petăr_IV_của_Bulgaria vidbo:predecessor vidbr:Đế_quốc_Đông_La_Mã .
+
+vidbr:Phan_Văn_Hùm vidbo:notableWork vidbr:Nguyễn_Đình_Chiểu .
+
+vidbr:Phan_Đăng_Lưu vidbo:predecessor vidbr:Quảng_Châu,
+        vidbr:Trung_Quốc .
+
+vidbr:Philipp_I_xứ_Hessen vidbo:successor vidbr:Bá_quốc_Hessen-Darmstadt,
+        vidbr:Bá_quốc_Hessen-Kassel,
+        vidbr:Bá_quốc_Hessen-Marburg .
+
+vidbr:Philippe_Pétain vidbo:successor vidbr:Chính_phủ_lâm_thời_Cộng_hòa_Pháp .
+
+vidbr:Philippos_II_Philoromaeos vidbo:successor vidbr:Cộng_hòa_La_Mã .
+
+vidbr:Phommathat vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Phong_trào_Hồi_giáo_Katip_Sumat vidbo:commander vidbr:Khởi_nghĩa_Ja_Thak_Wa .
+
+vidbr:Phothisarath vidbo:memberOfDynasty vidbr:Khun_Lo ;
+    vidbo:spouse vidbr:Bồn_Man,
+        vidbr:Vương_quốc_Ayutthaya,
+        vidbr:Đế_quốc_Khmer .
+
+vidbr:Photisarath_II vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Phù_Sùng vidbo:successor vidbr:Tây_Tần .
+
+vidbr:Phùng_An vidbo:successor vidbr:Nhà_Đường .
+
+vidbr:Phùng_Bạt vidbo:hasChild vidbr:Nhu_Nhiên .
+
+vidbr:Phùng_Quang_Thanh vidbo:deathPlace vidbr:Nguyễn_Tri_Phương .
+
+vidbr:Phúc_Linh_An vidbo:spouse vidbr:Hoằng_Giang .
+
+vidbr:Phạm_Ngọc_Thạch vidbo:spouse vidbr:Pháp .
+
+vidbr:Phạm_Thái_Bường vidbo:birthPlace vidbr:Càn_Long .
+
+vidbr:Phạm_Văn_Chung vidbo:successor vidbr:Quảng_Nam .
+
+vidbr:Phạm_Đăng_Lâm vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Ptolemaios_XV vidbo:successor vidbr:Đế_quốc_La_Mã .
+
+vidbr:Quách_Thiện_Ni vidbo:notableWork vidbr:Trường_Bình_Công_chúa .
+
+vidbr:Quản_Minh_Cường vidbo:predecessor vidbr:Quảng_Ninh .
+
+vidbr:Rama_I vidbo:predecessor vidbr:Vương_triều_Thonburi .
+
+vidbr:Ratsadanay vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Roscoe_B._Woodruff vidbo:participatedIn vidbr:Chiếm_đóng_Nhật_Bản .
+
+vidbr:Samsenethai vidbo:memberOfDynasty vidbr:Khun_Lo ;
+    vidbo:spouse vidbr:Tây_Song_Bản_Nạp,
+        vidbr:Vương_quốc_Ayutthaya .
+
+vidbr:Sayakumane vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Sen_Soulintha vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Shibata_Katsuie vidbo:deathPlace vidbr:Trận_Shizugatake .
+
+vidbr:Shivaji_II vidbo:birthPlace vidbr:Chân_Trí_vương .
+
+vidbr:Sisowath_Kossamak vidbo:successor vidbr:Cộng_hòa_Khmer .
+
+vidbr:Somphou vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Sri_Indraditya vidbo:predecessor vidbr:Đế_quốc_Khmer .
+
+vidbr:Sri_Lanka vidbo:capital vidbr:Encyclopædia_Britannica .
+
+vidbr:Suvanna_Banlang vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Sùng_Hiền_hầu vidbo:predecessor vidbr:Nhà_Lý .
+
+vidbr:Sử_Triều_Nghĩa vidbo:successor vidbr:Nhà_Đường .
+
+vidbr:Sử_Tư_Minh vidbo:predecessor vidbr:Nhà_Đường .
+
+vidbr:Terauchi_Masatake vidbo:predecessor vidbr:Đại_Hàn_Đế_Quốc .
+
+vidbr:Theodoric_I vidbo:deathPlace vidbr:Trận_Châlons .
+
+vidbr:Thiên_hoàng_Go-Daigo vidbo:predecessor vidbr:Bắc_triều_\(Nhật_Bản\) .
+
+vidbr:Thiên_hoàng_Kōmyō vidbo:predecessor vidbr:Bắc_triều_\(Nhật_Bản\),
+        vidbr:Nam_triều_\(Nhật_Bản\) .
+
+vidbr:Thoát_Lý vidbo:successor vidbr:Người_Khắc_Liệt,
+        vidbr:Đế_quốc_Mông_Cổ .
+
+vidbr:Thu_Cẩn vidbo:influenced vidbr:Cách_mạng_Tân_Hợi .
+
+vidbr:Thuần_Trinh_Hiếu_Hoàng_hậu vidbo:predecessor vidbr:Triều_Tiên .
+
+vidbr:Thác_Bạt_Thập_Dực_Kiền vidbo:spouse vidbr:Tiền_Yên .
+
+vidbr:Thạch_Lặc vidbo:predecessor vidbr:Hán_Triệu .
+
+vidbr:Tokugawa_Ieyasu vidbo:predecessor vidbr:Mạc_phủ_Tokugawa .
+
+vidbr:Tone_Kham vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Triều_Tiên_Cao_Tông vidbo:predecessor vidbr:Nhà_Triều_Tiên .
+
+vidbr:Triều_Tiên_Thuần_Tông vidbo:successor vidbr:Triều_Tiên .
+
+vidbr:Triều_Tiên_Trung_Tông vidbo:successor vidbr:Đại_Hàn_Đế_Quốc .
+
+vidbr:Triệu_Cao vidbo:successor vidbr:Nhà_Hán,
+        vidbr:Nhà_Tần .
+
+vidbr:Triệu_Dương_Vương vidbo:successor vidbr:Nhà_Hán .
+
+vidbr:Triệu_Hoằng_Ân vidbo:predecessor vidbr:Hậu_Chu ;
+    vidbo:successor vidbr:Nhà_Tống .
+
+vidbr:Triệu_Quốc_Mạnh vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Triệu_Vũ_Vương vidbo:predecessor vidbr:Âu_Lạc .
+
+vidbr:Trùng_Quang_Đế vidbo:successor vidbr:Nhà_Hậu_Lê .
+
+vidbr:Trúc_Phương_phu_nhân vidbo:successor vidbr:Cao_Ly .
+
+vidbr:Trương_Bửu_Điện vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Trương_Phụ vidbo:deathPlace vidbr:Sự_biến_Thổ_Mộc_bảo .
+
+vidbr:Trương_Quỹ vidbo:restingPlace vidbr:Trương_Tộ .
+
+vidbr:Trương_Đăng_Liêm vidbo:successor vidbr:Ninh_Thuận .
+
+vidbr:Trần_Anh_Tuấn_\(sinh_năm_1959\) vidbo:participatedIn vidbr:Vân_Hồ_\(xã\) .
+
+vidbr:Trần_Cảo_\(vua\) vidbo:predecessor vidbr:Nhà_Hậu_Trần ;
+    vidbo:successor vidbr:Nhà_Hậu_Lê .
+
+vidbr:Trần_Duy_Đông vidbo:successor vidbr:Phú_Thọ,
+        vidbr:Vĩnh_Phúc_\(tỉnh\) .
+
+vidbr:Trần_Huy_Tuấn vidbo:successor vidbr:Lào_Cai,
+        vidbr:Yên_Bái_\(tỉnh\) .
+
+vidbr:Trần_Kim_Phượng_\(nhà_ngoại_giao\) vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Trần_Lý vidbo:hasFather vidbr:Nhà_Trần .
+
+vidbr:Trần_Lưu_Quang vidbo:successor vidbr:Tây_Ninh .
+
+vidbr:Trần_Mẫn_công vidbo:successor vidbr:Trần_\(nước\) .
+
+vidbr:Trần_Ngọc_Thành vidbo:participatedIn vidbr:Vũ_Hán .
+
+vidbr:Trần_Sư_Hiền vidbo:hasChild vidbr:Đại_Việt_sử_ký_toàn_thư .
+
+vidbr:Trần_Thanh_Mại vidbo:notableWork vidbr:Hàn_Mặc_Tử,
+        vidbr:Tuy_Lý_vương .
+
+vidbr:Trần_Thanh_Mẫn vidbo:successor vidbr:Cần_Thơ .
+
+vidbr:Trần_Thiếu_Đế vidbo:successor vidbr:Nhà_Hồ .
+
+vidbr:Trần_Thuận_Tông vidbo:successor vidbr:Nhà_Hậu_Trần,
+        vidbr:Nhà_Hồ,
+        vidbr:Nhà_Trần .
+
+vidbr:Trần_Thúc_Bảo vidbo:successor vidbr:Nhà_Tùy .
+
+vidbr:Trần_Văn_Hương vidbo:deathPlace vidbr:Phan_Thanh_Giản .
+
+vidbr:Trần_Văn_Linh vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Trần_Văn_Phước vidbo:successor vidbr:Phnôm_Pênh_sụp_đổ .
+
+vidbr:Trần_Văn_Trà vidbo:successor vidbr:Chiến_tranh_Việt_Nam .
+
+vidbr:Trần_Đức_Lương vidbo:successor vidbr:Quảng_Ngãi .
+
+vidbr:Trận_Antioch_\(1098\) vidbo:commander vidbr:Harran .
+
+vidbr:Trận_Arras_\(1914\) vidbo:commander vidbr:Vương_quốc_Bayern .
+
+vidbr:Trận_Artois_lần_thứ_ba vidbo:commander vidbr:Bayern .
+
+vidbr:Trận_Austerlitz vidbo:commander vidbr:Hungary .
+
+vidbr:Trận_Beaumont vidbo:commander vidbr:Vương_quốc_Sachsen .
+
+vidbr:Trận_Bác_Vọng vidbo:partOfConflict vidbr:Nhà_Hán .
+
+vidbr:Trận_Bạch_Đăng vidbo:partOfConflict vidbr:Nhà_Hán .
+
+vidbr:Trận_Camlann vidbo:partOfConflict vidbr:Anh .
+
+vidbr:Trận_Châteauneuf-en-Thimerais vidbo:conflictPlace <http://vi.dbpedia.example.org/resource/Friedrich_III,_Hoàng_đế_Đức> .
+
+vidbr:Trận_Di_Lăng vidbo:commander vidbr:Tào_Ngụy ;
+    vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_Giới_Kiều vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_Grand_Couronné vidbo:commander vidbr:Vương_quốc_Bayern .
+
+vidbr:Trận_Hagelberg vidbo:partOfConflict vidbr:Đức .
+
+vidbr:Trận_Hán_Trung_\(215\) vidbo:partOfConflict vidbr:Tam_Quốc .
+
+<http://vi.dbpedia.example.org/resource/Trận_Hán_Trung_(217–219)> vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_Hổ_Lao_Quan vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_Hợp_Phì vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_Kadesh vidbo:partOfConflict vidbr:Ramesses_II .
+
+vidbr:Trận_Lê_Dương vidbo:partOfConflict vidbr:Nhà_Hán .
+
+vidbr:Trận_Mons_Badonicus vidbo:partOfConflict vidbr:Anh .
+
+vidbr:Trận_Nisibis_\(217\) vidbo:partOfConflict vidbr:Caracalla .
+
+vidbr:Trận_Picardy_lần_thứ_nhất vidbo:commander vidbr:Vương_quốc_Bayern .
+
+vidbr:Trận_Thạch_Đình vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_Trường_Bản vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_Vauquois vidbo:commander vidbr:Phổ_\(quốc_gia\) .
+
+vidbr:Trận_Vouillé vidbo:partOfConflict vidbr:Clovis_I .
+
+vidbr:Trận_Xích_Bích vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trận_khe_hở_Charmes vidbo:commander vidbr:Vương_quốc_Bayern .
+
+<http://vi.dbpedia.example.org/resource/Trận_Đà_Nẵng_(1858–1859)> vidbo:commander vidbr:Tây_Ban_Nha .
+
+vidbr:Trận_Đồng_Quan_\(211\) vidbo:partOfConflict vidbr:Tam_Quốc .
+
+vidbr:Trịnh_Bồng vidbo:successor vidbr:Chúa_Trịnh,
+        vidbr:Nhà_Lê_trung_hưng,
+        vidbr:Nhà_Tây_Sơn .
+
+vidbr:Trịnh_Tiếu vidbo:successor vidbr:Đắk_Lắk .
+
+vidbr:Trọng_Nguyễn vidbo:notableWork vidbr:Chợ_Mới_\(huyện_An_Giang\) .
+
+vidbr:Tào_Bá_Dương vidbo:successor vidbr:Tào_\(nước\) .
+
+vidbr:Tôn_Hạo vidbo:successor vidbr:Đông_Ngô .
+
+vidbr:Tôn_Thất_Soạn vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Tư_Mã_Lệnh_Cơ vidbo:successor vidbr:Nhà_Tùy .
+
+vidbr:Tư_Mã_Mậu_Anh vidbo:predecessor vidbr:Nhà_Tấn .
+
+vidbr:Tạ_Văn_Long vidbo:successor vidbr:Lào_Cai,
+        vidbr:Yên_Bái_\(tỉnh\) .
+
+vidbr:Tấn_Tĩnh_công vidbo:successor vidbr:Hàn_\(nước\),
+        vidbr:Ngụy_\(nước\),
+        vidbr:Triệu_\(nước\) .
+
+vidbr:Tề_Cảnh_công vidbo:hasChild vidbr:Ngô_\(nước\) ;
+    vidbo:spouse vidbr:Yên_\(nước\) .
+
+vidbr:Tề_Thái_công_\(Điền_Tề\) vidbo:predecessor vidbr:Tề_\(nước\) .
+
+vidbr:Tống_Mỹ_Linh vidbo:birthPlace vidbr:Encyclopædia_Britannica .
+
+vidbr:Tống_đế_Bính vidbo:successor vidbr:Nhà_Nguyên .
+
+vidbr:Upanyuvarath_I vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Uthumphon vidbo:successor vidbr:Vương_triều_Thonburi .
+
+vidbr:Valens vidbo:deathPlace vidbr:Trận_Hadrianopolis .
+
+vidbr:Vichai vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Vinh_phi vidbo:hasChild vidbr:Trường_Sinh .
+
+vidbr:Visunharat_Thipath vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Việt_Phương vidbo:birthPlace vidbr:Hai_Bà_Trưng .
+
+vidbr:Vladimir_Cả vidbo:spouse vidbr:Đế_quốc_La_Mã_Thần_thánh .
+
+vidbr:Volodymyr_Kyrylovych_Vynnychenko vidbo:predecessor vidbr:Quốc_gia_Ukraina .
+
+vidbr:Vologases_VI vidbo:successor vidbr:Đế_quốc_Sasan .
+
+vidbr:Vong_Savang vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Voravongsa_I vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Voravongsa_II vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Võ_Thị_Ánh_Xuân vidbo:successor vidbr:An_Giang,
+        vidbr:Tân_Châu_\(thị_xã\) .
+
+vidbr:Võ_Văn_Thưởng vidbo:successor vidbr:Quảng_Ngãi .
+
+vidbr:Vũ_Quang_Chiêm vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Vũ_Thị_Lưu_Mai vidbo:birthPlace vidbr:Gia_Khánh .
+
+vidbr:Vũ_Văn_Hóa_Cập vidbo:predecessor vidbr:Nhà_Tùy .
+
+vidbr:Vũ_Văn_Mẫu vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Vũ_Văn_Uyên vidbo:predecessor vidbr:Chúa_Bầu .
+
+vidbr:Vương_Hòa_Đức vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Vụ_mưu_khởi_nghĩa_ở_Huế_\(1916\) vidbo:commander vidbr:Đế_quốc_thực_dân_Pháp .
+
+<http://vi.dbpedia.example.org/resource/Wilhelm_II,_Hoàng_đế_Đức> vidbo:successor vidbr:Brandenburg,
+        vidbr:Cộng_hòa_Weimar,
+        vidbr:Kłodzko .
+
+vidbr:Willem_I_xứ_Oranje vidbo:successor vidbr:Cuộc_nổi_dậy_Hà_Lan .
+
+vidbr:Xaiyna_Chakhaphat vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Xaysethathirath vidbo:memberOfDynasty vidbr:Khun_Lo .
+
+vidbr:Xương_Bình_quân vidbo:successor <http://vi.dbpedia.example.org/resource/Chiến_tranh_Hán_–_Sở> .
+
+vidbr:Xương_Văn_quân vidbo:successor <http://vi.dbpedia.example.org/resource/Chiến_tranh_Hán_–_Sở> .
+
+vidbr:Yevhen_Petrushevych vidbo:successor vidbr:Cộng_hòa_Nhân_dân_Ukraina .
+
+vidbr:Ý_Kính_Thế_tử vidbo:birthPlace vidbr:Triều_Tiên_Thế_Tổ .
+
+vidbr:Đinh_Phế_Đế vidbo:successor vidbr:Nhà_Tiền_Lê .
+
+vidbr:Đinh_Tiến_Dũng vidbo:successor vidbr:Ninh_Bình,
+        vidbr:Điện_Biên .
+
+vidbr:Đoàn_Bá_Cang vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Đàm_Diên_Khải vidbo:predecessor vidbr:Chính_phủ_Bắc_Dương .
+
+vidbr:Đào_Trọng_Tường vidbo:successor vidbr:Đà_Nẵng .
+
+vidbr:Đường_Cao_Tổ vidbo:successor vidbr:Nhà_Đường,
+        vidbr:Võ_Chu .
+
+vidbr:Đường_Cảnh_Tùng vidbo:successor vidbr:Đài_Loan_Dân_Chủ_Quốc .
+
+vidbr:Đường_Cảnh_Tùng__OfficeTenure_0 vidbo:underMonarch vidbr:Đế_quốc_Nhật_Bản .
+
+vidbr:Đường_Cảnh_Tùng__OfficeTenure_2 vidbo:underMonarch vidbr:Nhà_Thanh .
+
+vidbr:Đảo_chính_Chile_1973 vidbo:partOfConflict vidbr:Chile .
+
+vidbr:Đảo_chính_Việt_Nam_Cộng_hòa_1963 vidbo:commander vidbr:Việt_Nam_Dân_chủ_Cộng_hòa .
+
+vidbr:Đặng_Ngọc_Trân vidbo:successor vidbr:Sự_kiện_30_tháng_4_năm_1975 .
+
+vidbr:Đặng_Thai_Mai vidbo:successor vidbr:Cộng_hòa_miền_Nam_Việt_Nam .
+
+vidbr:Đặng_Thị_Huệ vidbo:deathPlace vidbr:Trịnh_Sâm .
+
+vidbr:Đặng_Xuân_Phong_\(chính_khách\) vidbo:successor vidbr:Hòa_Bình_\(tỉnh\),
+        vidbr:Phú_Thọ,
+        vidbr:Vĩnh_Phúc_\(tỉnh\) .
+
+vidbr:Đế_Du_Võng vidbo:hasChild vidbr:Nhà_Chu .
+
+vidbr:Đế_Minh vidbo:memberOfDynasty vidbr:Thần_Nông .
+
+vidbr:Đế_Trực vidbo:memberOfDynasty vidbr:Thần_Nông .
+
+vidbr:Đế_quốc_Achaemenes vidbo:capital vidbr:Herodotos .
+
+vidbr:Đỗ_Kỳ vidbo:successor vidbr:Quảng_Trị .
+
+vidbr:Đỗ_Văn_Chiến vidbo:successor vidbr:Hà_Nội,
+        vidbr:Tuyên_Quang,
+        vidbr:Việt_Nam,
+        vidbr:Việt_Nam_Dân_chủ_Cộng_hòa,
+        vidbr:Yên_Bái_\(tỉnh\) .
+
+vidbr:An_Dương_Vương vidbo:predecessor vidbr:Hồng_Bàng ;
+    vidbo:successor vidbr:Nhà_Triệu .
+
+vidbr:Chính_phủ_Lâm_thời_Đại_Hàn_Dân_Quốc vidbo:leader <http://vi.dbpedia.example.org/resource/Washington,_D.C.> .
+
+vidbr:Hai_Bà_Trưng vidbo:predecessor vidbr:Thời_kỳ_Bắc_thuộc_lần_thứ_nhất ;
+    vidbo:successor vidbr:Thời_kỳ_Bắc_thuộc_lần_thứ_hai .
+
+vidbr:John_của_Anh vidbo:memberOfDynasty vidbr:Henry_II_của_Anh .
+
+vidbr:Tokugawa_Yoshinobu vidbo:successor vidbr:Chiến_tranh_Boshin .
+
+vidbr:Trận_Nedao vidbo:partOfConflict vidbr:Người_Hung .
+
+vidbr:Đế_quốc_Mông_Cổ vidbo:capital vidbr:Mông_Kha .
+
+vidbr:Đại_Việt_sử_ký_toàn_thư vidbo:author vidbr:Nhà_Hậu_Lê .
+
+vidbr:Nhà_Tùy vidbo:capital vidbr:Vương_Thế_Sung .
+

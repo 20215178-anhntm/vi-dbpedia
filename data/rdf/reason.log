@@ -1,0 +1,69 @@
+ontology 1,058 triples, data 626,995 triples (24s)
+  [OWL RL #1] round 1: +1,565,318
+  [OWL RL #1] round 2: +1,057,153
+  [OWL RL #1] round 3: +19,471
+  [OWL RL #1] round 4: +10,310
+  [OWL RL #1] round 5: +530
+  [OWL RL #1] round 6: +331
+  [OWL RL #1] round 7: +279
+  [OWL RL #1] round 8: +231
+  [OWL RL #1] round 9: +163
+  [OWL RL #1] round 10: +87
+  [OWL RL #1] round 11: +39
+  [OWL RL #1] round 12: +33
+  [OWL RL #1] round 13: +31
+  [OWL RL #1] round 14: +31
+  [OWL RL #1] round 15: +29
+  [OWL RL #1] round 16: +20
+  [OWL RL #1] round 17: +13
+  [OWL RL #1] round 18: +11
+  [OWL RL #1] round 19: +8
+  [OWL RL #1] round 20: +5
+  [OWL RL #1] round 21: +3
+  [OWL RL #1] round 22: +2
+  [OWL RL #1] round 23: +2
+  [OWL RL #1] round 24: +2
+  [OWL RL #1] round 25: +1
+  [OWL RL #1] round 26: +0
+  [OWL RL #1] fix-point after 26 rounds, 253s
+  rule R1_sibling: 54,710 triples
+  rule R2_age_at_death: 10,936 triples
+  rule R3_centenarian: 127 triples
+  rule R4_tenure_duration: 22,090 triples
+  rule R5_population_density: 5,421 triples
+  rule R6_reigned_during_conflict: 670 triples
+  [OWL RL #2] round 1: +42,525
+  [OWL RL #2] round 2: +0
+  [OWL RL #2] fix-point after 2 rounds, 19s
+asserted 626,995  inferred 2,636,065  (900s)
+violations: {'disjoint_classes': 145, 'transitive_cycle': 857, 'asymmetric': 6, 'functional_datatype': 6, 'has_key_duplicates': 19}
+    618,339  vidbo:hasDescendant
+    618,339  vidbo:hasAncestor
+     69,168  vidbo:bornWithin
+     63,784  vidbo:Belligerent
+     59,102  vidbo:Agent
+     59,102  dbo:Agent
+     58,242  http://xmlns.com/foaf/0.1/Person
+     58,242  dbo:Person
+     58,242  http://schema.org/Person
+     54,710  vidbo:sibling
+     46,305  vidbo:intellectualLineage
+     46,255  dbo:birthPlace
+     42,525  vidbo:uncleOrAunt
+     36,702  vidbo:participatedIn
+     31,997  vidbo:Person
+     27,253  vidbo:Tenure
+     23,853  dbo:birthYear
+     23,839  vidbo:diedWithin
+     22,090  vidbo:durationYears
+     21,951  http://schema.org/Place
+     21,951  dbo:Place
+     21,951  vidbo:Place
+     21,359  dbo:predecessor
+     21,359  dbo:successor
+     20,755  vidbo:officeHolder
+     18,766  dbo:birthDate
+     18,153  vidbo:hasGrandchild
+     18,153  vidbo:hasGrandparent
+     16,512  dbo:child
+     16,455  dbo:deathPlace

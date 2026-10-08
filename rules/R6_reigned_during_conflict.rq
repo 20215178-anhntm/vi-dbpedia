@@ -1,0 +1,12 @@
+# R6 - Temporal rule: a monarch "reigned during" a conflict when the conflict starts
+# inside the reign interval AND the monarch's dynasty took part in it as a combatant.
+PREFIX vidbo: <http://vi.dbpedia.example.org/ontology/>
+PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
+CONSTRUCT { ?m vidbo:reignedDuringConflict ?c }
+WHERE {
+  ?m vidbo:hasReign ?r .
+  ?r vidbo:startYear ?rs ; vidbo:endYear ?re .
+  ?m vidbo:memberOfDynasty ?dyn .
+  ?c vidbo:combatant ?dyn ; vidbo:startYear ?cs .
+  FILTER (xsd:integer(STR(?rs)) <= xsd:integer(STR(?cs)) && xsd:integer(STR(?cs)) <= xsd:integer(STR(?re)))
+}

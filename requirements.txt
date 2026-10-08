@@ -1,0 +1,9 @@
+rdflib>=7.0
+mwparserfromhell>=0.6
+PyYAML>=6.0
+requests>=2.31
+rapidfuzz>=3.0
+Unidecode>=1.3
+flask>=3.0
+pyshacl>=0.25
+owlready2>=0.46   # only for tests/test_hermit.py (HermiT tableau reasoner)

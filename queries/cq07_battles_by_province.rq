@@ -1,0 +1,9 @@
+# CQ7: Số xung đột diễn ra trong địa bàn từng tỉnh/thành hiện nay (tookPlaceWithin ∘ locatedIn, locatedIn bắc cầu)
+SELECT ?provinceLabel (COUNT(DISTINCT ?c) AS ?conflicts) (SAMPLE(?cLabel) AS ?example)
+WHERE {
+  ?c a vidbo:MilitaryConflict ; vidbo:tookPlaceWithin ?p ; rdfs:label ?cLabel .
+  ?p a vidbo:FirstLevelUnit ; rdfs:label ?provinceLabel .
+}
+GROUP BY ?provinceLabel
+ORDER BY DESC(?conflicts)
+LIMIT 30

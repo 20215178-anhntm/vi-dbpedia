@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}SPARQL — ViDBpedia{% endblock %}
+{% block body %}
+<h1>SPARQL endpoint</h1>
+<p class="muted">Endpoint máy đọc: <code>{{ request.url_root }}sparql?query=…</code> (hoặc trực tiếp Fuseki <code>http://localhost:3030/vidbpedia/sparql</code>).
+Các prefix <code>vidbo: vidbr: dbo: dbr: rdf: rdfs: owl: xsd: foaf: dct: skos: geo:</code> được khai báo sẵn.</p>
+<label>Câu hỏi mẫu:
+<select id="examples"><option value="">— chọn —</option>
+{% for e in examples %}<option value="{{ e.id }}">{{ e.title }}</option>{% endfor %}
+</select></label>
+<textarea id="q" spellcheck="false">{% if query %}{{ query }}{% else %}SELECT ?s ?label WHERE {
+  ?s a vidbo:VietnameseMonarch ; rdfs:label ?label .
+} LIMIT 20{% endif %}</textarea>
+<div class="bar"><button id="run">Chạy (Ctrl+Enter)</button>
+  <a id="csv" href="#">Tải CSV</a> <span id="status" class="muted"></span></div>
+<div id="out"></div>
+<script id="exdata" type="application/json">{{ examples|tojson }}</script>
+<script>
+const ex = JSON.parse(document.getElementById('exdata').textContent);
+const q = document.getElementById('q'), out = document.getElementById('out'), st = document.getElementById('status');
+const params = new URLSearchParams(location.search);
+if (params.get('example')) {
+  const e = ex.find(x => x.id === params.get('example'));
+  if (e) { q.value = e.query; document.getElementById('examples').value = e.id; }
+}
+document.getElementById('examples').onchange = ev => {
+  const e = ex.find(x => x.id === ev.target.value); if (e) q.value = e.query;
+};
+const P = {"http://vi.dbpedia.example.org/resource/": "vidbr:", "http://vi.dbpedia.example.org/ontology/": "vidbo:",
+           "http://dbpedia.org/resource/": "dbr:", "http://dbpedia.org/ontology/": "dbo:",
+           "http://www.w3.org/2002/07/owl#": "owl:", "http://www.w3.org/2000/01/rdf-schema#": "rdfs:",
+           "http://www.w3.org/1999/02/22-rdf-syntax-ns#": "rdf:", "http://www.wikidata.org/entity/": "wd:"};
+function short(v) {
+  for (const k in P) if (v.startsWith(k)) { try { return P[k] + decodeURIComponent(v.slice(k.length)); } catch (e) { return P[k] + v.slice(k.length); } }
+  return v;
+}
+function esc(s) { const d = document.createElement('span'); d.textContent = s; return d.innerHTML; }
+function cell(b) {
+  if (!b) return '';
+  if (b.type === 'uri') {
+    let href = b.value;
+    if (href.startsWith('http://vi.dbpedia.example.org/resource/')) href = '/page/' + href.slice(39);
+    else if (href.startsWith('http://vi.dbpedia.example.org/ontology/')) href = '/ontology/' + href.slice(39);
+    return '<a href="' + esc(href) + '">' + esc(short(b.value)) + '</a>';
+  }
+  return esc(b.value) + (b['xml:lang'] ? '<sup>@' + esc(b['xml:lang']) + '</sup>' : '');
+}
+async function run() {
+  st.textContent = 'Đang chạy…'; out.innerHTML = ''; const t = performance.now();
+  const r = await fetch('/sparql', {method: 'POST',
+    headers: {'Accept': 'application/sparql-results+json', 'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams({query: q.value, format: 'application/sparql-results+json'})});
+  const txt = await r.text();
+  if (!r.ok) { st.textContent = 'Lỗi ' + r.status; out.innerHTML = '<pre class="err">' + esc(txt) + '</pre>'; return; }
+  const j = JSON.parse(txt);
+  if (j.boolean !== undefined) { st.textContent = ''; out.textContent = 'ASK → ' + j.boolean; return; }
+  const vars = j.head.vars, rows = j.results.bindings;
+  st.textContent = rows.length + ' kết quả · ' + Math.round(performance.now() - t) + ' ms';
+  out.innerHTML = '<table class="data"><tr>' + vars.map(v => '<th>?' + esc(v) + '</th>').join('') + '</tr>' +
+    rows.map(r => '<tr>' + vars.map(v => '<td>' + cell(r[v]) + '</td>').join('') + '</tr>').join('') + '</table>';
+}
+document.getElementById('run').onclick = run;
+q.addEventListener('keydown', e => { if (e.ctrlKey && e.key === 'Enter') run(); });
+document.getElementById('csv').onclick = e => {
+  e.preventDefault(); location.href = '/sparql?format=text/csv&query=' + encodeURIComponent(q.value);
+};
+</script>
+{% endblock %}

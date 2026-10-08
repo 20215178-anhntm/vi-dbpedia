@@ -1,0 +1,7 @@
+# CQ15: Ai chịu ảnh hưởng (trực tiếp hoặc gián tiếp) của Nguyễn Du? (influenced = influencedBy⁻, intellectualLineage bắc cầu)
+SELECT ?label ?kind
+WHERE {
+  ?w vidbo:intellectualLineage vidbr:Nguyễn_Du ; rdfs:label ?label .
+  BIND(IF(EXISTS { ?w vidbo:influencedBy vidbr:Nguyễn_Du }, "trực tiếp", "gián tiếp") AS ?kind)
+}
+ORDER BY ?kind ?label

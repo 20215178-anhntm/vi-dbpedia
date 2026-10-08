@@ -1,0 +1,188 @@
+{
+ "conforms": false,
+ "violations": 104,
+ "by_constraint": {
+  "None / SPARQLConstraintComponent": 48,
+  "long / MaxInclusiveConstraintComponent": 24,
+  "lat / MaxInclusiveConstraintComponent": 13,
+  "birthDate / LessThanConstraintComponent": 8,
+  "adminCode / PatternConstraintComponent": 4,
+  "birthDate / MaxCountConstraintComponent": 3,
+  "birthYear / MaxCountConstraintComponent": 2,
+  "adminLevel / MinCountConstraintComponent": 2
+ },
+ "examples": {
+  "birthDate / LessThanConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Ngô_Quân_Miện",
+    "value": "1925-09-27",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Hedvig_Sofia_của_Thụy_Điển",
+    "value": "1861-06-26",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Lev_Aleksandrovich_Mey",
+    "value": "1882-02-13",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Charlotte_xứ_Clarence",
+    "value": "1819-03-27",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Anna_Freud",
+    "value": "1985-12-03",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   }
+  ],
+  "birthDate / MaxCountConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Đỗ_Hữu_Vị",
+    "value": "None",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Yamamoto_Isoroku",
+    "value": "None",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Alexandre_de_Rhodes",
+    "value": "None",
+    "message": "Ngày sinh phải duy nhất và trước ngày mất."
+   }
+  ],
+  "birthYear / MaxCountConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Nguyễn_Phục",
+    "value": "None",
+    "message": "Năm sinh phải duy nhất và có kiểu xsd:gYear."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Alexandre_de_Rhodes",
+    "value": "None",
+    "message": "Năm sinh phải duy nhất và có kiểu xsd:gYear."
+   }
+  ],
+  "None / SPARQLConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Thrasybulus",
+    "value": "http://vi.dbpedia.example.org/resource/Thrasybulus",
+    "message": "Năm kết thúc / năm mất (0388) trước năm bắt đầu / năm sinh (0440)."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Hedvig_Sofia_của_Thụy_Điển",
+    "value": "http://vi.dbpedia.example.org/resource/Hedvig_Sofia_của_Thụy_Điển",
+    "message": "Năm kết thúc / năm mất (1708) trước năm bắt đầu / năm sinh (1861)."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Valeriu_Arteni",
+    "value": "http://vi.dbpedia.example.org/resource/Valeriu_Arteni",
+    "message": "Năm kết thúc / năm mất (0018) trước năm bắt đầu / năm sinh (0021)."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Lev_Aleksandrovich_Mey",
+    "value": "http://vi.dbpedia.example.org/resource/Lev_Aleksandrovich_Mey",
+    "message": "Năm kết thúc / năm mất (1862) trước năm bắt đầu / năm sinh (1882)."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Anna_Freud",
+    "value": "http://vi.dbpedia.example.org/resource/Anna_Freud",
+    "message": "Năm kết thúc / năm mất (1982) trước năm bắt đầu / năm sinh (1985)."
+   }
+  ],
+  "adminCode / PatternConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Hiệp_Đức,_Đà_Nẵng",
+    "value": "2079",
+    "message": "Mã hành chính phải gồm 2 (tỉnh), 3 (huyện) hoặc 5 (xã) chữ số."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Tri_Tôn_(xã)",
+    "value": "3544",
+    "message": "Mã hành chính phải gồm 2 (tỉnh), 3 (huyện) hoặc 5 (xã) chữ số."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Nam_Triệu",
+    "value": "10311004",
+    "message": "Mã hành chính phải gồm 2 (tỉnh), 3 (huyện) hoặc 5 (xã) chữ số."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Khánh_Hưng,_Cà_Mau",
+    "value": "321197",
+    "message": "Mã hành chính phải gồm 2 (tỉnh), 3 (huyện) hoặc 5 (xã) chữ số."
+   }
+  ],
+  "adminLevel / MinCountConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Khu_Trị_Thiên_Huế",
+    "value": "None",
+    "message": "Đơn vị hành chính phải có cấp (1, 2 hoặc 3)."
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Khu_tự_trị_Việt_Bắc",
+    "value": "None",
+    "message": "Đơn vị hành chính phải có cấp (1, 2 hoặc 3)."
+   }
+  ],
+  "lat / MaxInclusiveConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Trung_Thịnh",
+    "value": "22705.0",
+    "message": "Value is not <= Literal(\"90\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Tân_Uyên_(xã)",
+    "value": "22174.0",
+    "message": "Value is not <= Literal(\"90\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Chợ_Đồn_(huyện)",
+    "value": "22159.0",
+    "message": "Value is not <= Literal(\"90\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Văn_Bàn_(huyện)",
+    "value": "22089.0",
+    "message": "Value is not <= Literal(\"90\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Khâu_Vai",
+    "value": "23065.0",
+    "message": "Value is not <= Literal(\"90\", datatype=xsd:integer)"
+   }
+  ],
+  "long / MaxInclusiveConstraintComponent": [
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Hoài_Ân_(huyện)",
+    "value": "108965.0",
+    "message": "Value is not <= Literal(\"180\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Tân_Uyên_(xã)",
+    "value": "103755.0",
+    "message": "Value is not <= Literal(\"180\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/A_Mú_Sung",
+    "value": "103659.0",
+    "message": "Value is not <= Literal(\"180\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Tràng_Định_(huyện)",
+    "value": "106476.0",
+    "message": "Value is not <= Literal(\"180\", datatype=xsd:integer)"
+   },
+   {
+    "focus": "http://vi.dbpedia.example.org/resource/Vũ_Quang_(huyện)",
+    "value": "105504.0",
+    "message": "Value is not <= Literal(\"180\", datatype=xsd:integer)"
+   }
+  ]
+ },
+ "seconds": 1043
+}

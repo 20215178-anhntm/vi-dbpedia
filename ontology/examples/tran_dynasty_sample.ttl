@@ -1,0 +1,64 @@
+@prefix vidbo: <http://vi.dbpedia.example.org/ontology/> .
+@prefix vidbr: <http://vi.dbpedia.example.org/resource/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# Small hand-checked ABox for demonstrating the ontology in Protégé (open together with vidbo.ttl,
+# then Reasoner > HermiT > Start reasoner). Only ASSERTED facts are written here; see the comments
+# for what the reasoner should infer.
+
+<http://vi.dbpedia.example.org/ontology/examples/tran>
+    a owl:Ontology ;
+    owl:imports <http://vi.dbpedia.example.org/ontology/> .
+
+vidbr:Nhà_Trần a vidbo:VietnameseDynasty ; rdfs:label "Nhà Trần"@vi .
+vidbr:Đại_Việt a vidbo:State ; rdfs:label "Đại Việt"@vi .
+
+vidbr:Trần_Thái_Tông a vidbo:Person ; rdfs:label "Trần Thái Tông"@vi ;
+    vidbo:hasReign vidbr:Trần_Thái_Tông__Reign_0 .
+vidbr:Trần_Thái_Tông__Reign_0 a vidbo:Reign ;
+    vidbo:tenureDynasty vidbr:Nhà_Trần .
+
+vidbr:Trần_Thánh_Tông a vidbo:Person ; rdfs:label "Trần Thánh Tông"@vi ;
+    vidbo:hasFather vidbr:Trần_Thái_Tông ;
+    vidbo:hasReign vidbr:Trần_Thánh_Tông__Reign_0 ;
+    vidbo:predecessor vidbr:Trần_Thái_Tông .
+vidbr:Trần_Thánh_Tông__Reign_0 a vidbo:Reign .
+
+vidbr:Trần_Nhân_Tông a vidbo:Person ; rdfs:label "Trần Nhân Tông"@vi ;
+    vidbo:hasFather vidbr:Trần_Thánh_Tông ;
+    vidbo:hasReign vidbr:Trần_Nhân_Tông__Reign_0 ;
+    vidbo:predecessor vidbr:Trần_Thánh_Tông ;
+    vidbo:birthPlace vidbr:Thăng_Long .
+vidbr:Trần_Nhân_Tông__Reign_0 a vidbo:Reign .
+
+vidbr:Trần_Anh_Tông a vidbo:Person ; rdfs:label "Trần Anh Tông"@vi ;
+    vidbo:hasFather vidbr:Trần_Nhân_Tông .
+vidbr:Thiên_Thụy_công_chúa a vidbo:Person ; rdfs:label "Thiên Thụy công chúa"@vi ;
+    vidbo:hasFather vidbr:Trần_Thánh_Tông .
+
+vidbr:Trần_Hưng_Đạo a vidbo:Person ; rdfs:label "Trần Hưng Đạo"@vi .
+
+vidbr:Thăng_Long a vidbo:Place ; vidbo:locatedIn vidbr:Đại_Việt .
+
+<http://vi.dbpedia.example.org/resource/Chiến_tranh_Nguyên_Mông–Đại_Việt_lần_3> a vidbo:War ;
+    vidbo:combatant vidbr:Nhà_Trần .
+<http://vi.dbpedia.example.org/resource/Trận_Bạch_Đằng_(1288)> a vidbo:Battle ;
+    vidbo:partOfConflict <http://vi.dbpedia.example.org/resource/Chiến_tranh_Nguyên_Mông–Đại_Việt_lần_3> ;
+    vidbo:commander vidbr:Trần_Nhân_Tông , vidbr:Trần_Hưng_Đạo ;
+    vidbo:conflictPlace vidbr:Sông_Bạch_Đằng .
+vidbr:Sông_Bạch_Đằng vidbo:locatedIn vidbr:Đại_Việt .
+
+# Expected inferences (HermiT / src/reason.py):
+#  * Trần Nhân Tông, Trần Thánh Tông, Trần Thái Tông : Monarch (∃hasReign.Reign)
+#  * Trần Thái Tông : memberOfDynasty Nhà Trần (chain hasReign ∘ tenureDynasty)
+#  * Trần Thánh Tông, Trần Nhân Tông, Trần Anh Tông : memberOfDynasty Nhà Trần (patrilineal chain hasFather ∘ memberOfDynasty)
+#  * all three emperors : VietnameseMonarch (Monarch ⊓ ∃memberOfDynasty.VietnameseDynasty)
+#  * Trần Nhân Tông : hasPaternalGrandfather Trần Thái Tông ; hasAncestor Trần Thái Tông (transitive)
+#  * Trần Anh Tông, Thiên Thụy công chúa : RoyalChild (∃hasParent.Monarch)
+#  * Trần Nhân Tông, Trần Hưng Đạo : MilitaryCommander (commanded ⊑ ∃ inverse of commander) ;
+#    Trần Nhân Tông : MonarchWarrior (Monarch ⊓ MilitaryCommander)
+#  * both participatedIn the 3rd Mongol war (chain participatedIn ∘ partOfConflict)
+#  * Trận Bạch Đằng tookPlaceWithin Đại Việt ; Trần Nhân Tông bornWithin Đại Việt
+#  * Sông Bạch Đằng, Thăng Long : Place (range of conflictPlace / birthPlace)

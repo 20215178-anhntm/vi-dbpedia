@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Ontology vidbo — ViDBpedia{% endblock %}
+{% block body %}
+<h1>Ontology <code>vidbo</code></h1>
+<p>Tải về: <a href="{{ url_for('static', filename='vidbo.ttl') }}">vidbo.ttl</a> (mở bằng Protégé để chạy HermiT / Pellet).</p>
+<h2>Lớp ({{ classes|length }})</h2>
+<table class="data"><tr><th>Lớp</th><th>Nhãn</th><th>Lớp cha</th><th>Số thực thể</th></tr>
+{% for c in classes %}<tr><td><a href="{{ local_link(c.c.value) }}">{{ short(c.c.value) }}</a></td>
+<td>{{ c.label.value if c.label else '' }}</td>
+<td>{% if c.super %}<a href="{{ local_link(c.super.value) }}">{{ short(c.super.value) }}</a>{% endif %}</td>
+<td class="r">{{ c.n.value }}</td></tr>{% endfor %}
+</table>
+<h2>Thuộc tính ({{ props|length }})</h2>
+<table class="data"><tr><th>Thuộc tính</th><th>Loại</th><th>Nhãn</th><th>Đặc tính</th></tr>
+{% for p in props %}<tr><td><a href="{{ local_link(p.p.value) }}">{{ short(p.p.value) }}</a></td><td>{{ short(p.type.value) }}</td>
+<td>{{ p.label.value if p.label else '' }}</td>
+<td class="muted">{{ (p.chars.value if p.chars else '')|replace('http://www.w3.org/2002/07/owl#','') }}</td></tr>{% endfor %}
+</table>
+{% endblock %}
