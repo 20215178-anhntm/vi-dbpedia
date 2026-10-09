@@ -18,7 +18,9 @@ from urllib.parse import unquote
 
 import requests
 from flask import Flask, Response, abort, redirect, render_template, request, url_for
-from rdflib import Graph
+from rdflib import BNode, Graph, Literal, URIRef
+from rdflib.collection import Collection
+from rdflib.namespace import OWL, RDF
 
 ROOT = Path(__file__).resolve().parent.parent
 FUSEKI = os.environ.get("VIDBPEDIA_FUSEKI", "http://localhost:3030/vidbpedia/sparql")
@@ -73,6 +75,57 @@ def iri(name):
 
 
 app.jinja_env.globals.update(short=short, local_link=local_link)
+
+_onto = None
+
+
+def onto():
+    """The vidbo ontology as an rdflib graph (small; parsed once), used to render anonymous class expressions."""
+    global _onto
+    if _onto is None:
+        _onto = Graph().parse(ROOT / "ontology" / "vidbo.ttl")
+    return _onto
+
+
+def render_expr(node):
+    """Description-logic notation for a class expression or property chain, e.g. Person ⊓ ∃hasReign.Reign."""
+    g = onto()
+    if isinstance(node, URIRef):
+        s = short(str(node))
+        return s[len("vidbo:"):] if s.startswith("vidbo:") else s
+    if isinstance(node, Literal):
+        return str(node)
+    for op, sym in ((OWL.intersectionOf, " ⊓ "), (OWL.unionOf, " ⊔ ")):
+        lst = g.value(node, op)
+        if lst is not None:
+            return sym.join(wrap(m) for m in Collection(g, lst))
+    if (node, RDF.type, OWL.Restriction) in g:
+        p = render_expr(g.value(node, OWL.onProperty))
+        for pred, fmt in ((OWL.someValuesFrom, "∃{p}.{c}"), (OWL.allValuesFrom, "∀{p}.{c}")):
+            c = g.value(node, pred)
+            if c is not None:
+                return fmt.format(p=p, c=wrap(c))
+        v = g.value(node, OWL.hasValue)
+        if v is not None:
+            return f"∃{p}.{{{render_expr(v)}}}"
+        for pred, sym in ((OWL.minQualifiedCardinality, "≥"), (OWL.maxQualifiedCardinality, "≤"),
+                          (OWL.qualifiedCardinality, "="), (OWL.minCardinality, "≥"), (OWL.maxCardinality, "≤"),
+                          (OWL.cardinality, "=")):
+            n = g.value(node, pred)
+            if n is not None:
+                c = g.value(node, OWL.onClass)
+                return f"{sym}{n} {p}" + (f".{wrap(c)}" if c is not None else "")
+    c = g.value(node, OWL.complementOf)
+    if c is not None:
+        return "¬" + wrap(c)
+    if g.value(node, RDF.first) is not None:          # an RDF list, e.g. a property chain
+        return " ∘ ".join(render_expr(m) for m in Collection(g, node))
+    return "[nút rỗng]"
+
+
+def wrap(node):
+    s = render_expr(node)
+    return f"({s})" if isinstance(node, BNode) and (" ⊓ " in s or " ⊔ " in s) else s
 
 
 def load_examples():
@@ -200,6 +253,7 @@ def search():
             SELECT ?s ?label (SAMPLE(?c) AS ?cls) WHERE {{
               GRAPH <{GRAPH}data> {{ ?s rdfs:label ?label }}
               FILTER(CONTAINS(LCASE(STR(?label)), LCASE("{safe}")))
+              FILTER NOT EXISTS {{ ?s a vidbo:Tenure }}   # reign/office nodes are reached from their person
               OPTIONAL {{ GRAPH <{GRAPH}data> {{ ?s a ?c }} }}
             }} GROUP BY ?s ?label ORDER BY STRLEN(STR(?label)) LIMIT 100""")
     return render_template("search.html", q=q, results=results)
@@ -239,6 +293,13 @@ def ontology_term(term):
         props.setdefault(r["p"]["value"], []).append({"value": r["o"]["value"], "type": r["o"]["type"],
                                                       "lang": r["o"].get("xml:lang"), "datatype": r["o"].get("datatype"),
                                                       "graph": r["g"]["value"].replace(GRAPH, ""), "label": None})
+    # anonymous class expressions / property chains: show them as formulas instead of blank nodes
+    for p, entries in props.items():
+        if any(e["type"] == "bnode" for e in entries):
+            exprs = [render_expr(o) for o in onto().objects(URIRef(ONT + term), URIRef(p)) if isinstance(o, BNode)]
+            named = [e for e in entries if e["type"] != "bnode"]
+            props[p] = [{"value": x, "type": "expr", "graph": "ontology", "label": None, "lang": None, "datatype": None}
+                        for x in exprs] + named
     info = {"uri": ONT + term, "title": "vidbo:" + term, "abstract": None, "lat": None, "long": None, "wiki": None,
             "usage": usage[0]["n"]["value"] if usage else 0}
     order = sorted(props, key=short)

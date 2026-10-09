@@ -21,6 +21,7 @@
   {% for v in props[p] %}
   <div class="val">
     {% if v.type == 'uri' %}<a href="{{ local_link(v.value) }}">{{ v.label or short(v.value) }}</a>
+    {% elif v.type == 'expr' %}<span class="expr">{{ v.value }}</span>
     {% elif v.type == 'bnode' %}<i>[nút rỗng]</i>
     {% else %}{{ v.value }}{% if v.lang %}<sup>@{{ v.lang }}</sup>{% elif v.datatype %}<sup>{{ short(v.datatype) }}</sup>{% endif %}{% endif %}
     <span class="badge {{ v.graph }}">{{ v.graph }}</span>

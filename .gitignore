@@ -1,9 +1,49 @@
+# ---------------------------------------------------------------- Python / editors
 __pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ---------------------------------------------------------------- data that is downloaded or regenerated
+# Wikipedia dumps (~1.4 GB): download with the commands in README.md
 data/dumps/
+# intermediate page store of collect_dump.py (~700 MB)
 data/raw/
-endpoint/databases/
+# materialised inferences (114 MB, over GitHub's 100 MB limit): python src/reason.py rebuilds it in ~15 min
+data/rdf/inferred.ttl
+*.log
+
+# ---------------------------------------------------------------- endpoint
+# Fuseki binaries (download link in README.md), TDB2 store (~1.7 GB, rebuilt by src/load_endpoint.py), runtime files
 endpoint/apache-jena-fuseki-*/
+endpoint/databases/
 endpoint/run/
-endpoint/*.log
-web/*.log
+
+# ---------------------------------------------------------------- linking
+# cached answers of the public DBpedia endpoint (~75 MB)
 linking/cache/
+
+# ---------------------------------------------------------------- presentation
+presentation/node_modules/
+
+# ---------------------------------------------------------------- paper (LaTeX build output and non-source files)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/*.toc
+paper/old/
+paper/ViDBpedia_overleaf.zip
+# report of another course used only as a layout reference
+paper/Group5_*
+docs/Group5_*

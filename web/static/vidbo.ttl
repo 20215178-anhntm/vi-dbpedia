@@ -452,7 +452,7 @@ vidbo:capital a owl:ObjectProperty ;
     owl:equivalentProperty dbo:capital .
 vidbo:capitalOf a owl:ObjectProperty ;
     rdfs:label "capital of"@en , "là thủ phủ của"@vi ;
-    rdfs:comment "Only used for administrative seats, which lie inside the unit: capitalOf ⊑ locatedIn."@en .
+    rdfs:comment "Not a sub-property of locatedIn in general (a former capital may lie outside today's borders); only seatOf (administrative seat, always inside the unit) is."@en .
 
 vidbo:seatOf a owl:ObjectProperty ;
     rdfs:subPropertyOf vidbo:capitalOf , vidbo:locatedIn ;
@@ -580,6 +580,10 @@ vidbo:governmentType a owl:DatatypeProperty ; rdfs:label "government type"@en , 
 
 vidbo:wikiPageWikiLink a owl:ObjectProperty ;
     rdfs:label "Link from a Wikipedia infobox to another page"@en , "liên kết trong hộp thông tin"@vi .
+
+vidbo:wikiPageRedirects a owl:ObjectProperty ;
+    rdfs:label "redirects to"@en , "đổi hướng tới"@vi ;
+    owl:equivalentProperty dbo:wikiPageRedirects .
 
 vidbo:religion a owl:ObjectProperty ; rdfs:label "religion"@en , "tôn giáo"@vi ; owl:equivalentProperty dbo:religion .
 

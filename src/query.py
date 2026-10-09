@@ -28,6 +28,7 @@ PREFIXES = {
     "foaf": "http://xmlns.com/foaf/0.1/", "dct": "http://purl.org/dc/terms/",
     "skos": "http://www.w3.org/2004/02/skos/core#", "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
     "wd": "http://www.wikidata.org/entity/",
+    "graph": "http://vi.dbpedia.example.org/graph/",
 }
 
 

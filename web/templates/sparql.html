@@ -60,6 +60,7 @@ async function run() {
     rows.map(r => '<tr>' + vars.map(v => '<td>' + cell(r[v]) + '</td>').join('') + '</tr>').join('') + '</table>';
 }
 document.getElementById('run').onclick = run;
+if (params.get('autorun')) run();
 q.addEventListener('keydown', e => { if (e.ctrlKey && e.key === 'Enter') run(); });
 document.getElementById('csv').onclick = e => {
   e.preventDefault(); location.href = '/sparql?format=text/csv&query=' + encodeURIComponent(q.value);

@@ -1,0 +1,1137 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vidbo: <http://vi.dbpedia.example.org/ontology/> .
+@prefix vidbr: <http://vi.dbpedia.example.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+vidbo: a owl:Ontology ;
+    dct:created "2026-10-08"^^xsd:date ;
+    dct:description """Ontology for a Vietnamese DBpedia built from Vietnamese Wikipedia infoboxes.
+Covers persons (monarchs, royals, military commanders, office holders, writers), dynasties and states,
+Vietnamese administrative units (including the 2025 reform that abolished the district level),
+military conflicts and written works. Aligned with DBpedia, FOAF and schema.org."""@en ;
+    dct:title "ViDBpedia Ontology"@en,
+        "Ontology DBpedia tiếng Việt"@vi ;
+    vann:preferredNamespacePrefix "vidbo" ;
+    vann:preferredNamespaceUri "http://vi.dbpedia.example.org/ontology/" ;
+    rdfs:seeAlso dbo: ;
+    owl:versionIRI vidbo:1.0 ;
+    owl:versionInfo "1.0" .
+
+vidbo:Campaign a owl:Class ;
+    rdfs:label "Campaign"@en,
+        "Chiến dịch"@vi ;
+    rdfs:subClassOf vidbo:MilitaryConflict .
+
+vidbo:CentenarianPerson a owl:Class ;
+    rdfs:label "Centenarian"@en,
+        "Người sống thọ trên 100 tuổi"@vi ;
+    rdfs:comment "Populated by the rule layer (rules/*.rq) from birth and death dates: OWL cannot do date arithmetic."@en ;
+    rdfs:subClassOf vidbo:Person .
+
+vidbo:District a owl:Class ;
+    rdfs:label "District-level unit"@en,
+        "Huyện / quận / thị xã / thành phố thuộc tỉnh"@vi ;
+    rdfs:subClassOf vidbo:SecondLevelUnit .
+
+vidbo:MonarchWarrior a owl:Class ;
+    rdfs:label "Warrior monarch"@en,
+        "Vua trực tiếp cầm quân"@vi ;
+    rdfs:comment "Defined class (intersection of two defined classes): a monarch who also commanded in a conflict."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:Monarch vidbo:MilitaryCommander ) ] .
+
+vidbo:NationalHero a owl:Class ;
+    rdfs:label "National hero"@en,
+        "Anh hùng dân tộc"@vi ;
+    rdfs:subClassOf vidbo:Person .
+
+vidbo:RoyalChild a owl:Class ;
+    rdfs:label "Prince or princess"@en,
+        "Hoàng tử / công chúa"@vi ;
+    rdfs:comment "Defined class: a person having a monarch as parent."@en ;
+    rdfs:subClassOf vidbo:RoyalFamilyMember ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:Person [ a owl:Restriction ;
+                        owl:onProperty vidbo:hasParent ;
+                        owl:someValuesFrom vidbo:Monarch ] ) ] .
+
+vidbo:RoyalCourtOfficial a owl:Class ;
+    rdfs:label "Royal court official"@en,
+        "Quan lại triều đình"@vi ;
+    rdfs:comment "Defined class: an office holder who served under a monarch (chain holdsOffice ∘ underMonarch)."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:OfficeHolder [ a owl:Restriction ;
+                        owl:onProperty vidbo:servedUnder ;
+                        owl:someValuesFrom vidbo:Monarch ] ) ] .
+
+vidbo:RoyalTitleHolder a owl:Class ;
+    rdfs:label "Royal title holder (consort, heir...)"@en,
+        "Người giữ tước vị hoàng gia"@vi ;
+    rdfs:subClassOf vidbo:RoyalFamilyMember ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:Person [ a owl:Restriction ;
+                        owl:onProperty vidbo:holdsRoyalTitle ;
+                        owl:someValuesFrom vidbo:RoyalTitleTenure ] ) ] .
+
+vidbo:Uprising a owl:Class ;
+    rdfs:label "Uprising"@en,
+        "Khởi nghĩa"@vi ;
+    rdfs:subClassOf vidbo:MilitaryConflict .
+
+vidbo:VietnameseMonarch a owl:Class ;
+    rdfs:label "Vietnamese monarch"@en,
+        "Vua Việt Nam"@vi ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:Monarch [ a owl:Restriction ;
+                        owl:onProperty vidbo:memberOfDynasty ;
+                        owl:someValuesFrom vidbo:VietnameseDynasty ] ) ] .
+
+vidbo:abstract a owl:DatatypeProperty ;
+    rdfs:label "abstract"@en,
+        "tóm tắt"@vi ;
+    owl:equivalentProperty dbo:abstract .
+
+vidbo:ageAtDeath a owl:DatatypeProperty ;
+    rdfs:label "age at death (rule-derived)"@en,
+        "hưởng thọ (suy ra bằng luật)"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range xsd:integer .
+
+vidbo:area a owl:DatatypeProperty ;
+    rdfs:label "area (km²)"@en,
+        "diện tích (km²)"@vi ;
+    rdfs:domain vidbo:Place ;
+    rdfs:range xsd:decimal .
+
+vidbo:areaCode a owl:DatatypeProperty ;
+    rdfs:label "telephone area code"@en,
+        "mã điện thoại"@vi ;
+    owl:equivalentProperty dbo:areaCode .
+
+vidbo:birthDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "birth date"@en,
+        "ngày sinh"@vi ;
+    vidbo:expectedDatatype xsd:date ;
+    rdfs:domain vidbo:Person ;
+    owl:equivalentProperty dbo:birthDate .
+
+vidbo:birthName a owl:DatatypeProperty ;
+    rdfs:label "birth name"@en,
+        "tên khai sinh / tên húy"@vi ;
+    rdfs:domain vidbo:Person ;
+    owl:equivalentProperty dbo:birthName .
+
+vidbo:birthPlace a owl:ObjectProperty ;
+    rdfs:label "birth place"@en,
+        "nơi sinh"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Place ;
+    rdfs:subPropertyOf vidbo:bornWithin ;
+    owl:equivalentProperty dbo:birthPlace .
+
+vidbo:birthYear a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "birth year"@en,
+        "năm sinh"@vi ;
+    vidbo:expectedDatatype xsd:gYear ;
+    rdfs:domain vidbo:Person ;
+    owl:equivalentProperty dbo:birthYear .
+
+vidbo:casualties a owl:DatatypeProperty ;
+    rdfs:label "casualties (text)"@en,
+        "thương vong"@vi ;
+    rdfs:domain vidbo:MilitaryConflict .
+
+vidbo:commander a owl:ObjectProperty ;
+    rdfs:label "commander"@en,
+        "chỉ huy"@vi ;
+    rdfs:domain vidbo:MilitaryConflict ;
+    rdfs:range vidbo:Person ;
+    owl:equivalentProperty dbo:commander ;
+    owl:inverseOf vidbo:commanded .
+
+vidbo:conflictPlace a owl:ObjectProperty ;
+    rdfs:label "place of conflict"@en,
+        "địa điểm"@vi ;
+    rdfs:domain vidbo:MilitaryConflict ;
+    rdfs:range vidbo:Place ;
+    rdfs:subPropertyOf vidbo:tookPlaceWithin ;
+    owl:equivalentProperty dbo:place .
+
+vidbo:courtesyName a owl:DatatypeProperty ;
+    rdfs:label "courtesy name"@en,
+        "tên tự"@vi ;
+    rdfs:domain vidbo:Person .
+
+vidbo:deathDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "death date"@en,
+        "ngày mất"@vi ;
+    vidbo:expectedDatatype xsd:date ;
+    rdfs:domain vidbo:Person ;
+    owl:equivalentProperty dbo:deathDate .
+
+vidbo:deathPlace a owl:ObjectProperty ;
+    rdfs:label "death place"@en,
+        "nơi mất"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Place ;
+    rdfs:subPropertyOf vidbo:diedWithin ;
+    owl:equivalentProperty dbo:deathPlace .
+
+vidbo:deathYear a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "death year"@en,
+        "năm mất"@vi ;
+    vidbo:expectedDatatype xsd:gYear ;
+    rdfs:domain vidbo:Person ;
+    owl:equivalentProperty dbo:deathYear .
+
+vidbo:district a owl:ObjectProperty ;
+    rdfs:label "district (before 1 July 2025)"@en,
+        "huyện (trước 1/7/2025)"@vi ;
+    rdfs:range vidbo:SecondLevelUnit ;
+    rdfs:subPropertyOf vidbo:locatedIn .
+
+vidbo:durationYears a owl:DatatypeProperty ;
+    rdfs:label "duration in years (rule-derived)"@en,
+        "số năm (suy ra bằng luật)"@vi ;
+    rdfs:range xsd:decimal .
+
+vidbo:dynastyRuledState a owl:ObjectProperty ;
+    rdfs:label "ruled state"@en,
+        "cai trị quốc gia"@vi ;
+    rdfs:domain vidbo:Dynasty ;
+    rdfs:range vidbo:State .
+
+vidbo:endDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "end date"@en,
+        "ngày kết thúc"@vi ;
+    vidbo:expectedDatatype xsd:date .
+
+vidbo:endYear a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "end year"@en,
+        "năm kết thúc"@vi ;
+    vidbo:expectedDatatype xsd:gYear .
+
+vidbo:eraName a owl:DatatypeProperty ;
+    rdfs:label "era name"@en,
+        "niên hiệu"@vi ;
+    rdfs:comment "Domain is Person, not Monarch: consorts and princes also receive temple/posthumous names; a Monarch domain made 925 queens and princes into monarchs."@en ;
+    rdfs:domain vidbo:Person .
+
+vidbo:ethnicGroups a owl:DatatypeProperty ;
+    rdfs:label "ethnic groups (text)"@en,
+        "dân tộc"@vi .
+
+vidbo:expectedDatatype a owl:AnnotationProperty ;
+    rdfs:label "expected datatype (checked by SHACL)"@en,
+        "kiểu dữ liệu mong đợi (kiểm tra bằng SHACL)"@vi .
+
+vidbo:formerName a owl:DatatypeProperty ;
+    rdfs:label "former name"@en,
+        "tên cũ"@vi .
+
+vidbo:foundingDate a owl:DatatypeProperty ;
+    rdfs:label "founding date"@en,
+        "ngày thành lập"@vi ;
+    vidbo:expectedDatatype xsd:date .
+
+vidbo:foundingYear a owl:DatatypeProperty ;
+    rdfs:label "founding year"@en,
+        "năm thành lập"@vi ;
+    vidbo:expectedDatatype xsd:gYear ;
+    owl:equivalentProperty dbo:foundingYear .
+
+vidbo:governmentType a owl:DatatypeProperty ;
+    rdfs:label "government type"@en,
+        "chính thể"@vi ;
+    rdfs:domain vidbo:State .
+
+vidbo:hasMother a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "mother"@en,
+        "mẹ"@vi ;
+    rdfs:subPropertyOf vidbo:hasParent ;
+    owl:equivalentProperty dbo:mother .
+
+vidbo:hasPaternalGrandfather a owl:ObjectProperty ;
+    rdfs:label "paternal grandfather"@en,
+        "ông nội"@vi ;
+    rdfs:subPropertyOf vidbo:hasGrandparent ;
+    owl:propertyChainAxiom ( vidbo:hasFather vidbo:hasFather ) .
+
+vidbo:influencedBy a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "influenced by"@en,
+        "chịu ảnh hưởng của"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Person ;
+    rdfs:subPropertyOf vidbo:intellectualLineage ;
+    owl:equivalentProperty dbo:influencedBy ;
+    owl:inverseOf vidbo:influenced .
+
+vidbo:infoboxTemplate a owl:DatatypeProperty ;
+    rdfs:label "source infobox template"@en,
+        "bản mẫu nguồn"@vi .
+
+vidbo:isoCode a owl:DatatypeProperty ;
+    rdfs:label "ISO 3166-2 code"@en,
+        "mã ISO 3166-2"@vi .
+
+vidbo:leader a owl:ObjectProperty ;
+    rdfs:label "leader"@en,
+        "nguyên thủ / lãnh đạo"@vi ;
+    rdfs:domain vidbo:State ;
+    rdfs:range vidbo:Person ;
+    owl:inverseOf vidbo:leaderOf .
+
+vidbo:leaderName a owl:DatatypeProperty ;
+    rdfs:label "chairman of people's committee"@en,
+        "chủ tịch UBND"@vi .
+
+vidbo:licensePlate a owl:DatatypeProperty ;
+    rdfs:label "vehicle plate code"@en,
+        "biển số xe"@vi .
+
+vidbo:nationality a owl:ObjectProperty ;
+    rdfs:label "nationality"@en,
+        "quốc tịch"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:State .
+
+vidbo:nativeName a owl:DatatypeProperty ;
+    rdfs:label "native-script name (Hán/Nôm)"@en,
+        "tên chữ Hán/Nôm"@vi .
+
+vidbo:occupation a owl:DatatypeProperty ;
+    rdfs:label "occupation (text)"@en,
+        "nghề nghiệp"@vi .
+
+vidbo:penName a owl:DatatypeProperty ;
+    rdfs:label "pen name"@en,
+        "bút danh"@vi ;
+    rdfs:domain vidbo:Person ;
+    owl:equivalentProperty dbo:pseudonym .
+
+vidbo:population a owl:DatatypeProperty ;
+    rdfs:label "population"@en,
+        "dân số"@vi ;
+    rdfs:domain vidbo:PopulatedPlace ;
+    rdfs:range xsd:integer ;
+    owl:equivalentProperty dbo:populationTotal .
+
+vidbo:populationAsOf a owl:DatatypeProperty ;
+    rdfs:label "population as of"@en,
+        "thời điểm dân số"@vi .
+
+vidbo:populationDensity a owl:DatatypeProperty ;
+    rdfs:label "population density (rule-derived, per km²)"@en,
+        "mật độ dân số"@vi ;
+    rdfs:range xsd:decimal .
+
+vidbo:position a owl:ObjectProperty ;
+    rdfs:label "position / office"@en,
+        "chức vị"@vi ;
+    rdfs:domain vidbo:Tenure .
+
+vidbo:postalCode a owl:DatatypeProperty ;
+    rdfs:label "postal code"@en,
+        "mã bưu chính"@vi ;
+    owl:equivalentProperty dbo:postalCode .
+
+vidbo:posthumousName a owl:DatatypeProperty ;
+    rdfs:label "posthumous name"@en,
+        "thụy hiệu"@vi ;
+    rdfs:comment "Domain is Person, not Monarch: consorts and princes also receive temple/posthumous names; a Monarch domain made 925 queens and princes into monarchs."@en ;
+    rdfs:domain vidbo:Person .
+
+vidbo:predecessor a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "predecessor"@en,
+        "tiền nhiệm"@vi ;
+    rdfs:comment """Deliberately NOT transitive: in the infoboxes the predecessor of a person is given per office,
+and one person holds many offices, so a transitive closure would connect almost every office holder
+with every other one (a first version did this and produced millions of meaningless triples)."""@en ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Person ;
+    owl:equivalentProperty dbo:predecessor ;
+    owl:inverseOf vidbo:successor .
+
+vidbo:predecessorState a owl:ObjectProperty ;
+    rdfs:label "preceded by state"@en,
+        "quốc gia tiền thân"@vi ;
+    rdfs:domain vidbo:State ;
+    rdfs:range vidbo:State ;
+    owl:inverseOf vidbo:successorState .
+
+vidbo:province a owl:ObjectProperty ;
+    rdfs:label "province"@en,
+        "tỉnh"@vi ;
+    rdfs:range vidbo:FirstLevelUnit ;
+    rdfs:subPropertyOf vidbo:locatedIn ;
+    owl:equivalentProperty dbo:province .
+
+vidbo:publicationYear a owl:DatatypeProperty ;
+    rdfs:label "publication year"@en,
+        "năm xuất bản"@vi ;
+    vidbo:expectedDatatype xsd:gYear ;
+    rdfs:domain vidbo:Work .
+
+vidbo:rank a owl:DatatypeProperty ;
+    rdfs:label "military rank"@en,
+        "quân hàm"@vi ;
+    rdfs:domain vidbo:MilitaryPerson .
+
+vidbo:region a owl:ObjectProperty ;
+    rdfs:label "region"@en,
+        "vùng"@vi ;
+    rdfs:range vidbo:Region ;
+    rdfs:subPropertyOf vidbo:locatedIn .
+
+vidbo:reignedDuringConflict a owl:ObjectProperty ;
+    rdfs:label "reigned during conflict"@en,
+        "trị vì trong thời gian diễn ra"@vi ;
+    rdfs:comment "Rule-derived (rules/R6): a monarch whose reign interval contains the start year of a conflict fought by his dynasty or state."@en ;
+    rdfs:domain vidbo:Monarch ;
+    rdfs:range vidbo:MilitaryConflict .
+
+vidbo:religion a owl:ObjectProperty ;
+    rdfs:label "religion"@en,
+        "tôn giáo"@vi ;
+    owl:equivalentProperty dbo:religion .
+
+vidbo:restingPlace a owl:ObjectProperty ;
+    rdfs:label "resting place"@en,
+        "nơi an táng"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Place ;
+    owl:equivalentProperty dbo:restingPlace .
+
+vidbo:result a owl:DatatypeProperty ;
+    rdfs:label "result"@en,
+        "kết quả"@vi ;
+    rdfs:domain vidbo:MilitaryConflict .
+
+vidbo:ruledAsMemberOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf vidbo:memberOfDynasty ;
+    owl:propertyChainAxiom ( vidbo:hasReign vidbo:tenureDynasty ) .
+
+vidbo:seatOf a owl:ObjectProperty ;
+    rdfs:label "administrative seat of"@en,
+        "là tỉnh lỵ của"@vi ;
+    rdfs:subPropertyOf vidbo:capitalOf,
+        vidbo:locatedIn ;
+    owl:inverseOf vidbo:adminSeat .
+
+vidbo:servedDynasty a owl:ObjectProperty ;
+    rdfs:label "served dynasty"@en,
+        "phục vụ triều đại"@vi ;
+    rdfs:comment "A mandarin or general served a dynasty without being a member of the ruling family (≠ memberOfDynasty)."@en ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Dynasty .
+
+vidbo:serviceYears a owl:DatatypeProperty ;
+    rdfs:label "years of service"@en,
+        "thời gian phục vụ"@vi .
+
+vidbo:startDate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "start date"@en,
+        "ngày bắt đầu"@vi ;
+    vidbo:expectedDatatype xsd:date .
+
+vidbo:startYear a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "start year"@en,
+        "năm bắt đầu"@vi ;
+    vidbo:expectedDatatype xsd:gYear .
+
+vidbo:strength a owl:DatatypeProperty ;
+    rdfs:label "strength (text)"@en,
+        "lực lượng"@vi ;
+    rdfs:domain vidbo:MilitaryConflict .
+
+vidbo:templeName a owl:DatatypeProperty ;
+    rdfs:label "temple name"@en,
+        "miếu hiệu"@vi ;
+    rdfs:comment "Domain is Person, not Monarch: consorts and princes also receive temple/posthumous names; a Monarch domain made 925 queens and princes into monarchs."@en ;
+    rdfs:domain vidbo:Person .
+
+vidbo:title a owl:DatatypeProperty ;
+    rdfs:label "title (text)"@en,
+        "tước vị / danh hiệu"@vi .
+
+vidbo:uncleOrAunt a owl:ObjectProperty ;
+    rdfs:label "has uncle or aunt"@en,
+        "có chú/bác/cô/dì"@vi ;
+    owl:propertyChainAxiom ( vidbo:hasParent vidbo:sibling ) .
+
+vidbo:website a owl:DatatypeProperty ;
+    rdfs:label "website"@en,
+        "trang web"@vi .
+
+vidbo:wikiPageID a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Wikipedia page ID"@en ;
+    rdfs:range xsd:integer .
+
+vidbo:wikiPageRedirects a owl:ObjectProperty ;
+    rdfs:label "redirects to"@en,
+        "đổi hướng tới"@vi ;
+    owl:equivalentProperty dbo:wikiPageRedirects .
+
+vidbo:wikiPageRevisionID a owl:DatatypeProperty ;
+    rdfs:label "Wikipedia revision ID"@en ;
+    rdfs:range xsd:integer .
+
+vidbo:wikiPageWikiLink a owl:ObjectProperty ;
+    rdfs:label "Link from a Wikipedia infobox to another page"@en,
+        "liên kết trong hộp thông tin"@vi .
+
+vidbo:wikidataID a owl:DatatypeProperty ;
+    rdfs:label "Wikidata QID"@en .
+
+vidbr:Thiên_Thụy_công_chúa a vidbo:Person ;
+    rdfs:label "Thiên Thụy công chúa"@vi ;
+    vidbo:hasFather vidbr:Trần_Thánh_Tông .
+
+vidbr:Trần_Anh_Tông a vidbo:Person ;
+    rdfs:label "Trần Anh Tông"@vi ;
+    vidbo:hasFather vidbr:Trần_Nhân_Tông .
+
+vidbr:Trận_Bạch_Đằng_\(1288\) a vidbo:Battle ;
+    vidbo:commander vidbr:Trần_Hưng_Đạo,
+        vidbr:Trần_Nhân_Tông ;
+    vidbo:conflictPlace vidbr:Sông_Bạch_Đằng ;
+    vidbo:partOfConflict <http://vi.dbpedia.example.org/resource/Chiến_tranh_Nguyên_Mông–Đại_Việt_lần_3> .
+
+vidbr:Việt_Nam a vidbo:State ;
+    rdfs:label "Vietnam"@en,
+        "Việt Nam"@vi .
+
+vidbo:Commune a owl:Class ;
+    rdfs:label "Commune"@en,
+        "Xã"@vi ;
+    rdfs:subClassOf vidbo:ThirdLevelUnit .
+
+vidbo:FormerState a owl:Class ;
+    rdfs:label "Former state"@en,
+        "Cựu quốc gia"@vi ;
+    rdfs:comment "Defined (sufficient condition): a state with a dissolution year."@en ;
+    rdfs:subClassOf vidbo:State .
+
+vidbo:MilitaryCommander a owl:Class ;
+    rdfs:label "Military commander"@en,
+        "Chỉ huy quân sự"@vi ;
+    rdfs:comment "Defined class: a person who commanded at least one military conflict."@en ;
+    rdfs:subClassOf vidbo:MilitaryPerson ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:Person [ a owl:Restriction ;
+                        owl:onProperty vidbo:commanded ;
+                        owl:someValuesFrom vidbo:MilitaryConflict ] ) ] .
+
+vidbo:Municipality a owl:Class ;
+    rdfs:label "Centrally-governed city"@en,
+        "Thành phố trực thuộc trung ương"@vi ;
+    rdfs:subClassOf vidbo:FirstLevelUnit .
+
+vidbo:OfficeHolder a owl:Class ;
+    rdfs:label "Office holder"@en,
+        "Người giữ chức vụ / chính khách"@vi ;
+    rdfs:subClassOf dbo:Politician ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:Person [ a owl:Restriction ;
+                        owl:onProperty vidbo:holdsOffice ;
+                        owl:someValuesFrom vidbo:OfficeTenure ] ) ] .
+
+vidbo:Province a owl:Class ;
+    rdfs:label "Province"@en,
+        "Tỉnh"@vi ;
+    rdfs:subClassOf vidbo:FirstLevelUnit ;
+    owl:equivalentClass dbo:Province .
+
+vidbo:Region a owl:Class ;
+    rdfs:label "Region"@en,
+        "Vùng"@vi ;
+    rdfs:subClassOf vidbo:Place .
+
+vidbo:SpecialZone a owl:Class ;
+    rdfs:label "Special zone"@en,
+        "Đặc khu"@vi ;
+    rdfs:subClassOf vidbo:ThirdLevelUnit .
+
+vidbo:Township a owl:Class ;
+    rdfs:label "Township"@en,
+        "Thị trấn"@vi ;
+    rdfs:subClassOf vidbo:ThirdLevelUnit .
+
+vidbo:Ward a owl:Class ;
+    rdfs:label "Ward"@en,
+        "Phường"@vi ;
+    rdfs:subClassOf vidbo:ThirdLevelUnit .
+
+vidbo:Writer a owl:Class ;
+    rdfs:label "Writer"@en,
+        "Nhà văn / nhà thơ"@vi ;
+    rdfs:subClassOf vidbo:Person ;
+    owl:equivalentClass dbo:Writer .
+
+vidbo:WrittenWork a owl:Class ;
+    rdfs:label "Written work"@en,
+        "Tác phẩm văn học"@vi ;
+    rdfs:subClassOf vidbo:Work ;
+    owl:equivalentClass dbo:WrittenWork .
+
+vidbo:adminCode a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "administrative code"@en,
+        "mã hành chính"@vi ;
+    rdfs:domain vidbo:AdministrativeUnit ;
+    rdfs:range xsd:string .
+
+vidbo:adminSeat a owl:ObjectProperty ;
+    rdfs:label "administrative seat"@en,
+        "tỉnh lỵ / huyện lỵ"@vi ;
+    rdfs:subPropertyOf vidbo:capital .
+
+vidbo:author a owl:ObjectProperty ;
+    rdfs:label "author"@en,
+        "tác giả"@vi .
+
+vidbo:capital a owl:ObjectProperty ;
+    rdfs:label "capital / seat"@en,
+        "thủ phủ / tỉnh lỵ / kinh đô"@vi ;
+    rdfs:domain vidbo:PopulatedPlace ;
+    rdfs:range vidbo:Place ;
+    owl:equivalentProperty dbo:capital ;
+    owl:inverseOf vidbo:capitalOf .
+
+vidbo:combatant a owl:ObjectProperty ;
+    rdfs:label "combatant"@en,
+        "bên tham chiến"@vi ;
+    rdfs:domain vidbo:MilitaryConflict ;
+    rdfs:range vidbo:Belligerent .
+
+vidbo:contains a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "contains"@en,
+        "bao gồm"@vi .
+
+vidbo:dissolutionYear a owl:DatatypeProperty ;
+    rdfs:label "dissolution year"@en,
+        "năm giải thể"@vi ;
+    vidbo:expectedDatatype xsd:gYear ;
+    owl:equivalentProperty dbo:dissolutionYear .
+
+vidbo:dynastyMember a owl:ObjectProperty ;
+    rdfs:label "dynasty member"@en,
+        "thành viên"@vi .
+
+vidbo:formedFrom a owl:ObjectProperty ;
+    rdfs:label "formed from (former units)"@en,
+        "hình thành từ (đơn vị cũ)"@vi .
+
+vidbo:hasAncestor a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has ancestor"@en,
+        "có tổ tiên"@vi ;
+    owl:inverseOf vidbo:hasDescendant .
+
+vidbo:hasChild a owl:ObjectProperty ;
+    rdfs:label "has child"@en,
+        "có con"@vi ;
+    owl:equivalentProperty dbo:child .
+
+vidbo:hasDescendant a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has descendant"@en,
+        "có hậu duệ"@vi .
+
+vidbo:hasGrandchild a owl:ObjectProperty ;
+    rdfs:label "has grandchild"@en,
+        "có cháu"@vi .
+
+vidbo:hasGrandparent a owl:ObjectProperty ;
+    rdfs:label "has grandparent"@en,
+        "có ông/bà"@vi ;
+    owl:inverseOf vidbo:hasGrandchild ;
+    owl:propertyChainAxiom ( vidbo:hasParent vidbo:hasParent ) .
+
+vidbo:hasSubConflict a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has sub-conflict"@en,
+        "gồm trận/chiến dịch"@vi .
+
+vidbo:holdsRoyalTitle a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "holds royal title"@en,
+        "giữ tước vị"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:RoyalTitleTenure .
+
+vidbo:influenced a owl:ObjectProperty ;
+    rdfs:label "influenced"@en,
+        "có ảnh hưởng tới"@vi ;
+    owl:equivalentProperty dbo:influenced .
+
+vidbo:intellectualLineage a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "intellectual lineage (transitive influence)"@en,
+        "dòng ảnh hưởng tư tưởng (bắc cầu)"@vi .
+
+vidbo:leaderOf a owl:ObjectProperty ;
+    rdfs:label "leader of"@en,
+        "lãnh đạo của"@vi .
+
+vidbo:mergedInto a owl:ObjectProperty ;
+    rdfs:label "merged into"@en,
+        "sáp nhập vào"@vi ;
+    rdfs:domain vidbo:AdministrativeUnit ;
+    rdfs:range vidbo:AdministrativeUnit ;
+    owl:inverseOf vidbo:formedFrom .
+
+vidbo:notableWork a owl:ObjectProperty ;
+    rdfs:label "notable work"@en,
+        "tác phẩm tiêu biểu"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Work ;
+    owl:equivalentProperty dbo:notableWork ;
+    owl:inverseOf vidbo:author .
+
+vidbo:officeHolder a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "office holder"@en,
+        "người giữ chức"@vi .
+
+vidbo:partOfConflict a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "part of conflict"@en,
+        "là một phần của"@vi ;
+    rdfs:domain vidbo:MilitaryConflict ;
+    rdfs:range vidbo:MilitaryConflict ;
+    rdfs:subPropertyOf dbo:isPartOfMilitaryConflict ;
+    owl:inverseOf vidbo:hasSubConflict .
+
+vidbo:servedBy a owl:ObjectProperty ;
+    rdfs:label "served by"@en,
+        "có bề tôi"@vi .
+
+vidbo:servedUnder a owl:ObjectProperty ;
+    rdfs:label "served under"@en,
+        "làm quan dưới thời"@vi ;
+    rdfs:comment "holdsOffice ∘ underMonarch ⊑ servedUnder"@en ;
+    owl:inverseOf vidbo:servedBy ;
+    owl:propertyChainAxiom ( vidbo:holdsOffice vidbo:underMonarch ) .
+
+vidbo:sibling a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "sibling"@en,
+        "anh chị em ruột"@vi ;
+    rdfs:comment "Materialised by rule R1 (shared parent, different person): OWL cannot express x ≠ y in a chain."@en ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Person .
+
+vidbo:spouse a owl:IrreflexiveProperty,
+        owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "spouse"@en,
+        "phối ngẫu / vợ chồng"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Person ;
+    owl:equivalentProperty dbo:spouse .
+
+vidbo:successor a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "successor"@en,
+        "kế nhiệm"@vi ;
+    owl:equivalentProperty dbo:successor .
+
+vidbo:successorState a owl:ObjectProperty ;
+    rdfs:label "succeeded by state"@en,
+        "quốc gia kế tục"@vi .
+
+vidbo:tenureDynasty a owl:ObjectProperty ;
+    rdfs:label "dynasty of reign"@en,
+        "triều đại của thời kỳ trị vì"@vi ;
+    rdfs:domain vidbo:Reign ;
+    rdfs:range vidbo:Dynasty .
+
+vidbo:underMonarch a owl:ObjectProperty ;
+    rdfs:label "under monarch"@en,
+        "dưới triều vua"@vi ;
+    rdfs:domain vidbo:OfficeTenure ;
+    rdfs:range vidbo:Person .
+
+<http://vi.dbpedia.example.org/resource/Chiến_tranh_Nguyên_Mông–Đại_Việt_lần_3> a vidbo:War ;
+    vidbo:combatant vidbr:Nhà_Trần .
+
+vidbr:Sông_Bạch_Đằng vidbo:locatedIn vidbr:Đại_Việt .
+
+vidbr:Thăng_Long a vidbo:Place ;
+    vidbo:locatedIn vidbr:Đại_Việt .
+
+vidbr:Trần_Hưng_Đạo a vidbo:Person ;
+    rdfs:label "Trần Hưng Đạo"@vi .
+
+vidbr:Trần_Nhân_Tông__Reign_0 a vidbo:Reign .
+
+vidbr:Trần_Thái_Tông__Reign_0 a vidbo:Reign ;
+    vidbo:tenureDynasty vidbr:Nhà_Trần .
+
+vidbr:Trần_Thánh_Tông__Reign_0 a vidbo:Reign .
+
+vidbo:Battle a owl:Class ;
+    rdfs:label "Battle"@en,
+        "Trận đánh"@vi ;
+    rdfs:subClassOf vidbo:MilitaryConflict .
+
+vidbo:Belligerent a owl:Class ;
+    rdfs:label "Belligerent"@en,
+        "Bên tham chiến"@vi ;
+    rdfs:comment "A party in a conflict: an agent (dynasty, army, person) or a state."@en ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf ( vidbo:Agent vidbo:State ) ] .
+
+vidbo:HistoricalAdministrativeUnit a owl:Class ;
+    rdfs:label "Historical (abolished) administrative unit"@en,
+        "Đơn vị hành chính đã giải thể"@vi ;
+    rdfs:comment "Domain knowledge: Resolution 202/2025/QH15 and the 2025 Constitution amendment abolished the district level from 1 July 2025."@en ;
+    rdfs:subClassOf vidbo:AdministrativeUnit .
+
+vidbo:MilitaryPerson a owl:Class ;
+    rdfs:label "Military person"@en,
+        "Quân nhân"@vi ;
+    rdfs:subClassOf vidbo:Person ;
+    owl:equivalentClass dbo:MilitaryPerson .
+
+vidbo:VietnameseDynasty a owl:Class ;
+    rdfs:label "Vietnamese dynasty"@en,
+        "Triều đại Việt Nam"@vi ;
+    rdfs:subClassOf vidbo:Dynasty .
+
+vidbo:War a owl:Class ;
+    rdfs:label "War"@en,
+        "Chiến tranh / cuộc kháng chiến"@vi ;
+    rdfs:subClassOf vidbo:MilitaryConflict .
+
+vidbo:bornWithin a owl:ObjectProperty ;
+    rdfs:label "born within"@en,
+        "sinh ra trong địa bàn"@vi ;
+    owl:propertyChainAxiom ( vidbo:bornWithin vidbo:locatedIn ) .
+
+vidbo:capitalOf a owl:ObjectProperty ;
+    rdfs:label "capital of"@en,
+        "là thủ phủ của"@vi ;
+    rdfs:comment "Not a sub-property of locatedIn in general (a former capital may lie outside today's borders); only seatOf (administrative seat, always inside the unit) is."@en .
+
+vidbo:commanded a owl:ObjectProperty ;
+    rdfs:label "commanded in"@en,
+        "chỉ huy trong"@vi ;
+    rdfs:subPropertyOf vidbo:participatedIn .
+
+vidbo:diedWithin a owl:ObjectProperty ;
+    rdfs:label "died within"@en,
+        "mất trong địa bàn"@vi ;
+    owl:propertyChainAxiom ( vidbo:diedWithin vidbo:locatedIn ) .
+
+vidbo:hasReign a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has reign"@en,
+        "có thời gian trị vì"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Reign ;
+    owl:inverseOf vidbo:reignOf .
+
+vidbo:holdsOffice a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "holds office"@en,
+        "giữ chức vụ"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:OfficeTenure ;
+    owl:inverseOf vidbo:officeHolder .
+
+vidbo:participatedIn a owl:ObjectProperty ;
+    rdfs:label "participated in"@en,
+        "tham gia"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:MilitaryConflict ;
+    owl:propertyChainAxiom ( vidbo:participatedIn vidbo:partOfConflict ) .
+
+vidbo:reignOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "reign of"@en,
+        "trị vì của"@vi .
+
+vidbo:tookPlaceWithin a owl:ObjectProperty ;
+    rdfs:label "took place within"@en,
+        "diễn ra trong địa bàn"@vi ;
+    owl:propertyChainAxiom ( vidbo:tookPlaceWithin vidbo:locatedIn ) .
+
+vidbr:Nhà_Trần a vidbo:VietnameseDynasty ;
+    rdfs:label "Nhà Trần"@vi .
+
+vidbr:Trần_Nhân_Tông a vidbo:Person ;
+    rdfs:label "Trần Nhân Tông"@vi ;
+    vidbo:birthPlace vidbr:Thăng_Long ;
+    vidbo:hasFather vidbr:Trần_Thánh_Tông ;
+    vidbo:hasReign vidbr:Trần_Nhân_Tông__Reign_0 ;
+    vidbo:predecessor vidbr:Trần_Thánh_Tông .
+
+vidbr:Trần_Thái_Tông a vidbo:Person ;
+    rdfs:label "Trần Thái Tông"@vi ;
+    vidbo:hasReign vidbr:Trần_Thái_Tông__Reign_0 .
+
+vidbr:Đại_Việt a vidbo:State ;
+    rdfs:label "Đại Việt"@vi .
+
+vidbo:Agent a owl:Class ;
+    rdfs:label "Agent"@en,
+        "Tác nhân"@vi ;
+    rdfs:comment "Something that can act: a person or a group such as a dynasty."@en ;
+    owl:equivalentClass dbo:Agent .
+
+vidbo:Event a owl:Class ;
+    rdfs:label "Event"@en,
+        "Sự kiện"@vi ;
+    owl:equivalentClass dbo:Event,
+        schema1:Event .
+
+vidbo:Group a owl:Class ;
+    rdfs:label "Group"@en,
+        "Nhóm / tổ chức"@vi ;
+    rdfs:subClassOf vidbo:Agent .
+
+vidbo:RoyalTitleTenure a owl:Class ;
+    rdfs:label "Non-sovereign royal title tenure"@en,
+        "Thời gian giữ tước vị (hậu phi, thái tử...)"@vi ;
+    rdfs:comment "Consorts and heirs also have a 'tại vị' field in the royalty infobox, but they do not reign."@en ;
+    rdfs:subClassOf vidbo:Tenure .
+
+vidbo:adminLevel a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "administrative level (1 = province, 2 = district, 3 = commune)"@en,
+        "cấp hành chính"@vi ;
+    rdfs:domain vidbo:AdministrativeUnit ;
+    rdfs:range xsd:integer .
+
+vidbo:hasFather a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "father"@en,
+        "cha"@vi ;
+    rdfs:subPropertyOf vidbo:hasParent ;
+    owl:equivalentProperty dbo:father .
+
+vidbo:memberOfDynasty a owl:ObjectProperty ;
+    rdfs:label "member of dynasty"@en,
+        "thuộc hoàng tộc / triều đại"@vi ;
+    rdfs:comment "Patrilineal: the child of a member (via the father) is a member: hasFather ∘ memberOfDynasty ⊑ memberOfDynasty."@en ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Dynasty ;
+    owl:inverseOf vidbo:dynastyMember ;
+    owl:propertyChainAxiom ( vidbo:hasFather vidbo:memberOfDynasty ) .
+
+vidbr:Trần_Thánh_Tông a vidbo:Person ;
+    rdfs:label "Trần Thánh Tông"@vi ;
+    vidbo:hasFather vidbr:Trần_Thái_Tông ;
+    vidbo:hasReign vidbr:Trần_Thánh_Tông__Reign_0 ;
+    vidbo:predecessor vidbr:Trần_Thái_Tông .
+
+vidbo:OfficeTenure a owl:Class ;
+    rdfs:label "Office tenure"@en,
+        "Nhiệm kỳ chức vụ"@vi ;
+    rdfs:subClassOf vidbo:Tenure .
+
+vidbo:PopulatedPlace a owl:Class ;
+    rdfs:label "Populated place"@en,
+        "Khu dân cư"@vi ;
+    rdfs:subClassOf vidbo:Place ;
+    owl:equivalentClass dbo:PopulatedPlace .
+
+vidbo:RoyalFamilyMember a owl:Class ;
+    rdfs:label "Member of a royal family"@en,
+        "Thành viên hoàng tộc"@vi ;
+    rdfs:comment "Monarchs, their children and their spouses (union expressed as three subclass axioms, OWL RL friendly)."@en .
+
+vidbo:SecondLevelUnit a owl:Class ;
+    rdfs:label "Second-level unit (district, abolished 1 July 2025)"@en,
+        "Đơn vị hành chính cấp huyện"@vi ;
+    rdfs:subClassOf vidbo:HistoricalAdministrativeUnit ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:AdministrativeUnit [ a owl:Restriction ;
+                        owl:hasValue 2 ;
+                        owl:onProperty vidbo:adminLevel ] ) ] .
+
+vidbo:Dynasty a owl:Class ;
+    rdfs:label "Dynasty"@en,
+        "Triều đại / hoàng tộc"@vi ;
+    rdfs:comment "A ruling family (e.g. Nhà Trần). Members are persons; the dynasty rules one or more states."@en ;
+    rdfs:subClassOf dbo:Family,
+        vidbo:Group .
+
+vidbo:Work a owl:Class ;
+    rdfs:label "Work"@en,
+        "Tác phẩm"@vi ;
+    owl:equivalentClass dbo:Work,
+        schema1:CreativeWork .
+
+vidbo:FirstLevelUnit a owl:Class ;
+    rdfs:label "First-level unit (province / municipality)"@en,
+        "Đơn vị hành chính cấp tỉnh"@vi ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:AdministrativeUnit [ a owl:Restriction ;
+                        owl:hasValue 1 ;
+                        owl:onProperty vidbo:adminLevel ] ) ] .
+
+vidbo:Monarch a owl:Class ;
+    rdfs:label "Monarch"@en,
+        "Quân chủ / vua"@vi ;
+    rdfs:comment "Defined class: a person who has at least one reign."@en ;
+    rdfs:subClassOf dbo:Monarch,
+        vidbo:RoyalFamilyMember ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:Person [ a owl:Restriction ;
+                        owl:onProperty vidbo:hasReign ;
+                        owl:someValuesFrom vidbo:Reign ] ) ] .
+
+vidbo:Tenure a owl:Class ;
+    rdfs:label "Tenure"@en,
+        "Nhiệm kỳ / thời gian tại vị"@vi ;
+    rdfs:comment """N-ary relation pattern (W3C 'Defining N-ary Relations', ODP 'Situation'):
+a period in which a person holds a position. Being a monarch or an office holder is a
+non-rigid role (OntoClean), so it is reified instead of being modelled as a rigid subclass of Person."""@en .
+
+vidbo:ThirdLevelUnit a owl:Class ;
+    rdfs:label "Third-level unit (commune / ward / special zone)"@en,
+        "Đơn vị hành chính cấp xã"@vi ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty vidbo:locatedIn ;
+            owl:someValuesFrom vidbo:FirstLevelUnit ] ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( vidbo:AdministrativeUnit [ a owl:Restriction ;
+                        owl:hasValue 3 ;
+                        owl:onProperty vidbo:adminLevel ] ) ] .
+
+vidbo:hasParent a owl:AsymmetricProperty,
+        owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has parent"@en,
+        "có cha/mẹ"@vi ;
+    rdfs:domain vidbo:Person ;
+    rdfs:range vidbo:Person ;
+    rdfs:subPropertyOf vidbo:hasAncestor ;
+    owl:inverseOf vidbo:hasChild .
+
+vidbo:Reign a owl:Class ;
+    rdfs:label "Reign"@en,
+        "Thời gian trị vì"@vi ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass vidbo:Person ;
+            owl:onProperty vidbo:reignOf ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        vidbo:Tenure .
+
+vidbo:locatedIn a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "located in"@en,
+        "nằm trong"@vi ;
+    rdfs:domain vidbo:Place ;
+    rdfs:range vidbo:Place ;
+    rdfs:subPropertyOf dbo:isPartOf ;
+    owl:inverseOf vidbo:contains .
+
+vidbo:AdministrativeUnit a owl:Class ;
+    rdfs:label "Vietnamese administrative unit"@en,
+        "Đơn vị hành chính Việt Nam"@vi ;
+    rdfs:subClassOf dbo:AdministrativeRegion,
+        vidbo:PopulatedPlace ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf ( vidbo:FirstLevelUnit vidbo:SecondLevelUnit vidbo:ThirdLevelUnit ) ] ;
+    owl:hasKey ( vidbo:adminCode ) .
+
+vidbo:State a owl:Class ;
+    rdfs:label "State / country"@en,
+        "Quốc gia"@vi ;
+    rdfs:subClassOf vidbo:PopulatedPlace ;
+    owl:equivalentClass dbo:Country .
+
+vidbo:Place a owl:Class ;
+    rdfs:label "Place"@en,
+        "Địa điểm"@vi ;
+    owl:equivalentClass dbo:Place,
+        schema1:Place .
+
+vidbo:MilitaryConflict a owl:Class ;
+    rdfs:label "Military conflict"@en,
+        "Xung đột quân sự"@vi ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+            owl:onClass vidbo:Belligerent ;
+            owl:onProperty vidbo:combatant ],
+        vidbo:Event ;
+    owl:equivalentClass dbo:MilitaryConflict .
+
+vidbo:Person a owl:Class ;
+    rdfs:label "Person"@en,
+        "Người"@vi ;
+    rdfs:subClassOf vidbo:Agent ;
+    owl:equivalentClass dbo:Person,
+        schema1:Person,
+        foaf:Person .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:Person vidbo:Place vidbo:Event vidbo:Work vidbo:Tenure ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:Person vidbo:Group ) .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf vidbo:RoyalFamilyMember ;
+    owl:onProperty vidbo:spouse ;
+    owl:someValuesFrom vidbo:Monarch .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf vidbo:Writer ;
+    owl:onProperty vidbo:notableWork ;
+    owl:someValuesFrom vidbo:WrittenWork .
+
+[] a owl:Class ;
+    rdfs:subClassOf vidbo:FormerState ;
+    owl:intersectionOf ( vidbo:State [ a owl:Restriction ;
+                owl:onProperty vidbo:dissolutionYear ;
+                owl:someValuesFrom rdfs:Literal ] ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:FirstLevelUnit vidbo:SecondLevelUnit vidbo:ThirdLevelUnit ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:Group vidbo:Event vidbo:Work vidbo:Tenure ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:Province vidbo:Municipality ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:Commune vidbo:Ward vidbo:Township vidbo:SpecialZone ) .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf vidbo:HistoricalAdministrativeUnit ;
+    owl:onProperty vidbo:mergedInto ;
+    owl:someValuesFrom vidbo:AdministrativeUnit .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:War vidbo:Battle ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( vidbo:Reign vidbo:OfficeTenure vidbo:RoyalTitleTenure ) .
+

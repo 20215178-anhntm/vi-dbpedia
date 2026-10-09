@@ -1,7 +1,10 @@
 # ViDBpedia — DBpedia tiếng Việt
 
 Đồ thị tri thức Linked Data 5★ về **lịch sử, địa lý và danh nhân Việt Nam**, xây dựng từ Wikipedia tiếng Việt
-theo đúng quy trình của DBpedia:
+theo đúng quy trình của DBpedia.
+
+Nhóm thực hiện: Le Phu Tai (20252268M), Nguyen Thi Mai Anh (20252265M), Duong Hoang Hai (20252273M), Le Van Luan (20252572M) — SoICT, HUST.
+
 
 | Bước đề bài | Thành phần trong dự án |
 |---|---|
@@ -11,7 +14,32 @@ theo đúng quy trình của DBpedia:
 | 4. Liên kết tới DBpedia tiếng Anh | [`src/link.py`](src/link.py), [`linking/silk_vidbpedia_dbpedia.xml`](linking/silk_vidbpedia_dbpedia.xml) |
 | 5. SPARQL endpoint / terminal | Apache Jena Fuseki ([`endpoint/`](endpoint/)), web UI ([`web/app.py`](web/app.py)), CLI ([`src/query.py`](src/query.py)), câu truy vấn [`queries/`](queries/) |
 
-Báo cáo chi tiết: [`docs/BAO_CAO.md`](docs/BAO_CAO.md).
+Tài liệu:
+* [`docs/BAO_CAO.md`](docs/BAO_CAO.md) — báo cáo dự án
+* [`docs/GIAI_THICH_ONTOLOGY.md`](docs/GIAI_THICH_ONTOLOGY.md) — giải thích từng phần của ontology
+* [`docs/KICH_BAN_DEMO.md`](docs/KICH_BAN_DEMO.md) — kịch bản demo 8–10 phút + câu hỏi thường gặp
+* [`docs/competency_questions.md`](docs/competency_questions.md), [`docs/cq_results.md`](docs/cq_results.md) — câu hỏi năng lực và kết quả
+* [`docs/KICH_BAN_THUYET_TRINH.md`](docs/KICH_BAN_THUYET_TRINH.md) — kịch bản thuyết trình 4 người (≈ 15 phút + 5 phút demo, phân công hỏi đáp)
+* [`docs/KICH_BAN_VIDEO.md`](docs/KICH_BAN_VIDEO.md) — kịch bản video demo 3–5 phút (quay màn hình web, một người thuyết minh, không dùng slide)
+* [`presentation/ViDBpedia_slides.pptx`](presentation/ViDBpedia_slides.pptx) — 27 slide thuyết trình (form SoICT/HUST), dựng lại bằng `node presentation/build_deck.js`
+* [`paper/`](paper/) — báo cáo LaTeX theo form NeurIPS (15 trang): [`paper/main.pdf`](paper/main.pdf) là bản PDF,
+  `python paper/make_zip.py` tạo `ViDBpedia_overleaf.zip` để tải lên Overleaf
+
+## Chạy nhanh từ repository (không cần tải dump)
+
+Repository đã có sẵn dữ liệu trích xuất và liên kết trong `data/rdf/`. Chỉ không có `data/rdf/inferred.ttl`
+(114 MB, vượt giới hạn 100 MB của GitHub) nên cần chạy lại bộ suy diễn:
+
+```bash
+pip install -r requirements.txt
+# tải Fuseki 5.6.0 và giải nén vào endpoint/ (xem mục Cài đặt)
+python src/reason.py          # sinh data/rdf/inferred.ttl (~15 phút)
+python src/load_endpoint.py   # nạp 4 named graph vào Fuseki TDB2 (~1 phút)
+python src/serve.py           # mở http://127.0.0.1:5000/
+```
+
+Không có trong repository (tự sinh lại hoặc tải về): dump Wikipedia `data/dumps/`, `data/raw/`, `data/rdf/inferred.ttl`,
+Fuseki và cơ sở dữ liệu TDB2 trong `endpoint/`, cache truy vấn DBpedia `linking/cache/`.
 
 ## Cài đặt
 

@@ -3,6 +3,8 @@
 **Đề tài 2.** *Build a DBpedia version for Vietnamese language* — định nghĩa ontology, thu thập bài viết Wikipedia tiếng Việt,
 chuyển dữ liệu sang chuẩn 4★, liên kết tới DBpedia tiếng Anh, cung cấp SPARQL endpoint/terminal.
 
+**Nhóm thực hiện:** Le Phu Tai (20252268M), Nguyen Thi Mai Anh (20252265M), Duong Hoang Hai (20252273M), Le Van Luan (20252572M) — SoICT, HUST.
+
 ---
 
 ## 1. Tổng quan
@@ -12,7 +14,7 @@ chuyển dữ liệu sang chuẩn 4★, liên kết tới DBpedia tiếng Anh, c
 | Miền tri thức | Lịch sử – địa lý – danh nhân Việt Nam (vua chúa, quan lại, tướng lĩnh, chính khách, nhà văn; triều đại, quốc gia; đơn vị hành chính sau cải cách 2025; chiến tranh, trận đánh; tác phẩm) |
 | Nguồn | Dump Wikipedia tiếng Việt ngày 01/10/2026 (1,62 triệu bài) + bảng `langlinks`, `page_props` |
 | Bài viết được trích xuất | 44.003 bài (43.614 bài sau khi loại 389 trang định hướng) |
-| Ontology `vidbo` | 48 lớp, 66 object property, 48 datatype property; 13 lớp định nghĩa, 10 property chain, 7 thuộc tính bắc cầu, 18 cặp nghịch đảo, 8 nhóm lớp rời nhau, `hasKey`; 52 tiên đề căn chỉnh với DBpedia/FOAF/schema.org |
+| Ontology `vidbo` | 48 lớp, 67 object property, 48 datatype property; 13 lớp định nghĩa, 10 property chain, 7 thuộc tính bắc cầu, 18 cặp nghịch đảo, 8 nhóm lớp rời nhau, `hasKey`; 53 tiên đề căn chỉnh với DBpedia/FOAF/schema.org |
 | Triple trích xuất (4★) | 1.511.725 triple trong 12 dataset (trong đó 626.995 triple “lõi”: kiểu, quan hệ, thuộc tính, nhiệm kỳ) |
 | Triple suy diễn | 2.636.065 triple (≈ 4,2 lần số triple lõi) |
 | Liên kết `owl:sameAs` tới DBpedia | 32.136 tới DBpedia qua interlanguage link (đã xác minh, 937 đi qua redirect) + 329 do bộ so khớp kiểu Silk; 43.145 tới Wikidata |
